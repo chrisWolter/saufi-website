@@ -8,7 +8,7 @@
         <Decider :didIHearSaufi="didIHearSaufiVar"/>
       </b-row>
       <b-row v-if="didIHearTaskVar"  id="task-decider" class="justify-content-md-center task" :style="cssVars">
-        <Task/>
+        <Task :did-i-hear-saufi="didIHearSaufi()"/>
       </b-row>
       <b-row id="reload-button" class="justify-content-md-center pos-bottom">
         <b-col col md="6">

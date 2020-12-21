@@ -1,26 +1,32 @@
 <template>
-    <b-col col md="6">
+    <b-col col md="6" v-if="task">
         <div>
             <h6 class="subheading">Aufgabe</h6>
-            <h1 class="heading">Mache etwas</h1>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+            <h1 class="heading">{{task.name}}</h1>
+            <p>{{task.description}}</p>
         </div>
     </b-col>
 </template>
 
 <script>
+import tasksJSON from '../assets/tasks'
+let weightedRandom = require('weighted-random')
+
 export default {
     name: "Task",
     props: ['didIHearSaufi'],
-    methods: {
-        isSaufi(){
-            if(this.didIHearSaufi){
-                this.chooseCategory()
-            }
-        },
-        chooseCategory() {
-            
-        }
+    computed: {
+      task() {
+          if (this.didIHearSaufi) {
+              let tasks = [...tasksJSON]
+              let weights = tasks.map(task => task.weight)
+              let selection = weightedRandom(weights)
+
+              return tasks[selection]
+          }
+
+          return undefined
+      }
     }
 }
 </script>
