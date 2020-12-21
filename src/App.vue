@@ -94,7 +94,6 @@ export default {
       const titleHeigth = document.getElementById('saufi-decider').getBoundingClientRect().bottom + 40
       const buttonPosition = document.getElementById('reload-button').getBoundingClientRect().top - 40
       const taskHeight = document.getElementById('task-decider').getBoundingClientRect().height
-      console.log(buttonPosition)
       const calculatedTaskHeight = viewHeigth - titleHeigth - (viewHeigth - buttonPosition)
 
       this.taskHeight = calculatedTaskHeight + 'px'
