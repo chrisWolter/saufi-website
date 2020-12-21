@@ -1,5 +1,5 @@
 <template>
-    <b-col col md="6" v-if="task">
+    <b-col col md="6">
         <div>
             <h6 class="subheading">Aufgabe</h6>
             <h1 class="heading">{{task.name}}</h1>
@@ -14,18 +14,13 @@ let weightedRandom = require('weighted-random')
 
 export default {
     name: "Task",
-    props: ['didIHearSaufi'],
     computed: {
       task() {
-          if (this.didIHearSaufi) {
-              let tasks = [...tasksJSON]
-              let weights = tasks.map(task => task.weight)
-              let selection = weightedRandom(weights)
+          let tasks = [...tasksJSON]
+          let weights = tasks.map(task => task.weight)
+          let selection = weightedRandom(weights)
 
-              return tasks[selection]
-          }
-
-          return undefined
+          return tasks[selection]
       }
     }
 }

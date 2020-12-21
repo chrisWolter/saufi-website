@@ -7,8 +7,8 @@
       <b-row class="justify-content-md-center decider">
         <Decider :didIHearSaufi="didIHearSaufiVar"/>
       </b-row>
-      <b-row class="justify-content-md-center task">
-        <Task :did-i-hear-saufi="didIHearSaufi()"/>
+      <b-row class="justify-content-md-center task" v-if="didIHearTaskVar">
+        <Task/>
       </b-row>
       <b-row class="justify-content-md-center">
         <b-col col md="6">
