@@ -5,14 +5,14 @@
         <h1 class="logo">Logo</h1>
       </b-row>
       <b-row class="justify-content-md-center decider">
-        <Decider/>
+        <Decider :didIHearSaufi="didIHearSaufi()"/>
       </b-row>
       <b-row class="justify-content-md-center task">
         <Task/>
       </b-row>
       <b-row class="justify-content-md-center">
         <b-col col md="6">
-          <b-button block variant="primary">Block Level Button</b-button>
+          <b-button block variant="primary">Hab ich saufi gehört?</b-button>
         </b-col>
       </b-row>
     </b-container>
@@ -66,8 +66,12 @@ export default {
   methods: {
     randomColor() {
       const length = this.pastel.length
-      const color = Math.floor(Math.random() * (length - 0 + 1)) + 0
+      const color = Math.floor(Math.random() * (length - 0)) + 0
+      this.didIHearSaufi()
       return this.pastel[color].hexcode
+    },
+    didIHearSaufi() {
+      return Math.random() > 0.25
     }
   },
 }
