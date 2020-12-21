@@ -4,13 +4,13 @@
       <b-row>
         <h1 class="logo">Logo</h1>
       </b-row>
-      <b-row class="justify-content-md-center decider">
+      <b-row id="saufi-decider" class="justify-content-md-center decider">
         <Decider :didIHearSaufi="didIHearSaufiVar"/>
       </b-row>
-      <b-row v-if="didIHearTaskVar" class="justify-content-md-center task">
+      <b-row v-if="didIHearTaskVar"  id="task-decider" class="justify-content-md-center task" :style="cssVars">
         <Task/>
       </b-row>
-      <b-row class="justify-content-md-center">
+      <b-row id="reload-button" class="justify-content-md-center pos-bottom">
         <b-col col md="6">
           <b-button @click="reload()" block variant="primary">Hab ich saufi gehört?</b-button>
         </b-col>
@@ -64,10 +64,12 @@ export default {
       didIHearSaufiVar: Boolean,
       didIHearTaskVar: Boolean,
       bgColor: String,
+      taskHeight: String,
     }
   },
   mounted: function() {
     this.reload()
+    this.setHeigth()
   },
   methods: {
     reload() {
@@ -87,6 +89,20 @@ export default {
     didIHearTask() {
       this.didIHearTaskVar = Math.random() < 0.25
     },
+    setHeigth(){
+      const viewHeigth = window.innerHeight
+      const title = document.getElementById('saufi-decider').getBoundingClientRect().bottom
+      const button = document.getElementById('reload-button').getBoundingClientRect().top
+      const height = viewHeigth - title - (viewHeigth - button) - 60
+      this.taskHeight = height + 'px'
+    }
+  },
+  computed: {
+    cssVars() {
+      return {
+        '--height': this.taskHeight
+      }
+    }
   }
 }
 </script>
@@ -96,10 +112,12 @@ export default {
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow: hidden;
   }
   #app {
   min-width: 100%;
   min-height: 100%;
+  overflow: hidden;
   }
   .logo {
     text-align: center;
@@ -108,12 +126,20 @@ export default {
   }
   .decider {
     margin-bottom: 40px;
+    max-height: 120px;
   }
   .task {
     margin-bottom: 40px;
+    max-height: var(--height);
+    overflow-y: scroll;
   }
 
   .subheading {
     margin: 0;
+  }
+  .pos-bottom{
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
   }
 </style>
