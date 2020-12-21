@@ -12,7 +12,7 @@
       </b-row>
       <b-row class="justify-content-md-center">
         <b-col col md="6">
-          <b-button block variant="primary">Hab ich saufi gehört?</b-button>
+          <b-button @click="reload()" block variant="primary">Hab ich saufi gehört?</b-button>
         </b-col>
       </b-row>
     </b-container>
@@ -72,8 +72,12 @@ export default {
     },
     didIHearSaufi() {
       return Math.random() > 0.25
+    },
+    reload() {
+      window.location.reload()
     }
   },
+
 }
 </script>
 
