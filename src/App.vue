@@ -65,11 +65,13 @@ export default {
       didIHearTaskVar: Boolean,
       bgColor: String,
       taskHeight: String,
+      needOverflow: String
     }
   },
   mounted: function() {
     this.reload()
     this.setHeigth()
+    this.setOverflowStyle()
   },
   methods: {
     reload() {
@@ -95,12 +97,25 @@ export default {
       const button = document.getElementById('reload-button').getBoundingClientRect().top
       const height = viewHeigth - title - (viewHeigth - button) - 60
       this.taskHeight = height + 'px'
+    },
+    setOverflowStyle() {
+      const viewHeigth = window.innerHeight
+      const title = document.getElementById('saufi-decider').getBoundingClientRect().bottom
+      const button = document.getElementById('reload-button').getBoundingClientRect().top
+      const task = document.getElementById('task-decider').getBoundingClientRect().height
+      const height = viewHeigth - title - (viewHeigth - button) - 60
+      if(height < task){
+        this.needOverflow = 'scroll'
+      }else {
+        this.needOverflow =  'hidden'
+      }
     }
   },
   computed: {
     cssVars() {
       return {
-        '--height': this.taskHeight
+        '--height': this.taskHeight,
+        '--overflow-hidden': this.needOverflow
       }
     }
   }
@@ -131,7 +146,7 @@ export default {
   .task {
     margin-bottom: 40px;
     max-height: var(--height);
-    overflow-y: scroll;
+    overflow-y: var(--overflow-hidden);
   }
 
   .subheading {
