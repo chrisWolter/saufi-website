@@ -82,7 +82,6 @@ export default {
       this.didIHearSaufiVar = Math.random() > 0.3
     },
     randomColor() {
-      console.log("Test")
       const length = this.pastel.length
       const color = Math.floor(Math.random() * (length - 0)) + 0
       this.bgColor = this.pastel[color].hexcode
