@@ -70,8 +70,7 @@ export default {
   },
   mounted: function() {
     this.reload()
-    this.setHeigth()
-    this.setOverflowStyle()
+    this.setTaskStyle()
   },
   methods: {
     reload() {
@@ -91,25 +90,22 @@ export default {
     didIHearTask() {
       this.didIHearTaskVar = Math.random() < 0.25
     },
-    setHeigth(){
+    setTaskStyle(){
       const viewHeigth = window.innerHeight
-      const title = document.getElementById('saufi-decider').getBoundingClientRect().bottom
-      const button = document.getElementById('reload-button').getBoundingClientRect().top
-      const height = viewHeigth - title - (viewHeigth - button) - 60
-      this.taskHeight = height + 'px'
-    },
-    setOverflowStyle() {
-      const viewHeigth = window.innerHeight
-      const title = document.getElementById('saufi-decider').getBoundingClientRect().bottom
-      const button = document.getElementById('reload-button').getBoundingClientRect().top
-      const task = document.getElementById('task-decider').getBoundingClientRect().height
-      const height = viewHeigth - title - (viewHeigth - button) - 60
-      if(height < task){
+      const titleHeigth = document.getElementById('saufi-decider').getBoundingClientRect().bottom + 40
+      const buttonPosition = document.getElementById('reload-button').getBoundingClientRect().top - 40
+      const taskHeight = document.getElementById('task-decider').getBoundingClientRect().height
+      console.log(buttonPosition)
+      const calculatedTaskHeight = viewHeigth - titleHeigth - (viewHeigth - buttonPosition)
+
+      this.taskHeight = calculatedTaskHeight + 'px'
+
+      if(calculatedTaskHeight < taskHeight){
         this.needOverflow = 'scroll'
       }else {
         this.needOverflow =  'hidden'
       }
-    }
+    },
   },
   computed: {
     cssVars() {
