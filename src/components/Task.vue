@@ -10,7 +10,18 @@
 
 <script>
 export default {
-    name: "Task"
+    name: "Task",
+    props: ['didIHearSaufi'],
+    methods: {
+        isSaufi(){
+            if(this.didIHearSaufi){
+                this.chooseCategory()
+            }
+        },
+        chooseCategory() {
+            
+        }
+    }
 }
 </script>
 

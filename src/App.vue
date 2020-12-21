@@ -7,7 +7,7 @@
       <b-row class="justify-content-md-center decider">
         <Decider :didIHearSaufi="didIHearSaufi()"/>
       </b-row>
-      <b-row class="justify-content-md-center task">
+      <b-row v-if="didIHearTask()" class="justify-content-md-center task">
         <Task/>
       </b-row>
       <b-row class="justify-content-md-center">
@@ -64,6 +64,12 @@ export default {
     }
   },
   methods: {
+    reload() {
+      window.location.reload()
+    },
+    didIHearTask() {
+      return Math.random() < 0.25
+    },
     randomColor() {
       const length = this.pastel.length
       const color = Math.floor(Math.random() * (length - 0)) + 0
@@ -73,11 +79,7 @@ export default {
     didIHearSaufi() {
       return Math.random() > 0.25
     },
-    reload() {
-      window.location.reload()
-    }
-  },
-
+  }
 }
 </script>
 
