@@ -1,13 +1,13 @@
 <template>
-  <div id="app" :style="{backgroundColor: randomColor()}">
+  <div id="app" :style="{backgroundColor: bgColor}">
     <b-container fluid>
       <b-row>
         <h1 class="logo">Logo</h1>
       </b-row>
       <b-row class="justify-content-md-center decider">
-        <Decider :didIHearSaufi="didIHearSaufi()"/>
+        <Decider :didIHearSaufi="didIHearSaufiVar"/>
       </b-row>
-      <b-row v-if="didIHearTask()" class="justify-content-md-center task">
+      <b-row v-if="didIHearTaskVar" class="justify-content-md-center task">
         <Task/>
       </b-row>
       <b-row class="justify-content-md-center">
@@ -60,24 +60,32 @@ export default {
         {hexcode: '#BDB2FF'},
         {hexcode: '#FFC6FF'},
         {hexcode: '#FFFFFC'}
-      ]
+      ],
+      didIHearSaufiVar: Boolean,
+      didIHearTaskVar: Boolean,
+      bgColor: String,
     }
+  },
+  mounted: function() {
+    this.reload()
   },
   methods: {
     reload() {
-      window.location.reload()
-    },
-    didIHearTask() {
-      return Math.random() < 0.25
-    },
-    randomColor() {
-      const length = this.pastel.length
-      const color = Math.floor(Math.random() * (length - 0)) + 0
+      this.randomColor()
       this.didIHearSaufi()
-      return this.pastel[color].hexcode
+      this.didIHearTask()
     },
     didIHearSaufi() {
-      return Math.random() > 0.25
+      this.didIHearSaufiVar = Math.random() > 0.25
+    },
+    randomColor() {
+      console.log("Test")
+      const length = this.pastel.length
+      const color = Math.floor(Math.random() * (length - 0)) + 0
+      this.bgColor = this.pastel[color].hexcode
+    },
+    didIHearTask() {
+      this.didIHearTaskVar = Math.random() < 0.25
     },
   }
 }
