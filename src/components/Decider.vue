@@ -1,9 +1,8 @@
 <template>
     <b-col col md="6" >
         <div>
-            <h6 class="subheading">Saufi </h6>
-            <h1 class="heading">Du hast saufi gehört</h1>
-            <h1>{{ didIHearSaufi }}</h1>
+            <h6 class="subheading">{{ didIHearSaufi ? 'Yippie' : 'Schade'}}</h6>
+            <h1 class="heading">{{ didIHearSaufi ? 'Sie haben Saufi gehört!': 'Sie haben kein Saufi gehört!'}}</h1>
         </div>
     </b-col>
 </template>
