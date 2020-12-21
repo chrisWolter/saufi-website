@@ -80,7 +80,7 @@ export default {
       this.didIHearTask()
     },
     didIHearSaufi() {
-      this.didIHearSaufiVar = Math.random() > 0.25
+      this.didIHearSaufiVar = Math.random() > 0.3
     },
     randomColor() {
       console.log("Test")
