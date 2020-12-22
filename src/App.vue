@@ -1,10 +1,15 @@
 <template>
   <div id="app">
     <b-container fluid>
-        <b-row class="justify-content-md-center logo-row">
-            <b-col col md="6">
-                <h1 class="logo">Logo</h1>
-            </b-col>
+        <b-row class="justify-content-md-center">
+          <b-col cols="10" class="header-wrapper">
+          <h1 class="logo">Logo</h1>
+          </b-col>
+          <b-col cols="2" class="header-wrapper">
+            <button class="impressum-button" v-b-modal.impressum-modal>
+            <img src="./assets/information-icon.png" class="info-icon"> 
+</button>
+          </b-col>
         </b-row>
         <b-row id="saufi-decider" class="justify-content-md-center decider">
           <Decider :didIHearSaufi="didIHearSaufiVar" class="decider-elem" :style="{color: didIHearSaufiVar ? '' : 'white', 'background': bgColor}"/>
@@ -21,6 +26,10 @@
         </b-col>
       </b-row>
     </b-container>
+
+      <b-modal id="impressum-modal" title="Impressum">
+    <p class="my-4">Hello from modal!</p>
+  </b-modal>
   </div>
 </template>
 
@@ -116,21 +125,16 @@ export default {
     height: 100%;
     margin: 0;
     padding: 0;
-    /*overflow: hidden;*/
     font-family: 'Open Sans', sans-serif;
   }
   #app {
   min-width: 100%;
   min-height: 100%;
-  /*overflow: hidden;*/
   }
   .logo {
     text-align: center;
     padding: 20px 0;
     margin: 0 25px;
-  }
-  .logo-row {
-
   }
   .decider-elem  {
     box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
@@ -146,8 +150,6 @@ export default {
   }
   .task {
     margin-bottom: 40px;
-    /*max-height: var(--height);*/
-    /*overflow-y: auto;*/
   }
 
   .heading {
@@ -187,6 +189,24 @@ export default {
   .gradient{
     margin-right: -15px;
     margin-left: -15px;
+  }
+
+  .info-icon{
+    width: 20px;
+    height: 20px;
+  }
+
+  .header-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .impressum-button,
+  .impressum-button:focus{
+    background: none;
+    border: none;
+    outline: none;
   }
 
 .animation-task-enter-active {
