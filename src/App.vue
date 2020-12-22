@@ -167,10 +167,13 @@ export default {
     box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
     border-radius: 1.7em;
     padding: 1.6em;
-    margin: 15px;
+    margin: 15px 25px;
   }
   .task-elem {
-    margin: 15px;
+    margin: 15px 25px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+    border-radius: 1.7em;
+    padding: 1.6em;
   }
   .task {
     margin-bottom: 40px;
@@ -223,18 +226,18 @@ export default {
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 470px) {
   .heading {
     font-size: 2.3em;
   }
 }
 
-@media only screen and (max-width: 410px) {
+@media only screen and (max-width: 430px) {
   .heading {
     font-size: 2.0em;
   }
 }
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 375px) {
   .heading {
     font-size: 1.8em;
   }
