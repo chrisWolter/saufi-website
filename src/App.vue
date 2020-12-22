@@ -16,7 +16,7 @@
         </transition>
 
       <b-row id="reload-button" class="justify-content-md-center pos-bottom">
-        <b-col col md="6">
+        <b-col col md="6" class="mx-0">
           <b-button @click="reload()" block variant="primary" class="reload-button" :style="{color: didIHearSaufiVar ? 'black' : 'white', 'background': bgColor}">Hab ich Saufi gehört?</b-button>
         </b-col>
       </b-row>
@@ -161,15 +161,17 @@ export default {
   }
   .pos-bottom{
     position: absolute;
-    bottom: 25px;
+    bottom: 30px;
     width: 100%;
+    padding: 0px 15px;
   }
   .reload-button{
-    border-radius: 2rem !important;
-    background-color: white !important;
+    border-radius: 1em !important;
+    height: 45px;
+    font-size: 20px !important;
     font-weight: bold !important;
-    box-shadow: 1px 1px 6px grey !important;
     border: none !important;
+    box-shadow: none !important;
   }
   .gradient{
     margin-right: -15px;
