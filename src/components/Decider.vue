@@ -1,7 +1,7 @@
 <template>
     <b-col col md="6" >
         <div>
-            <h6 class="subheading">{{ didIHearSaufi ? 'Yippie' : 'Schade'}}</h6>
+            <h5 class="subheading">{{ didIHearSaufi ? 'Yippie' : 'Schade'}}</h5>
             <h1 class="heading">{{ didIHearSaufi ? 'Sie haben Saufi gehört!': 'Sie haben kein Saufi gehört!'}}</h1>
         </div>
     </b-col>

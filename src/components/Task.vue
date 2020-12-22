@@ -1,7 +1,7 @@
 <template>
     <b-col col md="6">
         <div v-if="task">
-            <h6 class="subheading">{{task.category}}</h6>
+            <h5 class="subheading">{{task.category}}</h5>
             <h1 class="heading">{{task.name}}</h1>
             <p>{{task.description}}</p>
         </div>

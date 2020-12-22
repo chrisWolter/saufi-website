@@ -168,6 +168,10 @@ export default {
     overflow-y: var(--overflow-hidden);
   }
 
+  .heading {
+    letter-spacing: -2px;
+    font-size: 2.5em;
+  }
   .subheading {
     margin: 0;
     font-family: 'Lobster Two', cursive;
@@ -189,4 +193,27 @@ export default {
     margin-right: -15px;
     margin-left: -15px;
   }
+
+@media only screen and (min-width: 500px) {
+  .decider {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .heading {
+    font-size: 2.3em;
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  .heading {
+    font-size: 2.0em;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .heading {
+    font-size: 1.8em;
+  }
+}
 </style>
