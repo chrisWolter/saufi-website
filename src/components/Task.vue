@@ -1,6 +1,6 @@
 <template>
     <b-col col md="6">
-        <div>
+        <div v-if="task">
             <h6 class="subheading">{{task.category}}</h6>
             <h1 class="heading">{{task.name}}</h1>
             <p>{{task.description}}</p>
@@ -9,18 +9,26 @@
 </template>
 
 <script>
-import tasksJSON from '../assets/tasks'
 let weightedRandom = require('weighted-random')
 
 export default {
     name: "Task",
+    props: {
+      tasksJson: {
+          type: Array
+      }
+    },
     computed: {
-      task() {
-          let tasks = [...tasksJSON]
-          let weights = tasks.map(task => task.weight)
-          let selection = weightedRandom(weights)
+        task() {
+            if(this.tasksJson) {
+                let tasks = JSON.parse(JSON.stringify(this.tasksJson))
+                let weights = tasks.map(task => task.weight)
+                let selection = weightedRandom(weights)
 
-          return tasks[selection]
+                return tasks[selection]
+            } else {
+                return undefined
+            }
       }
     }
 }
