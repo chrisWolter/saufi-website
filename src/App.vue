@@ -1,12 +1,16 @@
 <template>
-  <div id="app" :style="{backgroundColor: bgColor}">
+  <div id="app">
     <b-container fluid>
-      <b-row>
-        <h1 class="logo">Logo</h1>
-      </b-row>
-      <b-row id="saufi-decider" class="justify-content-md-center decider">
-        <Decider :didIHearSaufi="didIHearSaufiVar"/>
-      </b-row>
+      <div class="gradient" :style="{backgroundImage: bgColor}">
+        <b-row>
+          <h1 class="logo">Logo</h1>
+        </b-row>
+        <b-row id="saufi-decider" class="justify-content-md-center decider">
+          <Decider :didIHearSaufi="didIHearSaufiVar"/>
+        </b-row>
+      </div>
+      <div class="background-gradient">
+      </div>
       <b-row v-if="didIHearTaskVar"  id="task-decider" class="justify-content-md-center task" :style="cssVars">
         <Task/>
       </b-row>
@@ -61,6 +65,15 @@ export default {
         {hexcode: '#FFC6FF'},
         {hexcode: '#FFFFFC'}
       ],
+      gradients: [
+        {gradient: 'linear-gradient( 135deg, #2AFADF 10%, #4C83FF 100%)'},
+        {gradient: 'linear-gradient( 135deg, #EECE13 10%, #B210FF 100%)'},
+        {gradient: 'linear-gradient( 135deg, #FFF720 10%, #3CD500 100%)'},
+        {gradient: 'linear-gradient( 135deg, #FD6E6A 10%, #FFC600 100%)'},
+        {gradient: 'linear-gradient( 135deg, #F0FF00 10%, #58CFFB 100%)'},
+        {gradient: 'linear-gradient( 135deg, #81FFEF 10%, #F067B4 100%)'},
+        {gradient: 'linear-gradient( 135deg, #FFF6B7 10%, #F6416C 100%)'},
+      ],
       didIHearSaufiVar: Boolean,
       didIHearTaskVar: Boolean,
       bgColor: String,
@@ -82,9 +95,9 @@ export default {
       this.didIHearSaufiVar = Math.random() > 0.3
     },
     randomColor() {
-      const length = this.pastel.length
+      const length = this.gradients.length
       const color = Math.floor(Math.random() * (length - 0)) + 0
-      this.bgColor = this.pastel[color].hexcode
+      this.bgColor = this.gradients[color].gradient
     },
     didIHearTask() {
       this.didIHearTaskVar = Math.random() < 0.25
@@ -122,6 +135,7 @@ export default {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background: rgb(2,0,36);
   }
   #app {
   min-width: 100%;
@@ -136,11 +150,15 @@ export default {
   .decider {
     margin-bottom: 40px;
     max-height: 120px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   .task {
     margin-bottom: 40px;
     max-height: var(--height);
     overflow-y: var(--overflow-hidden);
+    margin-top: -40px;
+    color: white;
   }
 
   .subheading {
@@ -158,5 +176,25 @@ export default {
     font-weight: bold !important;
     box-shadow: 1px 1px 6px grey !important;
     border: none !important;
+  }
+  .gradient{
+    margin-right: -15px;
+    margin-left: -15px;
+    height: 300px;
+  }
+  .background-gradient{
+    position: absolute;
+    width: 100%;
+    margin-left: -15px;
+    height: 100%;
+    top: 100px;
+    background: rgb(2,0,36);
+background: linear-gradient(180deg, rgba(2,0,36,0) 0%, rgba(2,0,36,0.2) 8%, rgba(2,0,36,0.5) 12%, rgba(2,0,36,1) 20%);
+  }
+  @media screen and (max-width: 576px){
+    .background-gradient{
+      top: 145px;
+      background: linear-gradient(180deg, rgba(2,0,36,0) 0%, rgba(2,0,36,0.2) 6%, rgba(2,0,36,0.5) 12%, rgba(2,0,36,1) 20%);
+    }
   }
 </style>
