@@ -1,8 +1,10 @@
 <template>
   <div id="app">
     <b-container fluid>
-        <b-row>
-          <h1 class="logo">Logo</h1>
+        <b-row class="justify-content-md-center">
+            <b-col col md="6">
+                <h1 class="logo">Logo</h1>
+            </b-col>
         </b-row>
         <b-row id="saufi-decider" class="justify-content-md-center decider">
           <Decider :didIHearSaufi="didIHearSaufiVar" class="decider-elem" :style="{color: didIHearSaufiVar ? '' : 'white', 'background': bgColor}"/>
@@ -125,8 +127,8 @@ export default {
   }
   .logo {
     text-align: center;
-    width: 100%;
-    margin-bottom: 40px;
+    padding: 20px 0;
+    margin: 0 25px;
   }
   .decider {
     margin-bottom: 10px;
