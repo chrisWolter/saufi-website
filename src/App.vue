@@ -130,13 +130,10 @@ export default {
     padding: 20px 0;
     margin: 0 25px;
   }
-  .decider {
-    margin-bottom: 10px;
-  }
   .decider-elem  {
     box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
     border-radius: 1.7em;
-    padding: 1.6em;
+    padding: 1em;
     margin: 15px 25px;
   }
   .task-elem {
@@ -214,6 +211,11 @@ export default {
   }
 }
 
+@media only screen and (max-width: 350px) {
+    .heading {
+        font-size: 1.6em;
+    }
+}
 /**
  * ----------------------------------------
  * animation scale-up-center
