@@ -139,7 +139,7 @@ export default {
     margin: 15px 25px;
   }
   .task-elem {
-    margin: 15px 30px 100px 30px;
+    margin: 15px 30px 120px 30px;
     box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
     border-radius: 1.7em;
     padding: 1.6em;
