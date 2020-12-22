@@ -161,7 +161,7 @@ export default {
     margin-bottom: 40px;
   }
   .decider {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   .decider-elem  {
     box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
