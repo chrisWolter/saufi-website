@@ -138,7 +138,6 @@ export default {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgb(2,0,36);
     font-family: 'Open Sans', sans-serif;
   }
   #app {
@@ -152,7 +151,7 @@ export default {
     margin-bottom: 40px;
   }
   .decider {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
   .decider-elem  {
     box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
@@ -189,25 +188,5 @@ export default {
   .gradient{
     margin-right: -15px;
     margin-left: -15px;
-    height: 300px;
-  }
-/*  .background-gradient{*/
-/*    position: absolute;*/
-/*    width: 100%;*/
-/*    margin-left: -15px;*/
-/*    height: 100%;*/
-/*    top: 100px;*/
-/*    background: rgb(2,0,36);*/
-/*background: linear-gradient(180deg, rgba(2,0,36,0) 0%, rgba(2,0,36,0.2) 8%, rgba(2,0,36,0.5) 12%, rgba(2,0,36,1) 20%);*/
-/*  }*/
-/*  @media screen and (max-width: 576px){*/
-/*    .background-gradient{*/
-/*      top: 145px;*/
-/*      background: linear-gradient(180deg, rgba(2,0,36,0) 0%, rgba(2,0,36,0.2) 6%, rgba(2,0,36,0.5) 12%, rgba(2,0,36,1) 20%);*/
-/*    }*/
-/*  }*/
-
-  decider-elem {
-
   }
 </style>
