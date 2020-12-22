@@ -5,7 +5,7 @@
           <h1 class="logo">Logo</h1>
         </b-row>
         <b-row id="saufi-decider" class="justify-content-md-center decider">
-          <Decider :didIHearSaufi="didIHearSaufiVar" class="decider-elem" :style="{backgroundImage: bgColor}"/>
+          <Decider :didIHearSaufi="didIHearSaufiVar" class="decider-elem" :style="{color: didIHearSaufiVar ? '' : 'white', 'background': bgColor}"/>
         </b-row>
         <transition name="animation-task">
             <b-row v-show="didIHearTaskVar"  id="task-decider" class="justify-content-md-center task" :style="cssVars">
@@ -15,7 +15,7 @@
 
       <b-row id="reload-button" class="justify-content-md-center pos-bottom">
         <b-col col md="6">
-          <b-button @click="reload()" block variant="primary" class="reload-button">Hab ich saufi gehört?</b-button>
+          <b-button @click="reload()" block variant="primary" class="reload-button" :style="{color: didIHearSaufiVar ? 'black' : 'white', 'background': bgColor}">Hab ich Saufi gehört?</b-button>
         </b-col>
       </b-row>
     </b-container>
@@ -48,44 +48,9 @@ export default {
   },
   data () {
     return {
-      bright: [
-        {hexcode: '#54478C'},
-        {hexcode: '#2C699A'},
-        {hexcode: '#048BA8'},
-        {hexcode: '#0DB39E'},
-        {hexcode: '#16DB93'},
-        {hexcode: '#83E377'},
-        {hexcode: '#B9E769'},
-        {hexcode: '#EFEA5A'},
-        {hexcode: '#F1C453'},
-        {hexcode: '#F29E4C'}
-      ],
-      smallBright: [
-        {hexcode: '#1A535C'},
-        {hexcode: '#4ECDC4'},
-        {hexcode: '#F7FFF7'},
-        {hexcode: '#FF6B6B'},
-        {hexcode: '#FFE66D'}
-      ],
-      pastel: [
-        {hexcode: '#FFADAD'},
-        {hexcode: '#FFD6A5'},
-        {hexcode: '#FDFFB6'},
-        {hexcode: '#CAFFBF'},
-        {hexcode: '#9BF6FF'},
-        {hexcode: '#A0C4FF'},
-        {hexcode: '#BDB2FF'},
-        {hexcode: '#FFC6FF'},
-        {hexcode: '#FFFFFC'}
-      ],
       gradients: [
-        {gradient: 'linear-gradient( 135deg, #2AFADF 10%, #4C83FF 100%)'},
-        {gradient: 'linear-gradient( 135deg, #EECE13 10%, #B210FF 100%)'},
-        {gradient: 'linear-gradient( 135deg, #FFF720 10%, #3CD500 100%)'},
-        {gradient: 'linear-gradient( 135deg, #FD6E6A 10%, #FFC600 100%)'},
-        {gradient: 'linear-gradient( 135deg, #F0FF00 10%, #58CFFB 100%)'},
-        {gradient: 'linear-gradient( 135deg, #81FFEF 10%, #F067B4 100%)'},
-        {gradient: 'linear-gradient( 135deg, #FFF6B7 10%, #F6416C 100%)'},
+        {gradient: 'linear-gradient(to right, #dce35b, #45b649)'},
+        {gradient: 'linear-gradient(to right, #ee0979, #ff6a00)'},
       ],
       didIHearSaufiVar: Boolean,
       didIHearTaskVar: Boolean,
@@ -105,18 +70,21 @@ export default {
   },
   methods: {
     reload() {
-      this.randomColor()
       this.didIHearSaufi()
       this.didIHearTask()
+      this.randomColor()
       animateDecider_in_bottomTop()
     },
     didIHearSaufi() {
       this.didIHearSaufiVar = Math.random() > 0.3
     },
     randomColor() {
-      const length = this.gradients.length
-      const color = Math.floor(Math.random() * (length - 0)) + 0
-      this.bgColor = this.gradients[color].gradient
+      console.log(this.didIHearSaufiVar)
+      if(this.didIHearSaufiVar){
+      this.bgColor = this.gradients[0].gradient
+      }else{
+        this.bgColor = this.gradients[1].gradient
+      }
     },
     didIHearTask() {
       this.didIHearTaskVar = Math.random() < 0.25
@@ -197,7 +165,6 @@ export default {
   .reload-button{
     border-radius: 2rem !important;
     background-color: white !important;
-    color: black !important;
     font-weight: bold !important;
     box-shadow: 1px 1px 6px grey !important;
     border: none !important;
