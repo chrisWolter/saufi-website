@@ -20,6 +20,7 @@ export default {
     },
     computed: {
         task() {
+            console.log(this.tasksJson);
             if(this.tasksJson) {
                 let tasks = JSON.parse(JSON.stringify(this.tasksJson))
                 let weights = tasks.map(task => task.weight)
