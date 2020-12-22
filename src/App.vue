@@ -141,7 +141,7 @@ export default {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background: rgb(2,0,36);
+    background-color: rgb(2,0,36);
   }
   #app {
   min-width: 100%;
