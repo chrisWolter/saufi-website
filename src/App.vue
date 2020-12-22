@@ -1,18 +1,14 @@
 <template>
   <div id="app">
     <b-container fluid>
-      <div class="gradient" :style="{backgroundImage: bgColor}">
         <b-row>
           <h1 class="logo">Logo</h1>
         </b-row>
         <b-row id="saufi-decider" class="justify-content-md-center decider">
-          <Decider :didIHearSaufi="didIHearSaufiVar"/>
+          <Decider :didIHearSaufi="didIHearSaufiVar" class="decider-elem" :style="{backgroundImage: bgColor}"/>
         </b-row>
-      </div>
-      <div class="background-gradient">
-      </div>
       <b-row v-if="didIHearTaskVar"  id="task-decider" class="justify-content-md-center task" :style="cssVars">
-        <Task :tasks-json="tasksJson"/>
+        <Task :tasks-json="tasksJson" class="task-elem"/>
       </b-row>
       <b-row id="reload-button" class="justify-content-md-center pos-bottom">
         <b-col col md="6">
@@ -155,16 +151,20 @@ export default {
   }
   .decider {
     margin-bottom: 40px;
-    max-height: 120px;
-    padding-left: 15px;
-    padding-right: 15px;
+  }
+  .decider-elem  {
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+    border-radius: 1.7em;
+    padding: 1.6em;
+    margin: 15px;
+  }
+  .task-elem {
+    margin: 15px;
   }
   .task {
     margin-bottom: 40px;
     max-height: var(--height);
     overflow-y: var(--overflow-hidden);
-    margin-top: -40px;
-    color: white;
   }
 
   .subheading {
@@ -188,19 +188,23 @@ export default {
     margin-left: -15px;
     height: 300px;
   }
-  .background-gradient{
-    position: absolute;
-    width: 100%;
-    margin-left: -15px;
-    height: 100%;
-    top: 100px;
-    background: rgb(2,0,36);
-background: linear-gradient(180deg, rgba(2,0,36,0) 0%, rgba(2,0,36,0.2) 8%, rgba(2,0,36,0.5) 12%, rgba(2,0,36,1) 20%);
-  }
-  @media screen and (max-width: 576px){
-    .background-gradient{
-      top: 145px;
-      background: linear-gradient(180deg, rgba(2,0,36,0) 0%, rgba(2,0,36,0.2) 6%, rgba(2,0,36,0.5) 12%, rgba(2,0,36,1) 20%);
-    }
+/*  .background-gradient{*/
+/*    position: absolute;*/
+/*    width: 100%;*/
+/*    margin-left: -15px;*/
+/*    height: 100%;*/
+/*    top: 100px;*/
+/*    background: rgb(2,0,36);*/
+/*background: linear-gradient(180deg, rgba(2,0,36,0) 0%, rgba(2,0,36,0.2) 8%, rgba(2,0,36,0.5) 12%, rgba(2,0,36,1) 20%);*/
+/*  }*/
+/*  @media screen and (max-width: 576px){*/
+/*    .background-gradient{*/
+/*      top: 145px;*/
+/*      background: linear-gradient(180deg, rgba(2,0,36,0) 0%, rgba(2,0,36,0.2) 6%, rgba(2,0,36,0.5) 12%, rgba(2,0,36,1) 20%);*/
+/*    }*/
+/*  }*/
+
+  decider-elem {
+
   }
 </style>
