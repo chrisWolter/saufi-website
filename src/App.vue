@@ -2,7 +2,7 @@
   <div id="app">
     <b-container fluid>
         <b-row class="justify-content-md-center">
-          <b-col cols="10" class="header-wrapper">
+          <b-col cols="8" offset="2" class="header-wrapper">
           <h1 class="logo">Logo</h1>
           </b-col>
           <b-col cols="2" class="header-wrapper">
@@ -66,7 +66,6 @@ export default {
       didIHearSaufiVar: Boolean,
       didIHearTaskVar: Boolean,
       bgColor: String,
-      taskHeight: String,
       tasksJson: null
     }
   },
@@ -107,14 +106,6 @@ export default {
 
       this.taskHeight = calculatedTaskHeight + 'px'
     },
-  },
-  computed: {
-    cssVars() {
-      return {
-        '--height': this.taskHeight,
-        '--overflow-hidden': this.needOverflow
-      }
-    }
   }
 }
 </script>
