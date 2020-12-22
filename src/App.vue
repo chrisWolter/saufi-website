@@ -12,7 +12,7 @@
       </b-row>
       <b-row id="reload-button" class="justify-content-md-center pos-bottom">
         <b-col col md="6">
-          <b-button @click="reload()" block variant="primary">Hab ich saufi gehört?</b-button>
+          <b-button @click="reload()" block variant="primary" class="reload-button">Hab ich saufi gehört?</b-button>
         </b-col>
       </b-row>
     </b-container>
@@ -150,5 +150,13 @@ export default {
     position: absolute;
     bottom: 25px;
     width: 100%;
+  }
+  .reload-button{
+    border-radius: 2rem !important;
+    background-color: white !important;
+    color: black !important;
+    font-weight: bold !important;
+    box-shadow: 1px 1px 6px grey !important;
+    border: none !important;
   }
 </style>
