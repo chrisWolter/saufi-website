@@ -74,7 +74,6 @@ export default {
       didIHearTaskVar: Boolean,
       bgColor: String,
       taskHeight: String,
-      needOverflow: String,
       tasksJson: null
     }
   },
@@ -108,16 +107,9 @@ export default {
       const viewHeigth = window.innerHeight
       const titleHeigth = document.getElementById('saufi-decider').getBoundingClientRect().bottom + 40
       const buttonPosition = document.getElementById('reload-button').getBoundingClientRect().top - 40
-      const taskHeight = document.getElementById('task-decider').getBoundingClientRect().height
       const calculatedTaskHeight = viewHeigth - titleHeigth - (viewHeigth - buttonPosition)
 
       this.taskHeight = calculatedTaskHeight + 'px'
-
-      if(calculatedTaskHeight < taskHeight){
-        this.needOverflow = 'scroll'
-      }else {
-        this.needOverflow =  'hidden'
-      }
     },
   },
   computed: {
@@ -165,7 +157,7 @@ export default {
   .task {
     margin-bottom: 40px;
     max-height: var(--height);
-    overflow-y: var(--overflow-hidden);
+    overflow-y: auto;
   }
 
   .heading {
