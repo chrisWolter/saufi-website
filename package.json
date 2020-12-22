@@ -8,9 +8,12 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "bootstrap-vue": "^2.21.1",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
+    "vue-async-computed": "^3.9.0",
+    "vue-axios": "^3.2.0",
     "weighted-random": "^0.1.0"
   },
   "devDependencies": {

@@ -8,7 +8,7 @@
         <Decider :didIHearSaufi="didIHearSaufiVar"/>
       </b-row>
       <b-row v-if="didIHearTaskVar"  id="task-decider" class="justify-content-md-center task" :style="cssVars">
-        <Task/>
+        <Task :tasks-json="tasksJson"/>
       </b-row>
       <b-row id="reload-button" class="justify-content-md-center pos-bottom">
         <b-col col md="6">
@@ -65,10 +65,16 @@ export default {
       didIHearTaskVar: Boolean,
       bgColor: String,
       taskHeight: String,
-      needOverflow: String
+      needOverflow: String,
+      tasksJson: null
     }
   },
-  mounted: function() {
+  mounted() {
+    this.axios
+        .get('https://alexherrmi.github.io/json/tasks.json')
+        .then(resp =>
+          this.tasksJson = resp.data
+        )
     this.reload()
     this.setTaskStyle()
   },
