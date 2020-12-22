@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <b-container fluid>
-        <b-row class="justify-content-md-center">
+        <b-row class="justify-content-md-center logo-row">
             <b-col col md="6">
                 <h1 class="logo">Logo</h1>
             </b-col>
@@ -10,7 +10,7 @@
           <Decider :didIHearSaufi="didIHearSaufiVar" class="decider-elem" :style="{color: didIHearSaufiVar ? '' : 'white', 'background': bgColor}"/>
         </b-row>
         <transition name="animation-task">
-            <b-row v-show="didIHearTaskVar"  id="task-decider" class="justify-content-md-center task" :style="cssVars">
+            <b-row v-show="didIHearTaskVar"  id="task-decider" class="justify-content-md-center task" >
                 <Task :tasks-json="tasksJson" class="task-elem"/>
             </b-row>
         </transition>
@@ -81,7 +81,6 @@ export default {
       this.didIHearSaufiVar = Math.random() > 0.3
     },
     randomColor() {
-      console.log(this.didIHearSaufiVar)
       if(this.didIHearSaufiVar){
       this.bgColor = this.gradients[0].gradient
       }else{
@@ -117,18 +116,21 @@ export default {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    /*overflow: hidden;*/
     font-family: 'Open Sans', sans-serif;
   }
   #app {
   min-width: 100%;
   min-height: 100%;
-  overflow: hidden;
+  /*overflow: hidden;*/
   }
   .logo {
     text-align: center;
     padding: 20px 0;
     margin: 0 25px;
+  }
+  .logo-row {
+
   }
   .decider-elem  {
     box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
@@ -137,15 +139,15 @@ export default {
     margin: 15px 25px;
   }
   .task-elem {
-    margin: 15px 25px;
+    margin: 15px 30px 100px 30px;
     box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
     border-radius: 1.7em;
     padding: 1.6em;
   }
   .task {
     margin-bottom: 40px;
-    max-height: var(--height);
-    overflow-y: auto;
+    /*max-height: var(--height);*/
+    /*overflow-y: auto;*/
   }
 
   .heading {
@@ -157,10 +159,22 @@ export default {
     font-family: 'Lobster Two', cursive;
   }
   .pos-bottom{
-    position: absolute;
+    position: fixed;
     bottom: 30px;
     width: 100%;
     padding: 0px 15px;
+  }
+  .pos-bottom::after {
+      content: '';
+      position: absolute;
+      background: rgb(255,255,255);
+      background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 65%, rgba(0,212,255,0) 100%);
+      width: 100%;
+      left: 0;
+      top: -60px;
+      height: 140px;
+      z-index: -1;
+
   }
   .reload-button{
     border-radius: 1em !important;
