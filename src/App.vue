@@ -17,7 +17,7 @@
         </b-row>
         <transition name="animation-task">
             <b-row v-show="didIHearTaskVar"  id="task-decider" class="justify-content-md-center task" >
-                <Task :tasks-json="tasksJson" class="task-elem"/>
+                <Task :tasks-json="tasksJson" :trigger="triggerButton" class="task-elem"/>
             </b-row>
         </transition>
 
@@ -82,7 +82,9 @@ export default {
       didIHearSaufiVar: Boolean,
       didIHearTaskVar: Boolean,
       bgColor: String,
-      tasksJson: null
+      taskHeight: String,
+      tasksJson: null,
+      triggerButton: false,
     }
   },
   mounted() {
@@ -112,8 +114,9 @@ export default {
       }
     },
     didIHearTask() {
-      this.didIHearTaskVar = Math.random() < 0.25
-    },
+      this.didIHearTaskVar = Math.random() > 0.25
+      this.triggerButton = !this.triggerButton
+     },
     setTaskStyle(){
       const viewHeigth = window.innerHeight
       const titleHeigth = document.getElementById('saufi-decider').getBoundingClientRect().bottom + 40

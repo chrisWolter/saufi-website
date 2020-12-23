@@ -16,10 +16,18 @@ export default {
     props: {
       tasksJson: {
           type: Array
+      },
+      trigger: {
+          type: Boolean
       }
     },
-    computed: {
-        task() {
+    data() {
+      return {
+          task: null
+      }
+    },
+    methods: {
+        getTask() {
             if(this.tasksJson) {
                 let tasks = JSON.parse(JSON.stringify(this.tasksJson))
                 let weights = tasks.map(task => task.weight)
@@ -29,7 +37,15 @@ export default {
             } else {
                 return undefined
             }
-      }
+        }
+    },
+    created() {
+        this.task = this.getTask()
+    },
+    watch: {
+        trigger() {
+            this.task = this.getTask()
+        }
     }
 }
 </script>
