@@ -21,7 +21,7 @@
 
         <b-row id="reload-button" class="justify-content-md-center pos-bottom">
           <b-col col md="6" class="mx-0">
-            <b-button @click="reload()" block variant="primary" class="reload-button" :style="{'background': bgColor}">Hab ich Saufi gehört?</b-button>
+            <b-button @click="reload()" block class="reload-button" :style="{'background': bgColor}">Hab ich Saufi gehört?</b-button>
           </b-col>
         </b-row>
       </div>
