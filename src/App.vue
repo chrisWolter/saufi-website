@@ -106,7 +106,7 @@ export default {
       animateDecider_in_bottomTop()
     },
     didIHearSaufi() {
-      this.didIHearSaufiVar = Math.random() > 0.3
+      this.didIHearSaufiVar = Math.random() > 0.4
     },
     randomColor() {
       if(this.didIHearSaufiVar){
@@ -116,7 +116,7 @@ export default {
       }
     },
     didIHearTask() {
-      this.didIHearTaskVar = Math.random() > 0.25
+      this.didIHearTaskVar = Math.random() < 0.45
       this.triggerButton = !this.triggerButton
      },
     setTaskStyle(){
