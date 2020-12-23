@@ -1,13 +1,18 @@
 <template>
   <div id="app">
     <b-container fluid>
-        <b-row class="justify-content-md-center logo-row">
-            <b-col col md="6">
-                <h1 class="logo">Logo</h1>
-            </b-col>
+        <b-row class="justify-content-md-center">
+          <b-col cols="8" offset="2" class="header-wrapper">
+          <h1 class="logo">Logo</h1>
+          </b-col>
+          <b-col cols="2" class="header-wrapper">
+            <button class="impressum-button" v-b-modal.impressum-modal>
+            <img src="./assets/information-icon.png" class="info-icon"> 
+</button>
+          </b-col>
         </b-row>
         <b-row id="saufi-decider" class="justify-content-md-center decider">
-          <Decider :didIHearSaufi="didIHearSaufiVar" class="decider-elem" :style="{color: didIHearSaufiVar ? '' : 'white', 'background': bgColor}"/>
+          <Decider :didIHearSaufi="didIHearSaufiVar" class="decider-elem" :style="{'background': bgColor}"/>
         </b-row>
         <transition name="animation-task">
             <b-row v-show="didIHearTaskVar"  id="task-decider" class="justify-content-md-center task" >
@@ -17,10 +22,28 @@
 
       <b-row id="reload-button" class="justify-content-md-center pos-bottom">
         <b-col col md="6" class="mx-0">
-          <b-button @click="reload()" block variant="primary" class="reload-button" :style="{color: didIHearSaufiVar ? 'black' : 'white', 'background': bgColor}">Hab ich Saufi gehört?</b-button>
+          <b-button @click="reload()" block variant="primary" class="reload-button" :style="{'background': bgColor}">Hab ich Saufi gehört?</b-button>
         </b-col>
       </b-row>
     </b-container>
+
+      <b-modal id="impressum-modal" title="Information" hide-footer>
+    <div class="d-block">
+      <h4>Allgemeine Infos</h4>
+      <p>Diese Website wurde mit viel Herz und Alkohol von Alexander Herrmann 
+        und Christian Wolter entwickelt. Bei Fragen, Anregungen oder Ideen für Spiele könnt Ihr uns einfach eine Emails schreiben.</p>
+        <a href="mailto:alex@hab-ich-saufi-gehoert.de">Mail an Alex</a>
+        <br />
+        <a href="mailto:chris@hab-ich-saufi-gehoert.de" class="mt-4">Mail an Chris</a>
+        <br />
+        <p class="mt-4">Vielen Dank an Manuel und Max, die uns bei der Erstellung der Aufgaben geholfen haben.</p>
+        <p>Ein Dank geht auch an alle Beta tester raus, deren Lebern das Spiel nicht so gefeiert haben</p>
+
+      <h4>Roadmap</h4>
+      <p>Wir arbeiten derweil schon an einer neuen Version von Hab ich Saufi gehört. Also seit gespannt was da auf euch irgendwann zukommt.
+        Wir können nur soviel verraten: Lobbysystem und noch mehr Spaß!</p> 
+    </div>
+  </b-modal>
   </div>
 </template>
 
@@ -51,8 +74,8 @@ export default {
   data () {
     return {
       gradients: [
-        {gradient: 'linear-gradient(to right, #dce35b, #45b649)'},
-        {gradient: 'linear-gradient(to right, #ee0979, #ff6a00)'},
+        {gradient: 'linear-gradient(to right, #dce35b, #45b649)'}, /* Grün */
+        {gradient: 'linear-gradient(to right, #f7b733, #fc4a1a)'}, /* Rot */
       ],
       didIHearSaufiVar: Boolean,
       didIHearTaskVar: Boolean,
@@ -100,14 +123,6 @@ export default {
 
       this.taskHeight = calculatedTaskHeight + 'px'
     },
-  },
-  computed: {
-    cssVars() {
-      return {
-        '--height': this.taskHeight,
-        '--overflow-hidden': this.needOverflow
-      }
-    }
   }
 }
 </script>
@@ -118,27 +133,23 @@ export default {
     height: 100%;
     margin: 0;
     padding: 0;
-    /*overflow: hidden;*/
     font-family: 'Open Sans', sans-serif;
   }
   #app {
   min-width: 100%;
   min-height: 100%;
-  /*overflow: hidden;*/
   }
   .logo {
     text-align: center;
     padding: 20px 0;
     margin: 0 25px;
   }
-  .logo-row {
-
-  }
   .decider-elem  {
     box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
     border-radius: 1.7em;
     padding: 1em;
     margin: 15px 25px;
+    color: black;
   }
   .task-elem {
     margin: 15px 30px 120px 30px;
@@ -148,13 +159,12 @@ export default {
   }
   .task {
     margin-bottom: 40px;
-    /*max-height: var(--height);*/
-    /*overflow-y: auto;*/
   }
 
   .heading {
     letter-spacing: -2px;
     font-size: 2.5em;
+    font-weight: 700;
   }
   .subheading {
     margin: 0;
@@ -185,10 +195,29 @@ export default {
     font-weight: bold !important;
     border: none !important;
     box-shadow: none !important;
+    color: black !important;
   }
   .gradient{
     margin-right: -15px;
     margin-left: -15px;
+  }
+
+  .info-icon{
+    width: 20px;
+    height: 20px;
+  }
+
+  .header-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .impressum-button,
+  .impressum-button:focus{
+    background: none;
+    border: none;
+    outline: none;
   }
 
 .animation-task-enter-active {
