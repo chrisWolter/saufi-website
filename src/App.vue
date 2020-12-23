@@ -3,7 +3,7 @@
     <b-container fluid>
         <b-row class="justify-content-md-center header">
           <b-col cols="8" offset="2" class="header-wrapper">
-          <h4 class="logo mx-0">Hab ich <span class="saufi-span">Saufi</span> gehört?</h4>
+          <h2 class="logo mx-0">Saufi?</h2>
           </b-col>
           <b-col cols="2" class="header-wrapper">
             <button class="impressum-button" v-b-modal.impressum-modal>
@@ -133,6 +133,7 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap');  
   html, body {
     margin: 0;
     padding: 0;
@@ -146,12 +147,7 @@ export default {
     text-align: center;
     padding: 20px 0;
     margin: 0 25px;
-    overflow: visible;
-   white-space: nowrap;
-  }
-  .saufi-span{
-    font-family: 'Lobster Two', cursive;
-    font-weight: bold;
+    font-family: 'Kalam', cursive;
   }
   .decider-elem  {
     box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
@@ -163,9 +159,6 @@ export default {
   .task-elem {
     margin: 15px 30px 120px 30px;
     padding: 0 !important;
-  }
-  .task {
-    margin-bottom: 40px;
   }
 
   .heading {
@@ -226,6 +219,7 @@ export default {
     background: none;
     border: none;
     outline: none;
+    margin-top: -10px
   }
 
   .header{
