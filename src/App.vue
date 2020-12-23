@@ -192,7 +192,7 @@ export default {
 
   }
   .reload-button{
-    border-radius: 1em !important;
+    border-radius: 0.8em !important;
     height: 45px;
     font-size: 20px !important;
     font-weight: 700 !important;
