@@ -183,14 +183,14 @@ export default {
   .pos-bottom::after {
       content: '';
       position: absolute;
-      background: rgb(255,255,255);
-      background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 65%, rgba(0,212,255,0) 100%);
+      background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 65%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 65%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 65%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       width: 100%;
       left: 0;
       top: -60px;
       height: 140px;
       z-index: -1;
-
   }
   .reload-button{
     border-radius: 0.8em !important;
@@ -200,6 +200,7 @@ export default {
     border: none !important;
     box-shadow: none !important;
     color: black !important;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.2) !important;
   }
   .gradient{
     margin-right: -15px;
@@ -243,8 +244,11 @@ export default {
     content: '';
     position: absolute;
     width: 100%;
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 65%, rgba(0,212,255,0) 100%);
     height: 80px;
+    margin-left: -15px;
+    background: -moz-linear-gradient(bottom,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 65%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 65%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 65%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   }
 
   .content-container{
