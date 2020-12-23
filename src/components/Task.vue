@@ -40,11 +40,7 @@ export default {
         }
     },
     created() {
-        // Because this.tasksJson is asnychronous
-        setTimeout(() => {
-            this.task = this.getTask()
-        }, 100)
-
+        this.task = this.getTask()
     },
     watch: {
         trigger() {

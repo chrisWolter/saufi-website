@@ -7,7 +7,7 @@
           </b-col>
           <b-col cols="2" class="header-wrapper">
             <button class="impressum-button" v-b-modal.impressum-modal>
-            <img src="./assets/information-icon.png" class="info-icon"> 
+            <img src="./assets/information-icon.png" class="info-icon">
 </button>
           </b-col>
         </b-row>
@@ -32,7 +32,7 @@
       <b-modal id="impressum-modal" title="Information" hide-footer>
     <div class="d-block">
       <h4>Allgemeine Infos</h4>
-      <p>Diese Website wurde mit viel Herz und Alkohol von Alexander Herrmann 
+      <p>Diese Website wurde mit viel Herz und Alkohol von Alexander Herrmann
         und Christian Wolter entwickelt. Bei Fragen, Anregungen oder Ideen für Spiele könnt Ihr uns einfach eine Emails schreiben.</p>
         <a href="mailto:alex@hab-ich-saufi-gehoert.de">Mail an Alex</a>
         <br />
@@ -43,7 +43,7 @@
 
       <h4>Roadmap</h4>
       <p>Wir arbeiten derweil schon an einer neuen Version von Hab ich Saufi gehört. Also seit gespannt was da auf euch irgendwann zukommt.
-        Wir können nur soviel verraten: Lobbysystem und noch mehr Spaß!</p> 
+        Wir können nur soviel verraten: Lobbysystem und noch mehr Spaß!</p>
     </div>
   </b-modal>
   </div>
@@ -87,8 +87,8 @@ export default {
       triggerButton: false,
     }
   },
-  mounted() {
-    this.axios
+  async mounted() {
+    await this.axios
         .get('https://alexherrmi.github.io/json/tasks.json')
         .then(resp =>
           this.tasksJson = resp.data
