@@ -12,7 +12,7 @@
           </b-col>
         </b-row>
         <b-row id="saufi-decider" class="justify-content-md-center decider">
-          <Decider :didIHearSaufi="didIHearSaufiVar" class="decider-elem" :style="{color: didIHearSaufiVar ? '' : 'white', 'background': bgColor}"/>
+          <Decider :didIHearSaufi="didIHearSaufiVar" class="decider-elem" :style="{'background': bgColor}"/>
         </b-row>
         <transition name="animation-task">
             <b-row v-show="didIHearTaskVar"  id="task-decider" class="justify-content-md-center task" >
@@ -22,7 +22,7 @@
 
       <b-row id="reload-button" class="justify-content-md-center pos-bottom">
         <b-col col md="6" class="mx-0">
-          <b-button @click="reload()" block variant="primary" class="reload-button" :style="{color: didIHearSaufiVar ? 'black' : 'white', 'background': bgColor}">Hab ich Saufi gehört?</b-button>
+          <b-button @click="reload()" block variant="primary" class="reload-button" :style="{'background': bgColor}">Hab ich Saufi gehört?</b-button>
         </b-col>
       </b-row>
     </b-container>
@@ -74,8 +74,8 @@ export default {
   data () {
     return {
       gradients: [
-        {gradient: 'linear-gradient(to right, #dce35b, #45b649)'},
-        {gradient: 'linear-gradient(to right, #ee0979, #ff6a00)'},
+        {gradient: 'linear-gradient(to right, #dce35b, #45b649)'}, /* Grün */
+        {gradient: 'linear-gradient(to right, #f7b733, #fc4a1a)'}, /* Rot */
       ],
       didIHearSaufiVar: Boolean,
       didIHearTaskVar: Boolean,
@@ -146,6 +146,7 @@ export default {
     border-radius: 1.7em;
     padding: 1em;
     margin: 15px 25px;
+    color: black;
   }
   .task-elem {
     margin: 15px 30px 120px 30px;
@@ -160,6 +161,7 @@ export default {
   .heading {
     letter-spacing: -2px;
     font-size: 2.5em;
+    font-weight: 700;
   }
   .subheading {
     margin: 0;
@@ -190,6 +192,7 @@ export default {
     font-weight: bold !important;
     border: none !important;
     box-shadow: none !important;
+    color: black !important;
   }
   .gradient{
     margin-right: -15px;
