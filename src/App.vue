@@ -138,6 +138,7 @@ export default {
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
+    background-color: white
   }
   #app {
   min-width: 100%;
@@ -242,12 +243,12 @@ export default {
     content: '';
     position: absolute;
     width: 100%;
-    height: 100px;
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 65%, rgba(0,212,255,0) 100%);
+    height: 80px;
   }
 
   .content-container{
-    margin-top: 80px;
+    margin-top: 60px;
   }
 
 
