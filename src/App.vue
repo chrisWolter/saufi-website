@@ -15,11 +15,9 @@
           <b-row id="saufi-decider" class="justify-content-md-center decider">
             <Decider :didIHearSaufi="didIHearSaufiVar" class="decider-elem" :style="{'background': bgColor}"/>
           </b-row>
-          <transition name="animation-task">
-              <b-row v-show="didIHearTaskVar"  id="task-decider" class="justify-content-md-center task" >
-                <Task :tasks-json="tasksJson" :trigger="triggerButton" class="task-elem"/>
-              </b-row>
-          </transition>
+          <b-row v-show="didIHearTaskVar"  id="task-decider" class="justify-content-md-center task" >
+            <Task :tasks-json="tasksJson" :trigger="triggerButton" class="task-elem"/>
+          </b-row>
 
         <b-row id="reload-button" class="justify-content-md-center pos-bottom">
           <b-col col md="6" class="mx-0">
@@ -63,6 +61,10 @@ export function animateDecider_in_bottomTop() {
         duration: 1,
         scale: 0.9,
         y: 20,
+    });
+    gsap.from(".task-elem", {
+        y: 80,
+        duration: 0.6
     });
 }
 
@@ -245,17 +247,6 @@ export default {
     margin-top: 80px;
   }
 
-.animation-task-enter-active {
-    animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-.animation-task-leave-active {
-    animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-.animation-task-enter, .animation-task-leave-to /* .fade-leave-active below version 2.1.8 */ {
-    opacity: 0;
-}
 
 
 @media only screen and (min-width: 500px) {
@@ -286,43 +277,4 @@ export default {
         font-size: 1.6em;
     }
 }
-/**
- * ----------------------------------------
- * animation scale-up-center
- * ----------------------------------------
- */
-@keyframes slide-in-left {
-    0% {
-        transform: translateX(-50px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slide-in-right {
-    0% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-    100% {
-        transform: translateX(50px);
-        opacity: 0;
-    }
-}
-
-@keyframes slide-in-fwd-center {
-    0% {
-        transform: translateZ(-1400px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateZ(0);
-        opacity: 1;
-    }
-}
-
-
 </style>
