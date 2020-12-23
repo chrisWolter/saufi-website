@@ -27,8 +27,22 @@
       </b-row>
     </b-container>
 
-      <b-modal id="impressum-modal" title="Impressum">
-    <p class="my-4">Hello from modal!</p>
+      <b-modal id="impressum-modal" title="Information" hide-footer>
+    <div class="d-block">
+      <h4>Allgemeine Infos</h4>
+      <p>Diese Website wurde mit viel Herz und Alkohol von Alexander Herrmann 
+        und Christian Wolter entwickelt. Bei Fragen, Anregungen oder Ideen für Spiele könnt Ihr uns einfach eine Emails schreiben.</p>
+        <a href="mailto:alex@hab-ich-saufi-gehoert.de">Mail an Alex</a>
+        <br />
+        <a href="mailto:chris@hab-ich-saufi-gehoert.de" class="mt-4">Mail an Chris</a>
+        <br />
+        <p class="mt-4">Vielen Dank an Manuel und Max, die uns bei der Erstellung der Aufgaben geholfen haben.</p>
+        <p>Ein Dank geht auch an alle Beta tester raus, deren Lebern das Spiel nicht so gefeiert haben</p>
+
+      <h4>Roadmap</h4>
+      <p>Wir arbeiten derweil schon an einer neuen Version von Hab ich Saufi gehört. Also seit gespannt was da auf euch irgendwann zukommt.
+        Wir können nur soviel verraten: Lobbysystem und noch mehr Spaß!</p> 
+    </div>
   </b-modal>
   </div>
 </template>
