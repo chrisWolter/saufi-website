@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <b-container fluid>
-        <b-row class="justify-content-md-center">
+        <b-row class="justify-content-md-center header">
           <b-col cols="8" offset="2" class="header-wrapper">
           <h1 class="logo">Logo</h1>
           </b-col>
@@ -11,6 +11,7 @@
 </button>
           </b-col>
         </b-row>
+        <div class="content-container">
         <b-row id="saufi-decider" class="justify-content-md-center decider">
           <Decider :didIHearSaufi="didIHearSaufiVar" class="decider-elem" :style="{'background': bgColor}"/>
         </b-row>
@@ -25,6 +26,7 @@
           <b-button @click="reload()" block variant="primary" class="reload-button" :style="{'background': bgColor}">Hab ich Saufi gehört?</b-button>
         </b-col>
       </b-row>
+      </div>
     </b-container>
 
       <b-modal id="impressum-modal" title="Information" hide-footer>
@@ -127,7 +129,6 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
   html, body {
-    height: 100%;
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
@@ -215,6 +216,25 @@ export default {
     background: none;
     border: none;
     outline: none;
+  }
+
+  .header{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: 0px
+  }
+
+  .header::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 65%, rgba(0,212,255,0) 100%);
+  }
+
+  .content-container{
+    margin-top: 80px;
   }
 
 .animation-task-enter-active {
