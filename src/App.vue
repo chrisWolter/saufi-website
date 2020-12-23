@@ -133,7 +133,7 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap');  
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap');
   html, body {
     margin: 0;
     padding: 0;
@@ -148,6 +148,7 @@ export default {
     padding: 20px 0;
     margin: 0 25px;
     font-family: 'Kalam', cursive;
+    font-weight: 700;
   }
   .decider-elem  {
     box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
@@ -168,7 +169,8 @@ export default {
   }
   .subheading {
     margin: 0;
-    font-family: 'Lobster Two', cursive;
+    font-weight: 400;
+    font-family: 'Kalam', cursive;
     font-style: italic;
   }
   .pos-bottom{
@@ -193,7 +195,7 @@ export default {
     border-radius: 1em !important;
     height: 45px;
     font-size: 20px !important;
-    font-weight: bold !important;
+    font-weight: 700 !important;
     border: none !important;
     box-shadow: none !important;
     color: black !important;
