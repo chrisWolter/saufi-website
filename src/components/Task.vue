@@ -39,7 +39,7 @@ export default {
             }
         }
     },
-    mounted() {
+    created() {
         this.task = this.getTask()
     },
     watch: {
