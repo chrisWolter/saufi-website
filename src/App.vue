@@ -7,25 +7,25 @@
           </b-col>
           <b-col cols="2" class="header-wrapper">
             <button class="impressum-button" v-b-modal.impressum-modal>
-            <img src="./assets/information-icon.png" class="info-icon">
-</button>
+              <img src="./assets/information-icon.png" class="info-icon">
+            </button>
           </b-col>
         </b-row>
         <div class="content-container">
-        <b-row id="saufi-decider" class="justify-content-md-center decider">
-          <Decider :didIHearSaufi="didIHearSaufiVar" class="decider-elem" :style="{'background': bgColor}"/>
-        </b-row>
-        <transition name="animation-task">
-            <b-row v-show="didIHearTaskVar"  id="task-decider" class="justify-content-md-center task" >
+          <b-row id="saufi-decider" class="justify-content-md-center decider">
+            <Decider :didIHearSaufi="didIHearSaufiVar" class="decider-elem" :style="{'background': bgColor}"/>
+          </b-row>
+          <transition name="animation-task">
+              <b-row v-show="didIHearTaskVar"  id="task-decider" class="justify-content-md-center task" >
                 <Task :tasks-json="tasksJson" :trigger="triggerButton" class="task-elem"/>
-            </b-row>
-        </transition>
+              </b-row>
+          </transition>
 
-      <b-row id="reload-button" class="justify-content-md-center pos-bottom">
-        <b-col col md="6" class="mx-0">
-          <b-button @click="reload()" block variant="primary" class="reload-button" :style="{'background': bgColor}">Hab ich Saufi gehört?</b-button>
-        </b-col>
-      </b-row>
+        <b-row id="reload-button" class="justify-content-md-center pos-bottom">
+          <b-col col md="6" class="mx-0">
+            <b-button @click="reload()" block variant="primary" class="reload-button" :style="{'background': bgColor}">Hab ich Saufi gehört?</b-button>
+          </b-col>
+        </b-row>
       </div>
     </b-container>
 
@@ -154,9 +154,7 @@ export default {
   }
   .task-elem {
     margin: 15px 30px 120px 30px;
-    box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
-    border-radius: 1.7em;
-    padding: 1.6em;
+    padding: 0 !important;
   }
   .task {
     margin-bottom: 40px;
@@ -170,6 +168,7 @@ export default {
   .subheading {
     margin: 0;
     font-family: 'Lobster Two', cursive;
+    font-style: italic;
   }
   .pos-bottom{
     position: fixed;
