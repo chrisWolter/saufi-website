@@ -2,10 +2,10 @@
   <div id="app">
     <b-container fluid>
         <b-row class="justify-content-md-center header">
-          <b-col cols="8" offset="2" class="header-wrapper">
+          <b-col cols="8" offset="2" md="4" offset-md="1" class="header-wrapper">
           <h2 class="logo mx-0">Saufi?</h2>
           </b-col>
-          <b-col cols="2" class="header-wrapper">
+          <b-col cols="2" md="1" class="header-wrapper info-button-wrapper">
             <button class="impressum-button" v-b-modal.impressum-modal>
               <img src="./assets/information-icon.png" class="info-icon">
             </button>
@@ -216,6 +216,12 @@ export default {
     justify-content: center;
   }
 
+@media screen and (min-width: 720px){
+  .info-button-wrapper{
+    justify-content: flex-end;
+  }
+}
+
   .impressum-button,
   .impressum-button:focus{
     background: none;
@@ -228,7 +234,8 @@ export default {
     position: fixed;
     width: 100%;
     z-index: 10;
-    top: 0px
+    top: 0px;
+    padding: 0 15px;
   }
 
   .header::before{
