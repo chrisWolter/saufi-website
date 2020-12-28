@@ -379,31 +379,31 @@ export default {
 }
 
 .slide-in-bottom {
-	-webkit-animation: slide-in-bottom 0.2s ease-in 0.25s both;
-	animation: slide-in-bottom 0.2s ease-in 0.25s both;
+	-webkit-animation: slide-top 0.2s ease-in-out 0.25s both;
+	animation: slide-top 0.2s ease-in-out 0.25s both;
 }
 
-@-webkit-keyframes slide-in-bottom {
+@-webkit-keyframes slide-top {
   0% {
-    -webkit-transform: translateY(150px);
-            transform: translateY(150px);
+    -webkit-transform: translateY(80px);
+    transform: translateY(80px);
     opacity: 0;
   }
   100% {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
-@keyframes slide-in-bottom {
+@keyframes slide-top {
   0% {
-    -webkit-transform: translateY(150px);
-            transform: translateY(150px);
+    -webkit-transform: translateY(80px);
+    transform: translateY(80px);
     opacity: 0;
   }
   100% {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
