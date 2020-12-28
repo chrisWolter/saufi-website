@@ -13,7 +13,7 @@
         </b-row>
         <div class="content-container">
           <b-row id="saufi-decider" class="justify-content-md-center decider">
-            <Decider :didIHearSaufi="didIHearSaufiVar" class="decider-elem" :style="{'background': bgColor}"/>
+            <Decider :didIHearSaufi="didIHearSaufiVar" id="decider" class="decider-elem" :style="{'background': bgColor}"/>
           </b-row>
           <b-row v-show="didIHearTaskVar"  id="task-decider" class="justify-content-md-center task" >
             <Task :tasks-json="tasksJson" :trigger="triggerButton" class="task-elem"/>
@@ -78,12 +78,18 @@ export default {
           this.tasksJson = resp.data
         )
     this.reload()
+    const el = document.getElementById('decider')
+    el.addEventListener('animationend', e => {
+      e.target.classList.remove('wobble')
+      e.target.classList.remove('scale-in-center')
+    })
   },
   methods: {
     reload() {
       this.didIHearSaufi()
       this.didIHearTask()
       this.randomColor()
+      this.animate()
     },
     didIHearSaufi() {
       this.didIHearSaufiVar = Math.random() > 0.4
@@ -99,6 +105,17 @@ export default {
       this.didIHearTaskVar = Math.random() < 0.45
       this.triggerButton = !this.triggerButton
      },
+     toggleClass (id, className) {
+       const el = document.getElementById(id)
+       el.classList.toggle(className)
+     },
+     animate() {
+       if(this.didIHearSaufiVar){
+         this.toggleClass('decider', 'scale-in-center')
+       }else{
+         this.toggleClass('decider', 'wobble')
+       }
+     }
   }
 }
 </script>
@@ -257,4 +274,102 @@ export default {
         font-size: 1.6em;
     }
 }
+
+/* Animation */
+
+.wobble {
+	-webkit-animation: wobble 0.5s linear both;
+	animation: wobble 0.5s linear both;
+}
+
+@-webkit-keyframes wobble {
+  0%,
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+  }
+  15% {
+    -webkit-transform: translateX(-30px) rotate(-6deg);
+            transform: translateX(-30px) rotate(-6deg);
+  }
+  30% {
+    -webkit-transform: translateX(15px) rotate(6deg);
+            transform: translateX(15px) rotate(6deg);
+  }
+  45% {
+    -webkit-transform: translateX(-15px) rotate(-3.6deg);
+            transform: translateX(-15px) rotate(-3.6deg);
+  }
+  60% {
+    -webkit-transform: translateX(9px) rotate(2.4deg);
+            transform: translateX(9px) rotate(2.4deg);
+  }
+  75% {
+    -webkit-transform: translateX(-6px) rotate(-1.2deg);
+            transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
+@keyframes wobble {
+  0%,
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+  }
+  15% {
+    -webkit-transform: translateX(-30px) rotate(-6deg);
+            transform: translateX(-30px) rotate(-6deg);
+  }
+  30% {
+    -webkit-transform: translateX(15px) rotate(6deg);
+            transform: translateX(15px) rotate(6deg);
+  }
+  45% {
+    -webkit-transform: translateX(-15px) rotate(-3.6deg);
+            transform: translateX(-15px) rotate(-3.6deg);
+  }
+  60% {
+    -webkit-transform: translateX(9px) rotate(2.4deg);
+            transform: translateX(9px) rotate(2.4deg);
+  }
+  75% {
+    -webkit-transform: translateX(-6px) rotate(-1.2deg);
+            transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
+
+.scale-in-center {
+	-webkit-animation: scale-in-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: scale-in-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
 </style>
