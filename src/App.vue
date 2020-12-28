@@ -379,8 +379,8 @@ export default {
 }
 
 .slide-in-bottom {
-	-webkit-animation: slide-in-bottom 0.2s ease-in both;
-	animation: slide-in-bottom 0.2s ease-in both;
+	-webkit-animation: slide-in-bottom 0.2s ease-in 0.25s both;
+	animation: slide-in-bottom 0.2s ease-in 0.25s both;
 }
 
 @-webkit-keyframes slide-in-bottom {
@@ -407,7 +407,5 @@ export default {
     opacity: 1;
   }
 }
-
-
 
 </style>
