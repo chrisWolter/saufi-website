@@ -50,24 +50,6 @@
 <script>
 import Decider from './components/Decider.vue'
 import Task from './components/Task.vue'
-import gsap from "gsap";
-
-export function animateDecider_in_bottomTop() {
-    const tl = gsap.timeline({
-        defaults: { ease: "expo", duration: 1.5 }
-    });
-    tl.from(".decider-elem", {
-        delay: 0,
-        duration: 1,
-        scale: 0.9,
-        y: 20,
-    });
-    gsap.from(".task-elem", {
-        y: 80,
-        duration: 0.6
-    });
-}
-
 
 export default {
   name: 'App',
@@ -96,14 +78,12 @@ export default {
           this.tasksJson = resp.data
         )
     this.reload()
-    this.setTaskStyle()
   },
   methods: {
     reload() {
       this.didIHearSaufi()
       this.didIHearTask()
       this.randomColor()
-      animateDecider_in_bottomTop()
     },
     didIHearSaufi() {
       this.didIHearSaufiVar = Math.random() > 0.4
@@ -119,14 +99,6 @@ export default {
       this.didIHearTaskVar = Math.random() < 0.45
       this.triggerButton = !this.triggerButton
      },
-    setTaskStyle(){
-      const viewHeigth = window.innerHeight
-      const titleHeigth = document.getElementById('saufi-decider').getBoundingClientRect().bottom + 40
-      const buttonPosition = document.getElementById('reload-button').getBoundingClientRect().top - 40
-      const calculatedTaskHeight = viewHeigth - titleHeigth - (viewHeigth - buttonPosition)
-
-      this.taskHeight = calculatedTaskHeight + 'px'
-    },
   }
 }
 </script>
