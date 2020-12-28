@@ -84,7 +84,7 @@ export default {
       this.animateTask()
     },
     didIHearSaufi() {
-      this.didIHearSaufiVar = Math.random() > 0.4
+      this.didIHearSaufiVar = Math.random() > 0.49
     },
     randomColor() {
       if(this.didIHearSaufiVar){
