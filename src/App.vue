@@ -16,7 +16,7 @@
             <Decider :didIHearSaufi="didIHearSaufiVar" id="decider" class="decider-elem" :style="{'background': bgColor}"/>
           </b-row>
           <b-row v-show="didIHearTaskVar"  id="task-decider" class="justify-content-md-center task" >
-            <Task :tasks-json="tasksJson" :trigger="triggerButton" class="task-elem"/>
+            <Task :tasks-json="tasksJson" :trigger="triggerButton" id="task" class="task-elem"/>
           </b-row>
 
         <b-row id="reload-button" class="justify-content-md-center pos-bottom">
@@ -83,6 +83,9 @@ export default {
       e.target.classList.remove('wobble')
       e.target.classList.remove('scale-in-center')
     })
+    document.getElementById('task').addEventListener('animationend', e => {
+      e.target.classList.remove('slide-in-bottom')
+    })
   },
   methods: {
     reload() {
@@ -90,6 +93,7 @@ export default {
       this.didIHearTask()
       this.randomColor()
       this.animate()
+      this.animateTask()
     },
     didIHearSaufi() {
       this.didIHearSaufiVar = Math.random() > 0.4
@@ -107,7 +111,7 @@ export default {
      },
      toggleClass (id, className) {
        const el = document.getElementById(id)
-       el.classList.toggle(className)
+       el.classList.add(className)
      },
      animate() {
        if(this.didIHearSaufiVar){
@@ -115,9 +119,12 @@ export default {
        }else{
          this.toggleClass('decider', 'wobble')
        }
+     },
+     animateTask() {
+         this.toggleClass('task', "slide-in-bottom")
+       }
      }
   }
-}
 </script>
 
 <style>
@@ -370,6 +377,37 @@ export default {
     opacity: 1;
   }
 }
+
+.slide-in-bottom {
+	-webkit-animation: slide-in-bottom 0.2s ease-in both;
+	animation: slide-in-bottom 0.2s ease-in both;
+}
+
+@-webkit-keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(150px);
+            transform: translateY(150px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(150px);
+            transform: translateY(150px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 
 
 </style>
