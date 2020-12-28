@@ -16,7 +16,7 @@
             <Decider :didIHearSaufi="didIHearSaufiVar" id="decider" class="decider-elem" :style="{'background': bgColor}"/>
           </b-row>
           <b-row id="task-decider" class="justify-content-md-center task" >
-            <Task :tasks-json="tasksJson" :trigger="triggerButton" :show="didIHearTaskVar" id="task" class="task-elem"/>
+            <Task :tasks-json="tasksJson" :task-trigger="triggerButton" :show="didIHearTaskVar" id="task" class="task-elem"/>
           </b-row>
 
         <b-row id="reload-button" class="justify-content-md-center pos-bottom">
@@ -45,7 +45,7 @@
       <p>Wir werden dieses Trinkspiel weiterentwickeln und neue Ideen einfließen lassen. Bis ein Update kommt, wird es aber noch ein bisschen gehen.
         Bugs und anpassungen werden aber regelmäßig geupdated.
       </p>
-      <p class="mt-4">Aktuelle Version: 1.0.0</p>
+      <p class="mt-4">Aktuelle Version: 0.9.0</p>
     </div>
   </b-modal>
   </div>
@@ -68,7 +68,7 @@ export default {
         {gradient: 'linear-gradient(to right, #f7b733, #fc4a1a)'}, /* Rot */
       ],
       didIHearSaufiVar: Boolean,
-      didIHearTaskVar: Boolean,
+      didIHearTaskVar: null,
       bgColor: String,
       taskHeight: String,
       tasksJson: null,
