@@ -1,9 +1,14 @@
 <template>
     <b-col col md="6">
-        <div v-if="task" class="task">
-            <h5 class="subheading">{{task.category}}</h5>
-            <h1 class="heading">{{task.name}}</h1>
-            <p>{{task.description}}</p>
+        <div v-show="show">
+            <div v-if="task" class="task">
+                <h5 class="subheading">{{task.category}}</h5>
+                <h1 class="heading">{{task.name}}</h1>
+                <p>{{task.description}}</p>
+            </div>
+        </div>
+        <div v-show="!show">
+            <h3 class="no-task">Keine Zusatzaufgabe :(</h3>
         </div>
     </b-col>
 </template>
@@ -18,6 +23,9 @@ export default {
           type: Array
       },
       trigger: {
+          type: Boolean
+      },
+      show: {
           type: Boolean
       }
     },
@@ -55,5 +63,9 @@ export default {
         padding: 1.6em 15px 1.6em 15px;
         box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
         border-radius: 1.7em;
+    }
+    .no-task {
+        text-align: center;
+        color: rgb(160, 160, 160);
     }
 </style>
