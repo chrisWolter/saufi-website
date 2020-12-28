@@ -26,27 +26,8 @@
         </b-row>
       </div>
     </b-container>
-
       <b-modal id="impressum-modal" title="Information" hide-footer>
-    <div class="d-block">
-      <h4>Das Spiel</h4>
-      <p>Ihr wollt ein Trinkspiel, das mal etwas anders ist? hier bekommt ihr es. Bei dem Spiel "Hab ich Saufi gehört"
-        wird das Handy herumgereicht und bekommt angezeigt ob man Saufi gehört hat, in dem man auf den Knopf am Ende der Seite drauf drückt.
-        Wenn Ihr Saufi gehört habt, dann müsst ihr etwas trinken. Was Ihr trinkt ist uns egal. Wieviel Ihr trinkt könnt ihr bevor ihr anfangt selber festlegen.
-        Es kann vorkommen das einem zusätzlich noch Aufgaben angezeigt wird. Diese solltet Ihr zusätzlich zum trinken oder nicht trinken erledigen.
-      </p>
-      <h4>Allgemeine Infos</h4>
-      <p>Diese Website wurde mit viel Herz und Alkohol von Alexander Herrmann
-        und Christian Wolter entwickelt. Bei Fragen, Anregungen oder Ideen für Spiele könnt Ihr uns einfach eine Emails schreiben.</p>
-        <a href="mailto:alex@hab-ich-saufi-gehoert.de">Mail an Alex</a>
-        <br />
-        <a href="mailto:chris@hab-ich-saufi-gehoert.de" class="mt-4">Mail an Chris</a>
-      <h4 class="mt-4">Roadmap</h4>
-      <p>Wir werden dieses Trinkspiel weiterentwickeln und neue Ideen einfließen lassen. Bis ein Update kommt, wird es aber noch ein bisschen gehen.
-        Bugs und anpassungen werden aber regelmäßig geupdated.
-      </p>
-      <p class="mt-4">Aktuelle Version: 0.9.0</p>
-    </div>
+    <modal-content></modal-content>
   </b-modal>
   </div>
 </template>
@@ -54,12 +35,14 @@
 <script>
 import Decider from './components/Decider.vue'
 import Task from './components/Task.vue'
+import ModalContent from '@/components/ModalContent'
 
 export default {
   name: 'App',
   components: {
     Decider,
-    Task
+    Task,
+    ModalContent
   },
   data () {
     return {
@@ -125,7 +108,7 @@ export default {
        }
      },
      animateTask() {
-         this.toggleClass('task', "slide-in-bottom")
+         this.toggleClass('task', 'slide-in-bottom')
        }
      }
   }
@@ -134,6 +117,8 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap');
+@import './assets/animation.css';
+
   html, body {
     margin: 0;
     padding: 0;
@@ -284,132 +269,6 @@ export default {
     .heading {
         font-size: 1.6em;
     }
-}
-
-/* Animation */
-
-.wobble {
-	-webkit-animation: wobble 0.5s linear both;
-	animation: wobble 0.5s linear both;
-}
-
-@-webkit-keyframes wobble {
-  0%,
-  100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-  }
-  15% {
-    -webkit-transform: translateX(-30px) rotate(-6deg);
-            transform: translateX(-30px) rotate(-6deg);
-  }
-  30% {
-    -webkit-transform: translateX(15px) rotate(6deg);
-            transform: translateX(15px) rotate(6deg);
-  }
-  45% {
-    -webkit-transform: translateX(-15px) rotate(-3.6deg);
-            transform: translateX(-15px) rotate(-3.6deg);
-  }
-  60% {
-    -webkit-transform: translateX(9px) rotate(2.4deg);
-            transform: translateX(9px) rotate(2.4deg);
-  }
-  75% {
-    -webkit-transform: translateX(-6px) rotate(-1.2deg);
-            transform: translateX(-6px) rotate(-1.2deg);
-  }
-}
-@keyframes wobble {
-  0%,
-  100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-  }
-  15% {
-    -webkit-transform: translateX(-30px) rotate(-6deg);
-            transform: translateX(-30px) rotate(-6deg);
-  }
-  30% {
-    -webkit-transform: translateX(15px) rotate(6deg);
-            transform: translateX(15px) rotate(6deg);
-  }
-  45% {
-    -webkit-transform: translateX(-15px) rotate(-3.6deg);
-            transform: translateX(-15px) rotate(-3.6deg);
-  }
-  60% {
-    -webkit-transform: translateX(9px) rotate(2.4deg);
-            transform: translateX(9px) rotate(2.4deg);
-  }
-  75% {
-    -webkit-transform: translateX(-6px) rotate(-1.2deg);
-            transform: translateX(-6px) rotate(-1.2deg);
-  }
-}
-
-.scale-in-center {
-	-webkit-animation: scale-in-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	animation: scale-in-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-@-webkit-keyframes scale-in-center {
-  0% {
-    -webkit-transform: scale(0.6);
-            transform: scale(0.6);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-  }
-}
-@keyframes scale-in-center {
-  0% {
-    -webkit-transform: scale(0.6);
-            transform: scale(0.6);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-  }
-}
-
-.slide-in-bottom {
-	-webkit-animation: slide-top 0.2s ease-in-out 0.25s both;
-	animation: slide-top 0.2s ease-in-out 0.25s both;
-}
-
-@-webkit-keyframes slide-top {
-  0% {
-    -webkit-transform: translateY(80px);
-    transform: translateY(80px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes slide-top {
-  0% {
-    -webkit-transform: translateY(80px);
-    transform: translateY(80px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 
 </style>
