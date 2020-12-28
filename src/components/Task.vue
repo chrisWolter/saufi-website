@@ -22,7 +22,7 @@ export default {
       tasksJson: {
           type: Array
       },
-      trigger: {
+      taskTrigger: {
           type: Boolean
       },
       show: {
@@ -51,7 +51,7 @@ export default {
         this.task = this.getTask()
     },
     watch: {
-        trigger() {
+        taskTrigger() {
             this.task = this.getTask()
         }
     }

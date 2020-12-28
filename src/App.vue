@@ -16,7 +16,7 @@
             <Decider :didIHearSaufi="didIHearSaufiVar" id="decider" class="decider-elem" :style="{'background': bgColor}"/>
           </b-row>
           <b-row id="task-decider" class="justify-content-md-center task" >
-            <Task :tasks-json="tasksJson" :trigger="triggerButton" :show="didIHearTaskVar" id="task" class="task-elem"/>
+            <Task :tasks-json="tasksJson" :task-trigger="triggerButton" :show="didIHearTaskVar" id="task" class="task-elem"/>
           </b-row>
         <b-row id="reload-button" class="justify-content-md-center pos-bottom">
           <b-col col md="6" class="mx-0">
@@ -50,7 +50,7 @@ export default {
         {gradient: 'linear-gradient(to right, #f7b733, #fc4a1a)'}, /* Rot */
       ],
       didIHearSaufiVar: Boolean,
-      didIHearTaskVar: Boolean,
+      didIHearTaskVar: null,
       bgColor: String,
       taskHeight: String,
       tasksJson: null,
