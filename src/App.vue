@@ -15,8 +15,8 @@
           <b-row id="saufi-decider" class="justify-content-md-center decider">
             <Decider :didIHearSaufi="didIHearSaufiVar" id="decider" class="decider-elem" :style="{'background': bgColor}"/>
           </b-row>
-          <b-row v-show="didIHearTaskVar"  id="task-decider" class="justify-content-md-center task" >
-            <Task :tasks-json="tasksJson" :trigger="triggerButton" id="task" class="task-elem"/>
+          <b-row id="task-decider" class="justify-content-md-center task" >
+            <Task :tasks-json="tasksJson" :trigger="triggerButton" :show="didIHearTaskVar" id="task" class="task-elem"/>
           </b-row>
 
         <b-row id="reload-button" class="justify-content-md-center pos-bottom">
