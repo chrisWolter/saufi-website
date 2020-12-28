@@ -35,6 +35,7 @@
 import Decider from './components/Decider.vue'
 import Task from './components/Task.vue'
 import ModalContent from '@/components/ModalContent'
+import tasksJson from './assets/tasks.json'
 
 export default {
   name: 'App',
@@ -58,11 +59,12 @@ export default {
     }
   },
   async mounted() {
-    await this.axios
+    /* await this.axios
         .get('https://alexherrmi.github.io/json/tasks.json')
         .then(resp =>
           this.tasksJson = resp.data
-        )
+        ) */
+    this.tasksJson = tasksJson
     this.reload()
     const el = document.getElementById('decider')
     el.addEventListener('animationend', e => {
