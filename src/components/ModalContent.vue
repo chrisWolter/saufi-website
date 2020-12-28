@@ -17,10 +17,23 @@
         Bugfixes und kleinere Anpassungen werden wir aber nachbessern.
       </p>
       <p class="mt-4">Aktuelle Version: 1.8.7</p>
+      <div class="clippy"></div>
     </div>
+
 </template>
 <script>
   export default {
     name: 'ModalContent'
   }
 </script>
+<style scoped>
+  .clippy {
+    background-image: url("../assets/clippy.png");
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+  }
+</style>
