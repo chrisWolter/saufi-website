@@ -126,7 +126,7 @@
       },
       {
         "category": "Trink",
-        "name": "Der keko, der am höchsten gewachsen ist darf erstmal trinken",
+        "name": "Der Keko, welcher am höchsten gewachsen ist darf erstmal trinken",
         "description": "Upsi Dupsi. Gibt das Leben dir 'ne Zitrone, dann mach Limosine"
       },
       {
@@ -151,14 +151,14 @@
       },
       {
         "category": "Trink",
-        "name": "Der lelek mit den kürzesten Haaren trinkt",
+        "name": "Der Lelek mit den kürzesten Haaren trinkt",
         "description": "Da kannst du schütteln, da kannst du klopfen, in die Hose geht der letzte Tropfen."
       }
     ]
   },
   {
     "name": "Regel",
-    "weight": 1,
+    "weight": 2,
     "data": [
       {
         "category": "Regel (nicht die Tage)",
@@ -179,18 +179,18 @@
   },
   {
     "name": "Aufgabe",
-    "weight": 2,
+    "weight": 1,
     "data": [
       {
         "category": "Aufgabe",
-        "name": "Ein Spieler deiner Wahl muss...",
+        "name": "Ein/e Spieler*in deiner Wahl muss...",
         "description": "Der Johannes, der diese Karte gezogen hat darf einem Spieler*in seiner/ihrer Wahl eine Aufgabe stellen, der/die diese erledigen muss. Will er/sie das nicht machen, kann er/sie sich mit 5 guten Schlucks frei kaufen. (Wird aber nicht empfohlen)"
       }
     ]
   },
   {
     "name": "Frage",
-    "weight": 3,
+    "weight": 1,
     "data": [
       {
         "category": "Frage",
