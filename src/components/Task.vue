@@ -59,9 +59,12 @@ export default {
 </script>
 
 <style scoped>
+    .dark-mode .task {
+        box-shadow: 0 0 5px rgba(255,255,255,0.2);
+    }
     .task {
         padding: 1.6em 15px 1.6em 15px;
-        box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+        box-shadow: 0 0 5px rgba(0,0,0,0.2);
         border-radius: 1.7em;
     }
     .no-task {

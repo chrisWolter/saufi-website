@@ -1,13 +1,19 @@
 <template>
-  <div id="app">
+  <div id="app" class="light-mode">
     <b-container fluid>
         <b-row class="justify-content-md-center header">
-          <b-col cols="8" offset="2" md="4" offset-md="1" class="header-wrapper">
+          <b-col cols="2" md="1" class="header-wrapper">
+            <button @click="toggleDarkMode()" class="dark-mode-trigger">
+              <span v-if="!isDarkMode"><BIconMoon></BIconMoon></span>
+              <span v-else><BIconSun></BIconSun></span>
+            </button>
+          </b-col>
+          <b-col cols="8" md="4" class="header-wrapper">
           <h2 class="logo mx-0">Saufi?</h2>
           </b-col>
           <b-col cols="2" md="1" class="header-wrapper info-button-wrapper">
             <button class="impressum-button" v-b-modal.impressum-modal>
-              <img src="./assets/information-icon.png" class="info-icon">
+              <BIconInfoCircle class="info-icon"></BIconInfoCircle>
             </button>
           </b-col>
         </b-row>
@@ -35,13 +41,17 @@
 import Decider from './components/Decider.vue'
 import Task from './components/Task.vue'
 import ModalContent from '@/components/ModalContent'
+import {BIconInfoCircle, BIconMoon, BIconSun} from "bootstrap-vue";
 
 export default {
   name: 'App',
   components: {
     Decider,
     Task,
-    ModalContent
+    ModalContent,
+    BIconInfoCircle,
+    BIconMoon,
+    BIconSun
   },
   data () {
     return {
@@ -55,6 +65,7 @@ export default {
       taskHeight: String,
       tasksJson: null,
       triggerButton: false,
+      isDarkMode: false
     }
   },
   async mounted() {
@@ -108,8 +119,16 @@ export default {
      },
      animateTask() {
          this.toggleClass('task', 'slide-in-bottom')
-       }
-     }
+       },
+    toggleDarkMode() {
+      let body = document.getElementsByTagName('html')[0]
+      let currentClass = body.className
+      console.log(body);
+      body.className = currentClass === "dark-mode" ? "light-mode" : "dark-mode";
+      this.isDarkMode = !this.isDarkMode
+    }
+     },
+
   }
 </script>
 
@@ -117,16 +136,41 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap');
 @import './assets/animation.css';
-
   html, body {
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
     background-color: white
   }
+  .dark-mode, .dark-mode body, .dark-mode .modal-content {
+    background: #000814;
+    color: white;
+  }
+  .dark-mode #reload-button::after,   .dark-mode .header::before {
+    background: -moz-linear-gradient(top,  rgba(0,8,20,1) 0%, rgba(0,8,20,1) 65%, rgba(0,8,20,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(0,8,20,1) 0%,rgba(0,8,20,1) 65%,rgba(0,8,20,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to top,  rgba(0,8,20,1) 0%,rgba(0,8,20,1) 65%,rgba(0,8,20,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  }
+  .dark-mode .info-icon {
+    color: white;
+  }
+
+  .info-icon {
+    font-size: 24px;
+  }
+
   #app {
   min-width: 100%;
   min-height: 100%;
+  }
+  .dark-mode-trigger, .dark-mode-trigger:focus  {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 25px;
+  }
+  .dark-mode .dark-mode-trigger {
+    color: white;
   }
   .logo {
     text-align: center;
@@ -190,12 +234,6 @@ export default {
     margin-right: -15px;
     margin-left: -15px;
   }
-
-  .info-icon{
-    width: 20px;
-    height: 20px;
-  }
-
   .header-wrapper{
     display: flex;
     align-items: center;
@@ -230,9 +268,10 @@ export default {
     width: 100%;
     height: 80px;
     margin-left: -15px;
-    background: -moz-linear-gradient(bottom,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 65%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 65%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 65%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 65%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 65%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 65%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    transform: rotate(180deg);
   }
 
   .content-container{
