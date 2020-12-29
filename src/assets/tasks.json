@@ -5,9 +5,57 @@
     "data": [
       {
         "category": "Spiel",
-        "name": "Wahrheit oder Pflicht 1",
-        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-        "weight": 10
+        "name": "Wahrheit oder Pflicht",
+        "description": "Der Nutzer, der die Karte gezogen hat, darf mit einer Person seiner Wahl eine Runde Wahrheit oder Pflicht spielen.",
+        "weight": 1
+      },
+      {
+        "category": "Spiel",
+        "name": "Ich hab noch nie",
+        "description": "Die Person, die die Karte gezogen hat darf ein Thema für eine Runde Ich hab noch nie aussuchen. (z.B. Ich hab noch nie Alkohol getrunken) Jeder der das schon einmal getan hat, muss ein Schluck trinken.",
+        "weight": 1
+      },
+      {
+        "category": "Spiel",
+        "name": "Ich würde am ehesten",
+        "description": "Der Lauchi, der die Karte gezogen hat darf sich eine 'Wer würde am ehesten' Frage ausdenken (z.B. Wer würde am ehesten Donauradler auf einem Date trinken) Danach wird abgestimmt wer dies am ehesten sein wird und die Person muss einen Schluck trinken. Die letzte Entscheidung bei einem gleichstand liegt dabei beim Lauchi der die Karte gezogen hat.",
+        "weight": 1
+      },
+      {
+        "category": "Spiel",
+        "name": "Ich gehe in eine Bar und trinke einen...",
+        "description": "Das Spiel ist gleich wie 'Ich packe meinen Koffer und nehme mit', nur packen wir keinen Koffer, sondern gehen in eine Bar und trinken. Der Verlierer muss saufen (Kein Wasser! (Außer er ist Fahrer!!))",
+        "weight": 1
+      },
+      {
+        "category": "Spiel",
+        "name": "Themenrunde",
+        "description": "Bei der Themenrunde sucht sich der Saufkopf, der die Karte gezogen hat ein Thema aus (z.B. Biermarken) Danach wird reihum EIN Wort zu dem Thema gesagt (z.B. Rothaus, Hirsch Helles, Oettinger). Wem kein Wort mehr einfällt oder ein Wort wiederholt muss trinken.",
+        "weight": 1
+      },
+      {
+        "category": "Spiel",
+        "name": "Flachwitzchallenge",
+        "description": "Jeder Spiel sagt einen Flachwitz auf. Der Spieler der die Karte gezogen hat darf entscheide welcher der beste oder schlechteste war. Trinken müssen alle außer die Person, die vom Kartenzieher genannt wurde.",
+        "weight": 1
+      },
+      {
+        "category": "Spiel",
+        "name": "Ja, Nein, Vielleicht",
+        "description": "Jeder Spieler darf der Wichsflöte, die die Karte gezogen hat eine Frage stellen. Die Wichsflöte MUSS diese beantworten, darf aber nicht die Wörter 'Ja', 'Nein' und 'Vielleicht' benutzten. Benutzt er eins dieser Wörter, muss er trinken.",
+        "weight": 1
+      },
+      {
+        "category": "Spiel",
+        "name": "Hast du schonmal",
+        "description": "Ihr kennt 'Ich hab noch nie'? Das Spiel ist ähnlich, nur das ihr hier trinkt, wenn ihr es noch nicht gemacht habt. Der Kartenzieher denkt sich dabei eine Frage aus (z.B. Ich hab schonmal bei einem Date gefurzt). Jeder der das noch nicht getan hat, muss einen trinken!",
+        "weight": 1
+      },
+      {
+        "category": "Spiel",
+        "name": "Assoziation",
+        "description": "Bei deim Spiel Assoziation denkt sich der Keck, der die Karte gezogen ein Wort aus, welches sich aus zwei Wörtern zusammensetzt (z.B. Alkoholvergiftung). Der Spieler rechts neben dem Keck, der die Karte gezogen hat nimmt nun das zweite Wort (Vergiftung) und fügt eine neues Wort hintendran (Vergiftungssympthome). Und so geht es im Kreis weiter, bis einer Person nichts mehr einfällt oder er einen Fehler macht. Der Person muss dann trinken.",
+        "weight": 1
       }
     ]
   },
