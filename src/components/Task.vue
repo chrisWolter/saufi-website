@@ -42,7 +42,6 @@ export default {
                 let selection = weightedRandom(weights)
                 let tasks = tasklist[selection].data
                 let randomTaskNumber = Math.floor(Math.random() * tasks.length)
-                console.log(randomTaskNumber)
                 return tasks[randomTaskNumber]
             } else {
                 return undefined
