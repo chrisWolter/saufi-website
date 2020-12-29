@@ -123,7 +123,6 @@ export default {
     toggleDarkMode() {
       let body = document.getElementsByTagName('html')[0]
       let currentClass = body.className
-      console.log(body);
       body.className = currentClass === "dark-mode" ? "light-mode" : "dark-mode";
       this.isDarkMode = !this.isDarkMode
     }
