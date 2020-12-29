@@ -37,11 +37,13 @@ export default {
     methods: {
         getTask() {
             if(this.tasksJson) {
-                let tasks = JSON.parse(JSON.stringify(this.tasksJson))
-                let weights = tasks.map(task => task.weight)
+                let tasklist = JSON.parse(JSON.stringify(this.tasksJson))
+                let weights = tasklist.map(task => task.weight)
                 let selection = weightedRandom(weights)
-
-                return tasks[selection]
+                let tasks = tasklist[selection].data
+                let randomTaskNumber = Math.floor(Math.random() * tasks.length)
+                console.log(randomTaskNumber)
+                return tasks[randomTaskNumber]
             } else {
                 return undefined
             }
