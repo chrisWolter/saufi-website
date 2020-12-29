@@ -2,7 +2,7 @@
     <b-col col md="6" >
         <div>
             <h5 class="subheading">{{ didIHearSaufi ? 'Yippie' : 'Schade'}}</h5>
-            <h1 class="heading">{{ didIHearSaufi ? 'Sie haben Saufi gehört!': 'Sie haben kein Saufi gehört!'}}</h1>
+            <h1 class="heading">{{ didIHearSaufi ? 'Du hast Saufi gehört!': 'Du hast kein Saufi gehört!'}}</h1>
         </div>
     </b-col>
 </template>
