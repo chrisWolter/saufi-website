@@ -6,56 +6,67 @@
       {
         "category": "Spiel",
         "name": "Wahrheit oder Pflicht",
-        "description": "Der Nutzer, der die Karte gezogen hat, darf mit einer Person seiner Wahl eine Runde Wahrheit oder Pflicht spielen.",
-        "weight": 1
+        "description": "Der Nutzer, der die Karte gezogen hat, darf mit einer Person seiner Wahl eine Runde Wahrheit oder Pflicht spielen."
       },
       {
         "category": "Spiel",
         "name": "Ich hab noch nie",
-        "description": "Die Person, die die Karte gezogen hat darf ein Thema für eine Runde Ich hab noch nie aussuchen. (z.B. Ich hab noch nie Alkohol getrunken) Jeder der das schon einmal getan hat, muss ein Schluck trinken.",
-        "weight": 1
+        "description": "Die Person, die die Karte gezogen hat darf ein Thema für eine Runde Ich hab noch nie aussuchen. (z.B. Ich hab noch nie Alkohol getrunken) Jeder der das schon einmal getan hat, muss ein Schluck trinken."
       },
       {
         "category": "Spiel",
         "name": "Ich würde am ehesten",
-        "description": "Der Lauchi, der die Karte gezogen hat darf sich eine 'Wer würde am ehesten' Frage ausdenken (z.B. Wer würde am ehesten Donauradler auf einem Date trinken) Danach wird abgestimmt wer dies am ehesten sein wird und die Person muss einen Schluck trinken. Die letzte Entscheidung bei einem gleichstand liegt dabei beim Lauchi der die Karte gezogen hat.",
-        "weight": 1
+        "description": "Der Lauchi, der die Karte gezogen hat darf sich eine 'Wer würde am ehesten' Frage ausdenken (z.B. Wer würde am ehesten Donauradler auf einem Date trinken) Danach wird abgestimmt wer dies am ehesten sein wird und die Person muss einen Schluck trinken. Die letzte Entscheidung bei einem gleichstand liegt dabei beim Lauchi der die Karte gezogen hat."
       },
       {
         "category": "Spiel",
         "name": "Ich gehe in eine Bar und trinke einen...",
-        "description": "Das Spiel ist gleich wie 'Ich packe meinen Koffer und nehme mit', nur packen wir keinen Koffer, sondern gehen in eine Bar und trinken. Der Verlierer muss saufen (Kein Wasser! (Außer er ist Fahrer!!))",
-        "weight": 1
+        "description": "Das Spiel ist gleich wie 'Ich packe meinen Koffer und nehme mit', nur packen wir keinen Koffer, sondern gehen in eine Bar und trinken. Der Verlierer muss saufen (Kein Wasser! (Außer er ist Fahrer!!))"
       },
       {
         "category": "Spiel",
         "name": "Themenrunde",
-        "description": "Bei der Themenrunde sucht sich der Saufkopf, der die Karte gezogen hat ein Thema aus (z.B. Biermarken) Danach wird reihum EIN Wort zu dem Thema gesagt (z.B. Rothaus, Hirsch Helles, Oettinger). Wem kein Wort mehr einfällt oder ein Wort wiederholt muss trinken.",
-        "weight": 1
+        "description": "Bei der Themenrunde sucht sich der Saufkopf, der die Karte gezogen hat ein Thema aus (z.B. Biermarken) Danach wird reihum EIN Wort zu dem Thema gesagt (z.B. Rothaus, Hirsch Helles, Oettinger). Wem kein Wort mehr einfällt oder ein Wort wiederholt muss trinken."
       },
       {
         "category": "Spiel",
         "name": "Flachwitzchallenge",
-        "description": "Jeder Spiel sagt einen Flachwitz auf. Der Spieler der die Karte gezogen hat darf entscheide welcher der beste oder schlechteste war. Trinken müssen alle außer die Person, die vom Kartenzieher genannt wurde.",
-        "weight": 1
+        "description": "Jeder Spiel sagt einen Flachwitz auf. Der Spieler der die Karte gezogen hat darf entscheide welcher der beste oder schlechteste war. Trinken müssen alle außer die Person, die vom Kartenzieher genannt wurde."
       },
       {
         "category": "Spiel",
         "name": "Ja, Nein, Vielleicht",
-        "description": "Jeder Spieler darf der Wichsflöte, die die Karte gezogen hat eine Frage stellen. Die Wichsflöte MUSS diese beantworten, darf aber nicht die Wörter 'Ja', 'Nein' und 'Vielleicht' benutzten. Benutzt er eins dieser Wörter, muss er trinken.",
-        "weight": 1
+        "description": "Jeder Spieler darf der Wichsflöte, die die Karte gezogen hat eine Frage stellen. Die Wichsflöte MUSS diese beantworten, darf aber nicht die Wörter 'Ja', 'Nein' und 'Vielleicht' benutzten. Benutzt er eins dieser Wörter, muss er trinken."
       },
       {
         "category": "Spiel",
         "name": "Hast du schonmal",
-        "description": "Ihr kennt 'Ich hab noch nie'? Das Spiel ist ähnlich, nur das ihr hier trinkt, wenn ihr es noch nicht gemacht habt. Der Kartenzieher denkt sich dabei eine Frage aus (z.B. Ich hab schonmal bei einem Date gefurzt). Jeder der das noch nicht getan hat, muss einen trinken!",
-        "weight": 1
+        "description": "Ihr kennt 'Ich hab noch nie'? Das Spiel ist ähnlich, nur das ihr hier trinkt, wenn ihr es noch nicht gemacht habt. Der Kartenzieher denkt sich dabei eine Frage aus (z.B. Ich hab schonmal bei einem Date gefurzt). Jeder der das noch nicht getan hat, muss einen trinken!"
       },
       {
         "category": "Spiel",
         "name": "Assoziation",
-        "description": "Bei deim Spiel Assoziation denkt sich der Keck, der die Karte gezogen ein Wort aus, welches sich aus zwei Wörtern zusammensetzt (z.B. Alkoholvergiftung). Der Spieler rechts neben dem Keck, der die Karte gezogen hat nimmt nun das zweite Wort (Vergiftung) und fügt eine neues Wort hintendran (Vergiftungssympthome). Und so geht es im Kreis weiter, bis einer Person nichts mehr einfällt oder er einen Fehler macht. Der Person muss dann trinken.",
-        "weight": 1
+        "description": "Bei deim Spiel Assoziation denkt sich der Keck, der die Karte gezogen ein Wort aus, welches sich aus zwei Wörtern zusammensetzt (z.B. Alkoholvergiftung). Der Spieler rechts neben dem Keck, der die Karte gezogen hat nimmt nun das zweite Wort (Vergiftung) und fügt eine neues Wort hintendran (Vergiftungssympthome). Und so geht es im Kreis weiter, bis einer Person nichts mehr einfällt oder er einen Fehler macht. Der Person muss dann trinken."
+      },
+      {
+        "category": "Spiel",
+        "name": "Bodenseetrinken",
+        "description": "Bei diesem Spiel geht es darum, eure Flaschen / Gläser am schnellsten leer zu bekommen. \nDer Bimbo der das Spiel gezogen hat fängt an mit 1 Schlucks an und gibt sein Getränk dem Uhrzeigersinn weiter. Der nächste Spieler\ntrink dan 2 Schlucks und so weiter. Das Spiel endet, wenn das Behältnis leer ist oder das Frühstück eines Mitspielers den Magen verlassen hat."
+      },
+      {
+        "category": "Spiel",
+        "name": "Imitation",
+        "description": "Der Dödel, der die Karte gezogen hat versucht nun für 1 Minute eine Person zu imitieren, die möglichst alle kennen. Hierbei ist darauf zu achten,\ndass diese Person auch sehr klischeehaft dargestellt wird. Z.B Ähhhh aber geht dein Licht unter deinem Bett automatisch an wenn du nachts mal wieder \neinen Abseilen musst ?! Hä ?! Alle die, die das nicht erkennt haben trinken. Jenachdem wie viele es nicht erkannt haben so viele Schlucks trinkt der Dödel."
+      },
+      {
+        "category": "Spiel",
+        "name": "Kurz-Pantomime",
+        "description": "Der Spieler, der die Karte gezogen hat denkt sich einen Begriff aus, und muss nur mit Gestik und Mimik (OHNE GERÄUSCHE IHR KEKS) zeigen, um \nwas für einen Begriff es sich handelt. Der Spieler hat 1 Minute Zeit (variierbar). Alle die es nicht erkannt haben: trinkt. Wenn es z.B 5 nicht erkannt\nhaben, so muss der ziehende Spieler 5 Schlucks runterschlabbern."
+      },
+      {
+        "category": "Spiel",
+        "name": "Entweder, oder",
+        "description": "Du stellst eine Frage wie z.B Entweder 1 Jahr kein Sex oder 1 Jahr nicht scheißen gehen. Nun gibts du direkt deine Antwort ab und lässt reihrum (oder jeder schreit einfach rein)\nseine Antwort. Die Minderheit trinkt. Bei Gleichstand entscheidet der, mit der größten Nase, wer trinken muss."
       }
     ]
   },
@@ -64,10 +75,84 @@
     "weight": 4,
     "data": [
       {
-        "category": "",
-        "name": "",
-        "description": "",
-        "weight": 1
+        "category": "Trink",
+        "name": "Der möchtegern Influenzer trinkt",
+        "description": "Zurnot auch die Person, die da am ehesten reinpassen würde."
+      },
+      {
+        "category": "Trink",
+        "name": "Der klügste Spieler trinkt",
+        "description": "Kommt eine schwangere Frau zum Bäcker. Sagst sie zum Bäcker: 'Ich bekomme 3 Brezeln'. Sagt der Bäcker: 'Sachen gibts..' "
+      },
+      {
+        "category": "Trink",
+        "name": "Die dümmste Flasche trinkt",
+        "description": "Im Zweifel auch der, mit den dümmsten Aussagen (oder Lars :*)"
+      },
+      {
+        "category": "Trink",
+        "name": "Der Klappstuhl, mit der größten Nase trinkt.",
+        "description": "Sollte selbstverständlich sein."
+      },
+      {
+        "category": "Trink",
+        "name": "An die bärtigen unter euch: trinkt!",
+        "description": "Auch Backenbart zählt dazu"
+      },
+      {
+        "category": "Trink",
+        "name": "Der Älteste Lurch trinkt",
+        "description": "Sollte selbstverständlich sein."
+      },
+      {
+        "category": "Trink",
+        "name": "Alle männlichen Dullies trinken",
+        "description": "Und diese, die sich als solche identifizieren"
+      },
+      {
+        "category": "Trink",
+        "name": "Alle weiblichen Geschöpfe trinken",
+        "description": "Und diese, die sich als solche identifizieren"
+      },
+      {
+        "category": "Trink",
+        "name": "Alle die sich als Apche Kampfhubschrauber oder 'son Scheiß identifizieren",
+        "description": "Mach den Hub Hub Hub mach den Schrauber Schrauber Schrauber"
+      },
+      {
+        "category": "Trink",
+        "name": "Die am wenigsten betrunkene Person trinkt",
+        "description": "UHHHHHHHHHHHHHHHHHHHHHHHH Im blinded by the lights"
+      },
+      {
+        "category": "Trink",
+        "name": "Der keko, der / die am höchsten gewachsen ist darf erstmal trinken",
+        "description": "Upsi Dupsi. Gibt das Leben dir 'ne Zitrone, dann mach Limosine"
+      },
+      {
+        "category": "Trink",
+        "name": "Der Spieler / Die Spieler, der/die heute noch nicht geduscht hat/haben, trinkt / trinken aber sofort.",
+        "description": "Deutsch ist halt so eine Alman Sprache"
+      },
+      {
+        "category": "Trink",
+        "name": "Alle Brillenträger trinken",
+        "description": "Wie nennt man eine japanische Unterhosenfabrik? Sacki verpacki."
+      },
+      {
+        "category": "Trink",
+        "name": "Das kleinste Gebläse trinkt",
+        "description": "Ich spüle Teller, Schalen, Pfannen aber abwaschen bleibt gleich -Mozart"
+      },
+      {
+        "category": "Trink",
+        "name": "Der jünste trinkt",
+        "description": "Das passt ja vorn und hinten nicht. Lisa, 23 schickt ihre Eis.de Bestellung zurück."
+      },
+      {
+        "category": "Trink",
+        "name": "Der lelek mit den kürzesten Haaren trinkt",
+        "description": "Das kannst du schütteln, da kannst du klopfen, in die Hose geht der letzte Tropfen."
       }
     ]
   },
@@ -78,8 +163,7 @@
       {
         "category": "",
         "name": "",
-        "description": "",
-        "weight": 1
+        "description": ""
       }
     ]
   },
@@ -90,8 +174,7 @@
       {
         "category": "",
         "name": "",
-        "description": "",
-        "weight": 1
+        "description": ""
       }
     ]
   },
@@ -102,8 +185,7 @@
       {
         "category": "",
         "name": "",
-        "description": "",
-        "weight": 1
+        "description": ""
       }
     ]
   }
