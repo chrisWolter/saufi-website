@@ -68,6 +68,7 @@ export default {
         padding: 1.6em 15px 1.6em 15px;
         box-shadow: 0 0 5px rgba(0,0,0,0.2);
         border-radius: 1.7em;
+        word-break: break-word;
     }
     .no-task {
         text-align: center;
