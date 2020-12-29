@@ -8,7 +8,8 @@
             </div>
         </div>
         <div v-show="!show">
-            <h3 class="no-task">Keine Zusatzaufgabe :(</h3>
+            <h3 v-if="didIHearSaufi" class="no-task">Keine Zusatzaufgabe :( <br />Aber du darfst trotzdem einen Sipp nehmen</h3>
+            <h3 v-else class="no-task">Keine Zusatzaufgabe :( <br /> Leider darfst du auch nichts trinken</h3>
         </div>
     </b-col>
 </template>
@@ -26,6 +27,9 @@ export default {
           type: Boolean
       },
       show: {
+          type: Boolean
+      },
+      didIHearSaufi: {
           type: Boolean
       }
     },

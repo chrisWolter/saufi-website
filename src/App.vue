@@ -2,7 +2,7 @@
   <div id="app" class="light-mode">
     <b-container fluid>
         <b-row class="justify-content-md-center header">
-          <b-col cols="2" md="1" class="header-wrapper">
+          <b-col cols="2" md="1" class="header-wrapper dark-mode-button-wrapper">
             <button @click="toggleDarkMode()" class="header-buttons">
               <span v-if="!isDarkMode"><BIconMoon></BIconMoon></span>
               <span v-else><BIconSun></BIconSun></span>
@@ -22,7 +22,7 @@
             <Decider :didIHearSaufi="didIHearSaufiVar" id="decider" class="decider-elem" :style="{'background': bgColor}"/>
           </b-row>
           <b-row id="task-decider" class="justify-content-md-center task" >
-            <Task :tasks-json="tasksJson" :task-trigger="triggerButton" :show="didIHearTaskVar" id="task" class="task-elem"/>
+            <Task :tasks-json="tasksJson" :task-trigger="triggerButton" :show="didIHearTaskVar" :didIHearSaufi="didIHearSaufiVar" id="task" class="task-elem"/>
           </b-row>
         <b-row id="reload-button" class="justify-content-md-center pos-bottom">
           <b-col col md="6" class="mx-0">
@@ -227,6 +227,9 @@ export default {
 @media screen and (min-width: 720px){
   .info-button-wrapper{
     justify-content: flex-end;
+  }
+  .dark-mode-button-wrapper{
+    justify-content: flex-start;
   }
 }
 

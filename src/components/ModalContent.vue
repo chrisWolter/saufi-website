@@ -4,12 +4,14 @@
       <p>Ihr wollt wissen ob Ihr Saufi gehört habt? Say no more.
         <br />
         Bei dem Spiel "Hab ich Saufi gehört" wird das Handy herumgereicht und
-        ihr bekommt angezeigt, ob ihr Saufi gehört habt oder eben nicht. In dem
-        man auf den Knopf am unteren Ende der Seite drückt, werden
+        ihr bekommt angezeigt, ob ihr Saufi gehört habt oder eben nicht. Wenn Ihr
+        Saufi gehört habt, dann müsst Ihr trinken, ansonsten müsst Ihr nicht 
+        trinken. In demman auf den Knopf am unteren Ende der Seite drückt, werden
         die Würfel neu gerollt und der nächste Spieler hat die möglich seiner
         Leber zu schaden oder eben nicht. Wenn Ihr Saufi gehört habt, dann müsst
         ihr etwas trinken. Was Ihr trinkt ist uns egal. Wieviel Ihr trinkt könnt
-        ihr bevor ihr anfangt selber festlegen.
+        ihr bevor ihr anfangt selber festlegen. Wenn Ihr kein Saufi gehört habt, 
+        dann trinkt Ihr nichts.
         Es kann vorkommen das euch zusätzlich noch Aufgaben angezeigt werden.
         Diese solltet Ihr zusätzlich zum trinken oder nicht trinken erledigen.
       </p>
