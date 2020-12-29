@@ -62,7 +62,7 @@ export default {
 
 <style scoped>
     .dark-mode .task {
-        box-shadow: 0 0 5px rgba(255,255,255,0.2);
+        box-shadow: 0 0 5px rgba(255,255,255,0.4);
     }
     .task {
         padding: 1.6em 15px 1.6em 15px;

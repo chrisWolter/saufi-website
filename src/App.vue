@@ -167,7 +167,7 @@ export default {
     font-weight: 700;
   }
   .decider-elem  {
-    box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
     border-radius: 1.7em;
     padding: 1em;
     margin: 15px 25px;
