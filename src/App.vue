@@ -246,6 +246,12 @@ export default {
     color: white;
   }
 
+  .dark-mode button.close{
+    color: white;
+    text-shadow: none;
+    opacity: 0.75;
+  }
+
   .header{
     position: fixed;
     width: 100%;
