@@ -3,7 +3,7 @@
     <b-container fluid>
         <b-row class="justify-content-md-center header">
           <b-col cols="2" md="1" class="header-wrapper">
-            <button @click="toggleDarkMode()" class="dark-mode-trigger">
+            <button @click="toggleDarkMode()" class="header-buttons">
               <span v-if="!isDarkMode"><BIconMoon></BIconMoon></span>
               <span v-else><BIconSun></BIconSun></span>
             </button>
@@ -12,8 +12,8 @@
           <h2 class="logo mx-0">Saufi?</h2>
           </b-col>
           <b-col cols="2" md="1" class="header-wrapper info-button-wrapper">
-            <button class="impressum-button" v-b-modal.impressum-modal>
-              <BIconInfoCircle class="info-icon"></BIconInfoCircle>
+            <button class="header-buttons" v-b-modal.impressum-modal>
+              <BIconInfoCircle></BIconInfoCircle>
             </button>
           </b-col>
         </b-row>
@@ -153,28 +153,12 @@ export default {
     background: -webkit-linear-gradient(top,  rgba(0,8,20,1) 0%,rgba(0,8,20,1) 65%,rgba(0,8,20,0) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to top,  rgba(0,8,20,1) 0%,rgba(0,8,20,1) 65%,rgba(0,8,20,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   }
-  .dark-mode .info-icon {
-    color: white;
-  }
-
-  .info-icon {
-    font-size: 24px;
-  }
 
   #app {
   min-width: 100%;
   min-height: 100%;
-  background-color: white;
   }
-  .dark-mode-trigger, .dark-mode-trigger:focus  {
-    border: none;
-    outline: none;
-    background: none;
-    font-size: 25px;
-  }
-  .dark-mode .dark-mode-trigger {
-    color: white;
-  }
+
   .logo {
     text-align: center;
     padding: 20px 0;
@@ -249,12 +233,17 @@ export default {
   }
 }
 
-  .impressum-button,
-  .impressum-button:focus{
+  .header-buttons,
+  .header-buttons:focus{
     background: none;
     border: none;
     outline: none;
-    margin-top: -10px
+    margin-top: -10px;
+    font-size: 20px;
+  }
+
+  .dark-mode .header-buttons {
+    color: white;
   }
 
   .header{
