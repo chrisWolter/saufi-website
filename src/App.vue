@@ -59,7 +59,7 @@ export default {
         {gradient: 'linear-gradient(to right, #dce35b, #45b649)'}, /* Grün */
         {gradient: 'linear-gradient(to right, #f7b733, #fc4a1a)'}, /* Rot */
       ],
-      didIHearSaufiVar: Boolean,
+      didIHearSaufiVar: null,
       didIHearTaskVar: null,
       bgColor: String,
       taskHeight: String,

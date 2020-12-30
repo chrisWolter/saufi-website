@@ -8,8 +8,14 @@
             </div>
         </div>
         <div v-show="!show">
-            <h3 v-if="didIHearSaufi" class="no-task">Keine Zusatzaufgabe :( <br />Aber du darfst trotzdem einen Sipp nehmen</h3>
-            <h3 v-else class="no-task">Keine Zusatzaufgabe :( <br /> Leider darfst du auch nichts trinken</h3>
+            <div v-if="didIHearSaufi" class="no-task">
+                <h3>Keine Zusatzaufgabe :(</h3>
+                <h4 class="mt-4">Aber du darfst trotzdem einen Sipp nehmen.</h4>
+            </div>
+            <div v-else class="no-task">
+                <h3>Keine Zusatzaufgabe :(</h3>
+                <h4 class="mt-4">Leider darfst du auch nichts trinken.</h4>
+            </div>
         </div>
     </b-col>
 </template>
