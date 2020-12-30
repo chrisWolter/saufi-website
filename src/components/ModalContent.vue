@@ -1,19 +1,23 @@
 <template>
     <div class="d-block">
       <h4>Das Spiel</h4>
-      <p>Ihr wollt wissen ob Ihr Saufi gehört habt? Say no more.
+      <p>Ihr wollt wissen, ob Ihr Saufi gehört habt? Say no more.
         <br />
         Bei dem Spiel "Hab ich Saufi gehört" wird das Handy herumgereicht und
-        ihr bekommt angezeigt, ob ihr Saufi gehört habt oder eben nicht. Wenn Ihr
-        Saufi gehört habt, dann müsst Ihr trinken, ansonsten müsst Ihr nicht 
-        trinken. In demman auf den Knopf am unteren Ende der Seite drückt, werden
-        die Würfel neu gerollt und der nächste Spieler hat die möglich seiner
-        Leber zu schaden oder eben nicht. Wenn Ihr Saufi gehört habt, dann müsst
-        ihr etwas trinken. Was Ihr trinkt ist uns egal. Wieviel Ihr trinkt könnt
-        ihr bevor ihr anfangt selber festlegen. Wenn Ihr kein Saufi gehört habt, 
-        dann trinkt Ihr nichts.
+        ihr bekommt angezeigt, ob ihr Saufi gehört habt oder eben nicht. 
+        Wenn Ihr Saufi gehört habt, dann müsst ihr etwas trinken. Was Ihr trinkt 
+        ist uns egal. Wieviel Ihr trinkt, könnt ihr, bevor ihr anfangt selbst 
+        festlegen. Wenn Ihr kein Saufi gehört habt, dann trinkt Ihr nichts. In dem 
+        man auf den Knopf am unteren Ende der Seite drückt, werden
+        die Würfel neu gerollt und der nächste Spieler hat die Möglichkeit seiner
+        Leber zu schaden oder eben nicht.
         Es kann vorkommen das euch zusätzlich noch Aufgaben angezeigt werden.
-        Diese solltet Ihr zusätzlich zum trinken oder nicht trinken erledigen.
+        Diese solltet Ihr zusätzlich zum Trinken oder nicht Trinken erledigen. Es kann
+        also vorkommen, dass ihr kein Saufi gehört habt (also nichts trinken) und trotzdem 
+        eine Aufgabe erledigen müsst. Was Ihr bei der Aufgabe machen müsst, wird auf der 
+        Aufgabenkarte erklärt.
+        <br />
+        #drinkresponsibly #dontdrinkanddrive
       </p>
       <h4>Allgemeine Infos</h4>
       <p>Diese Website wurde mit viel Herz und Alkohol von Alexander Herrmann
@@ -25,7 +29,8 @@
       <h4 class="mt-4">Roadmap</h4>
       <p>Wir werden dieses Trinkspiel weiterentwickeln und neue Ideen einfließen
         lassen. Allerdings kommen Major Updates unregelmäßig.
-        Bugfixes und kleinere Anpassungen werden wir aber nachbessern.
+        Bugfixes und kleinere Anpassungen werden aber recht schnell erledigt und 
+        bereitgestellt.
       </p>
       <h4 class="mt-4">Rechtliches</h4>
       <div>Infoicon made by
