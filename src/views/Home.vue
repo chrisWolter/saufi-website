@@ -3,10 +3,7 @@
     <b-container fluid>
       <b-row class="justify-content-md-center header">
         <b-col cols="2" md="1" class="header-wrapper dark-mode-button-wrapper">
-          <button @click="toggleDarkMode()" class="header-buttons">
-            <span v-if="!isDarkMode"><BIconMoon></BIconMoon></span>
-            <span v-else><BIconSun></BIconSun></span>
-          </button>
+          <ToggleDarkModeButton/>
         </b-col>
         <b-col cols="8" md="4" class="header-wrapper">
           <h2 class="logo mx-0">Saufi?</h2>
@@ -47,17 +44,17 @@
 import Decider from '@/components/Decider.vue'
 import Task from '@/components/Task.vue'
 import ModalContent from '@/components/ModalContent'
-import { BIconInfoCircle, BIconMoon, BIconSun } from 'bootstrap-vue'
+import { BIconInfoCircle } from 'bootstrap-vue'
+import ToggleDarkModeButton from '@/components/ToggleDarkModeButton'
 
 export default {
   name: 'App',
   components: {
+    ToggleDarkModeButton,
     Decider,
     Task,
     ModalContent,
-    BIconInfoCircle,
-    BIconMoon,
-    BIconSun
+    BIconInfoCircle
   },
   data () {
     return {
@@ -71,7 +68,6 @@ export default {
       taskHeight: String,
       tasksJson: null,
       triggerButton: false,
-      isDarkMode: false,
       activeAnimations: {
         decider: {
           wobble: false,
@@ -133,19 +129,13 @@ export default {
     },
     animateTask () {
       this.activeAnimations.task.slideInBottom = true
-    },
-    toggleDarkMode () {
-      let body = document.getElementsByTagName('html')[0]
-      let currentClass = body.className
-      body.className = currentClass === 'dark-mode' ? 'light-mode' : 'dark-mode'
-      this.isDarkMode = !this.isDarkMode
     }
   },
 
 }
 </script>
 
-<style>
+<style scoped>
 @import '../assets/animation.css';
 
 .logo {

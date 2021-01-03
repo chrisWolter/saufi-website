@@ -11,21 +11,7 @@ export default {
   name: 'App',
   components: {
     Home
-  },
-  data () {
-    return {
-      isDarkMode: false
-    }
-  },
-  methods: {
-    toggleDarkMode () {
-      let body = document.getElementsByTagName('html')[0]
-      let currentClass = body.className
-      body.className = currentClass === 'dark-mode' ? 'light-mode' : 'dark-mode'
-      this.isDarkMode = !this.isDarkMode
-    }
-  },
-
+  }
 }
 </script>
 
