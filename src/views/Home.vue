@@ -116,10 +116,6 @@ export default {
       this.didIHearTaskVar = Math.random() < 0.45
       this.triggerButton = !this.triggerButton
     },
-    toggleClass (id, className) {
-      const el = document.getElementById(id)
-      el.classList.add(className)
-    },
     animateDecider () {
       if (this.didIHearSaufiVar) {
         this.activeAnimations.decider.scaleInCenter = true
