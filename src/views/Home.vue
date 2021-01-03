@@ -80,19 +80,9 @@ export default {
     }
   },
   async mounted () {
-    const response = await this.axios
-        .get('https://alexherrmi.github.io/json/tasks.json')
-    this.tasksJson = response.data
+    await this.getTasks()
     this.reload()
-    const decider = this.$refs.decider.$el
-    decider.addEventListener('animationend', () => {
-      this.activeAnimations.decider.wobble = false
-      this.activeAnimations.decider.scaleInCenter = false
-    })
-    const task = this.$refs.task.$el
-    task.addEventListener('animationend', () => {
-      this.activeAnimations.task.slideInBottom = false
-    })
+    this.stopAnimations()
   },
   methods: {
     reload () {
@@ -101,6 +91,22 @@ export default {
       this.setThemeColor()
       this.animateDecider()
       this.animateTask()
+    },
+    async getTasks() {
+      const response = await this.axios
+          .get('https://alexherrmi.github.io/json/tasks.json')
+      this.tasksJson = response.data
+    },
+    stopAnimations() {
+      const decider = this.$refs.decider.$el
+      decider.addEventListener('animationend', () => {
+        this.activeAnimations.decider.wobble = false
+        this.activeAnimations.decider.scaleInCenter = false
+      })
+      const task = this.$refs.task.$el
+      task.addEventListener('animationend', () => {
+        this.activeAnimations.task.slideInBottom = false
+      })
     },
     rollDidIHearSaufiDice () {
       this.didIHearSaufi = Math.random() > 0.4
