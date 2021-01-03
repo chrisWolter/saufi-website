@@ -17,7 +17,7 @@
       <div class="content-container">
         <b-row id="saufi-decider" class="justify-content-md-center decider">
           <Decider :didIHearSaufi="didIHearSaufi" ref="decider" id="decider" class="decider-elem"
-                   :style="{'background': bgColor}"
+                   :style="{'background': themeColor}"
                    :class="{'wobble': activeAnimations.decider.wobble, 'scale-in-center': activeAnimations.decider.scaleInCenter}"/>
         </b-row>
         <b-row id="task-decider" class="justify-content-md-center task">
@@ -27,7 +27,7 @@
         </b-row>
         <b-row id="reload-button" class="justify-content-md-center pos-bottom">
           <b-col col md="6" class="mx-0">
-            <b-button @click="reload()" block class="reload-button" :style="{'background': bgColor}">Hab ich Saufi
+            <b-button @click="reload()" block class="reload-button" :style="{'background': themeColor}">Hab ich Saufi
               gehört?
             </b-button>
           </b-col>
@@ -64,7 +64,6 @@ export default {
       },
       didIHearSaufi: null,
       didIHearTask: null,
-      bgColor: String,
       taskHeight: String,
       tasksJson: null,
       triggerButton: false,
@@ -88,7 +87,6 @@ export default {
     reload () {
       this.rollDidIHearSaufiDice()
       this.rollDidIHearTaskDice()
-      this.setThemeColor()
       this.animateDecider()
       this.animateTask()
     },
@@ -111,13 +109,6 @@ export default {
     rollDidIHearSaufiDice () {
       this.didIHearSaufi = Math.random() > 0.4
     },
-    setThemeColor () {
-      if (this.didIHearSaufi) {
-        this.bgColor = this.gradients.red
-      } else {
-        this.bgColor = this.gradients.green
-      }
-    },
     rollDidIHearTaskDice () {
       this.didIHearTask = Math.random() < 0.45
       this.triggerButton = !this.triggerButton
@@ -133,6 +124,11 @@ export default {
       this.activeAnimations.task.slideInBottom = true
     }
   },
+  computed: {
+    themeColor() {
+      return this.didIHearSaufi ? this.gradients.red : this.gradients.green
+    }
+  }
 
 }
 </script>
