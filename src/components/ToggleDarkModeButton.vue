@@ -1,7 +1,11 @@
 <template>
   <button @click="toggleDarkMode" class="header-buttons">
-    <span v-if="!isDarkMode"><BIconMoon></BIconMoon></span>
-    <span v-else><BIconSun></BIconSun></span>
+    <template v-if="isDarkMode">
+      <BIconMoon/>
+    </template>
+    <template v-else>
+      <BIconSun/>
+    </template>
   </button>
 </template>
 <script>
