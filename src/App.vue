@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="light-mode">
+  <div id="app">
     <Home/>
   </div>
 </template>

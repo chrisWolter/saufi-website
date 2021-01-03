@@ -14,10 +14,8 @@ export default {
   },
   methods: {
     toggleDarkMode () {
-      let body = document.getElementsByTagName('html')[0]
-      let currentClass = body.className
-      body.className = currentClass === 'dark-mode' ? 'light-mode' : 'dark-mode'
       this.isDarkMode = !this.isDarkMode
+      document.querySelector('html').classList.toggle('dark-mode')
     }
   },
 }
