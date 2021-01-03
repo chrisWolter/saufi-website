@@ -16,13 +16,13 @@
       </b-row>
       <div class="content-container">
         <b-row id="saufi-decider" class="justify-content-md-center decider">
-          <Decider :didIHearSaufi="didIHearSaufiVar" ref="decider" id="decider" class="decider-elem"
+          <Decider :didIHearSaufi="didIHearSaufi" ref="decider" id="decider" class="decider-elem"
                    :style="{'background': bgColor}"
                    :class="{'wobble': activeAnimations.decider.wobble, 'scale-in-center': activeAnimations.decider.scaleInCenter}"/>
         </b-row>
         <b-row id="task-decider" class="justify-content-md-center task">
-          <Task :tasks-json="tasksJson" :task-trigger="triggerButton" :show="didIHearTaskVar"
-                :didIHearSaufi="didIHearSaufiVar" ref="task" id="task" class="task-elem"
+          <Task :tasks-json="tasksJson" :task-trigger="triggerButton" :show="didIHearTask"
+                :didIHearSaufi="didIHearSaufi" ref="task" id="task" class="task-elem"
                 :class="{'slide-in-bottom': activeAnimations.task.slideInBottom}"/>
         </b-row>
         <b-row id="reload-button" class="justify-content-md-center pos-bottom">
@@ -58,12 +58,12 @@ export default {
   },
   data () {
     return {
-      gradients: [
-        { gradient: 'linear-gradient(to right, #dce35b, #45b649)' }, /* Grün */
-        { gradient: 'linear-gradient(to right, #f7b733, #fc4a1a)' }, /* Rot */
-      ],
-      didIHearSaufiVar: null,
-      didIHearTaskVar: null,
+      gradients: {
+        red: 'linear-gradient(to right, #dce35b, #45b649)',
+        green: 'linear-gradient(to right, #f7b733, #fc4a1a)'
+      },
+      didIHearSaufi: null,
+      didIHearTask: null,
       bgColor: String,
       taskHeight: String,
       tasksJson: null,
@@ -96,28 +96,28 @@ export default {
   },
   methods: {
     reload () {
-      this.didIHearSaufi()
-      this.didIHearTask()
-      this.randomColor()
+      this.rollDidIHearSaufiDice()
+      this.rollDidIHearTaskDice()
+      this.setThemeColor()
       this.animateDecider()
       this.animateTask()
     },
-    didIHearSaufi () {
-      this.didIHearSaufiVar = Math.random() > 0.4
+    rollDidIHearSaufiDice () {
+      this.didIHearSaufi = Math.random() > 0.4
     },
-    randomColor () {
-      if (this.didIHearSaufiVar) {
-        this.bgColor = this.gradients[0].gradient
+    setThemeColor () {
+      if (this.didIHearSaufi) {
+        this.bgColor = this.gradients.red
       } else {
-        this.bgColor = this.gradients[1].gradient
+        this.bgColor = this.gradients.green
       }
     },
-    didIHearTask () {
-      this.didIHearTaskVar = Math.random() < 0.45
+    rollDidIHearTaskDice () {
+      this.didIHearTask = Math.random() < 0.45
       this.triggerButton = !this.triggerButton
     },
     animateDecider () {
-      if (this.didIHearSaufiVar) {
+      if (this.didIHearSaufi) {
         this.activeAnimations.decider.scaleInCenter = true
       } else {
         this.activeAnimations.decider.wobble = true
