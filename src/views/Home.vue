@@ -157,19 +157,6 @@ export default {
   padding: 0 !important;
 }
 
-.heading {
-  letter-spacing: -2px;
-  font-size: 2.5em;
-  font-weight: 700;
-}
-
-.subheading {
-  margin: 0;
-  font-weight: 400;
-  font-family: 'Kalam', cursive;
-  font-style: italic;
-}
-
 .pos-bottom {
   position: fixed;
   bottom: 30px;
@@ -196,7 +183,6 @@ export default {
   font-size: 20px !important;
   font-weight: 700 !important;
   border: none !important;
-  box-shadow: none !important;
   color: black !important;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) !important;
 }
@@ -263,37 +249,6 @@ export default {
 
 .content-container {
   margin-top: 60px;
-}
-
-
-@media only screen and (min-width: 500px) {
-  .decider {
-    text-align: center;
-  }
-}
-
-@media only screen and (max-width: 470px) {
-  .heading {
-    font-size: 2.3em;
-  }
-}
-
-@media only screen and (max-width: 430px) {
-  .heading {
-    font-size: 2.0em;
-  }
-}
-
-@media only screen and (max-width: 375px) {
-  .heading {
-    font-size: 1.8em;
-  }
-}
-
-@media only screen and (max-width: 350px) {
-  .heading {
-    font-size: 1.6em;
-  }
 }
 
 </style>

@@ -42,4 +42,49 @@ html, body {
   min-width: 100%;
   min-height: 100%;
 }
+
+
+.heading {
+  letter-spacing: -2px;
+  font-size: 2.5em;
+  font-weight: 700;
+}
+
+.subheading {
+  margin: 0;
+  font-weight: 400;
+  font-family: 'Kalam', cursive;
+  font-style: italic;
+}
+
+@media only screen and (min-width: 500px) {
+  .decider {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .heading {
+    font-size: 2.3em;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .heading {
+    font-size: 2.0em;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .heading {
+    font-size: 1.8em;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .heading {
+    font-size: 1.6em;
+  }
+}
+
 </style>
