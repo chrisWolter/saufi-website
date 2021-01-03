@@ -10,7 +10,7 @@
         </b-col>
         <b-col cols="2" md="1" class="header-wrapper info-button-wrapper">
           <button class="header-buttons" v-b-modal.impressum-modal>
-            <BIconInfoCircle></BIconInfoCircle>
+            <BIconInfoCircle/>
           </button>
         </b-col>
       </b-row>
@@ -35,7 +35,7 @@
       </div>
     </b-container>
     <b-modal id="impressum-modal" title="Information" hide-footer>
-      <modal-content></modal-content>
+      <modal-content/>
     </b-modal>
   </div>
 </template>
