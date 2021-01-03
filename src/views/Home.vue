@@ -79,7 +79,7 @@ export default {
     }
   },
   async mounted () {
-    await this.getTasks()
+    await this.fetchTasks()
     this.reload()
     this.stopAnimations()
   },
@@ -90,7 +90,7 @@ export default {
       this.animateDecider()
       this.animateTask()
     },
-    async getTasks() {
+    async fetchTasks() {
       const response = await this.axios
           .get('https://alexherrmi.github.io/json/tasks.json')
       this.tasksJson = response.data
