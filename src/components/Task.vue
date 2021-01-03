@@ -21,7 +21,7 @@
 </template>
 
 <script>
-let weightedRandom = require('weighted-random')
+const weightedRandom = require('weighted-random')
 
 export default {
     name: "Task",
@@ -45,18 +45,17 @@ export default {
       }
     },
     methods: {
-        getTask() {
-            if(this.tasksJson) {
-                let tasklist = JSON.parse(JSON.stringify(this.tasksJson))
-                let weights = tasklist.map(task => task.weight)
-                let selection = weightedRandom(weights)
-                let tasks = tasklist[selection].data
-                let randomTaskNumber = Math.floor(Math.random() * tasks.length)
-                return tasks[randomTaskNumber]
-            } else {
-                return undefined
-            }
+      getTask () {
+        if (!this.tasksJson) {
+          return
         }
+        const taskList = JSON.parse(JSON.stringify(this.tasksJson))
+        const weights = taskList.map(task => task.weight)
+        const selection = weightedRandom(weights)
+        const tasks = taskList[selection].data
+        const randomTaskIndex = Math.floor(Math.random() * tasks.length)
+        return tasks[randomTaskIndex]
+      }
     },
     created() {
         this.task = this.getTask()
