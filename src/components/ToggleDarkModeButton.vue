@@ -16,10 +16,19 @@ export default {
       isDarkMode: false
     }
   },
+  mounted () {
+    if(localStorage.getItem('SaufiDarkMode') === 'true'){
+      this.toggleDarkMode()
+    }
+  },
   methods: {
     toggleDarkMode () {
       this.isDarkMode = !this.isDarkMode
+      this.localStoreDarkMode(this.isDarkMode)
       document.querySelector('html').classList.toggle('dark-mode')
+    },
+    localStoreDarkMode (isDarkMode) {
+      localStorage.setItem('SaufiDarkMode', isDarkMode)
     }
   },
 }
