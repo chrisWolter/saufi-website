@@ -26,10 +26,10 @@
                 :class="{'slide-in-bottom': activeAnimations.task.slideInBottom}"/>
         </b-row>
         <b-row id="reload-button" class="justify-content-md-center pos-bottom">
-          <b-col col md="6" class="mx-0">
-            <b-button @click="reload()" block class="reload-button" :style="{'background': themeColor}">Hab ich Saufi
+          <b-col col md="6" class="mx-0 px-sm-0">
+            <button @click="reload()" block class="reload-button w-100" :style="{'background': themeColor}"> <span class="mr-3"> <BIconArrowRepeat /> </span>Hab ich Saufi
               gehört?
-            </b-button>
+            </button>
           </b-col>
         </b-row>
       </div>
@@ -178,13 +178,17 @@ export default {
 }
 
 .reload-button {
-  border-radius: 0.8em !important;
+  border-radius: 0.8em;
   height: 45px;
-  font-size: 20px !important;
-  font-weight: 700 !important;
-  border: none !important;
-  color: black !important;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) !important;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  color: black;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.reload-button:focus{
+  outline: none;
 }
 
 .gradient {
