@@ -2,7 +2,7 @@
 
 name: CI
 
-# Controls when the action will run. 
+# Controls when the action will run.
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
@@ -26,7 +26,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Use Node.js 12x
         uses: actions/setup-node@v1
-        
+
 
       # Runs a single command using the runners shell
       - name: Build projekt
@@ -43,7 +43,7 @@ jobs:
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-          LOCAL_DIR: build
+          LOCAL_DIR: dist
           METHOD: sftp
           PORT: 22
           ARGS: --delete
