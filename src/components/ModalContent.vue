@@ -50,7 +50,7 @@
           title="paomedia">www.paomedia.com
         </a>
       </div>
-      <p class="mt-4">Aktuelle Version: 1.1.1 - now with automated deployment</p>
+      <p class="mt-4">Aktuelle Version: 1.1.1</p>
       <div class="clippy"></div>
     </div>
 </template>
