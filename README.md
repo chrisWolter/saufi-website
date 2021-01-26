@@ -16,7 +16,7 @@ npm run serve
 npm run build
 ```
 
-### Lints and fixes files
+### Lints and fixes filesaoeu
 ```
 npm run lint
 ```
