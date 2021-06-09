@@ -7,9 +7,11 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import {BIconInfoCircle, BIconSun, BIconMoon, BIconArrowRepeat} from 'bootstrap-vue'
 import { VueHammer } from 'vue2-hammer'
+import VueBottomSheet from "@webzlodimir/vue-bottom-sheet";
 
 Vue.config.productionTip = false
 
+Vue.use(VueBottomSheet);
 Vue.use(VueHammer)
 Vue.use(BootstrapVue)
 Vue.use(VueAxios, axios)

@@ -37,6 +37,13 @@
     <b-modal id="impressum-modal" title="Information" hide-footer>
       <modal-content/>
     </b-modal>
+    <vue-bottom-sheet ref="myBottomSheet" class="custom-bottom-sheet" max-height="100%">
+      <h1>Lorem Ipsum</h1>
+      <h2>What is Lorem Ipsum?</h2>
+      <p>
+        <strong>Lorem Ipsum</strong> is simply dummy text
+      </p>
+    </vue-bottom-sheet>
   </div>
 </template>
 
@@ -85,7 +92,7 @@ export default {
   },
   methods: {
     onSwipeLeft() {
-      alert("test")
+      this.$refs.myBottomSheet.open();
     },
     reload () {
       this.rollDidIHearSaufiDice()
@@ -256,6 +263,19 @@ export default {
 
 .content-container {
   margin-top: 60px;
+}
+
+::v-deep .fx-default {
+  transition: all 0.2s cubic-bezier(.77,0,.17,1) !important;
+}
+
+::v-deep .bottom-sheet__content {
+  height: 35vh !important;
+}
+
+::v-deep .bottom-sheet__backdrop {
+  background: rgba(0,0,0,.6) !important;
+  backdrop-filter: blur(10px);
 }
 
 </style>
