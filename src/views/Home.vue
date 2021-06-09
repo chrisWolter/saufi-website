@@ -34,7 +34,7 @@
         </b-row>
       </div>
     </b-container>
-    <b-modal id="impressum-modal" title="Information" hide-footer>
+    <b-modal id="impressum-modal" hide-header hide-footer>
       <modal-content/>
     </b-modal>
   </div>
@@ -122,7 +122,7 @@ export default {
     },
     animateTask () {
       this.activeAnimations.task.slideInBottom = true
-    }
+    },
   },
   computed: {
     themeColor() {
@@ -254,5 +254,19 @@ export default {
 .content-container {
   margin-top: 60px;
 }
+
+::v-deep .modal-dialog{
+  margin: 0;
+  min-height: 100%;
+}
+
+::v-deep .modal-content{
+  backdrop-filter: blur(20px);
+  position: absolute;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 0;
+  border: none;
+  }
 
 </style>
