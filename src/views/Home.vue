@@ -27,7 +27,7 @@
         </b-row>
         <b-row id="reload-button" class="justify-content-md-center pos-bottom">
           <b-col col md="6" class="mx-0 px-sm-0">
-            <button @click="reload()" block class="reload-button w-100" :style="{'background': themeColor}"> <span class="mr-3"> <BIconArrowRepeat /> </span>Hab ich Saufi
+            <button v-hammer:swipe.up="onSwipeLeft" @click="reload()" block class="reload-button w-100" :style="{'background': themeColor}"> <span class="mr-3"> <BIconArrowRepeat /> </span>Hab ich Saufi
               gehört?
             </button>
           </b-col>
@@ -84,6 +84,9 @@ export default {
     this.stopAnimations()
   },
   methods: {
+    onSwipeLeft() {
+      alert("test")
+    },
     reload () {
       this.rollDidIHearSaufiDice()
       this.rollDidIHearTaskDice()

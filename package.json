@@ -15,6 +15,7 @@
     "vue": "^2.6.11",
     "vue-async-computed": "^3.9.0",
     "vue-axios": "^3.2.0",
+    "vue2-hammer": "^2.1.2",
     "weighted-random": "^0.1.0"
   },
   "devDependencies": {

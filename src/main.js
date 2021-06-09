@@ -6,9 +6,11 @@ import "bootstrap-vue/dist/bootstrap-vue.css"
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import {BIconInfoCircle, BIconSun, BIconMoon, BIconArrowRepeat} from 'bootstrap-vue'
+import { VueHammer } from 'vue2-hammer'
 
 Vue.config.productionTip = false
 
+Vue.use(VueHammer)
 Vue.use(BootstrapVue)
 Vue.use(VueAxios, axios)
 Vue.component('BIconInfoCircle', BIconInfoCircle)
