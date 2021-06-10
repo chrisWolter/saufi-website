@@ -4,7 +4,7 @@
             <div v-if="task" class="task">
                 <h5 class="subheading">{{task.category}}</h5>
                 <h1 class="heading">{{task.name}}</h1>
-                <p>{{task.description}}</p>
+                <p>{{taskDesciption}}</p>
             </div>
         </div>
         <div v-show="!show">
@@ -47,8 +47,9 @@ export default {
     methods: {
       getTask () {
         if (!this.tasksJson) {
-          return
+            return
         }
+
         const taskList = JSON.parse(JSON.stringify(this.tasksJson))
         const weights = taskList.map(task => task.weight)
         const selection = weightedRandom(weights)
@@ -56,6 +57,15 @@ export default {
         const randomTaskIndex = Math.floor(Math.random() * tasks.length)
         return tasks[randomTaskIndex]
       }
+    },
+    computed: {
+        taskDesciption() {
+            if(this.task.description instanceof Array) {
+                const random = Math.floor(Math.random() * this.task.description.length)
+                return this.task.description[random]
+            }
+            return this.task.description
+        }
     },
     created() {
         this.task = this.getTask()
