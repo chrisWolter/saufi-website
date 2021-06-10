@@ -10,7 +10,7 @@
         </b-col>
         <b-col cols="2" md="1" class="header-wrapper info-button-wrapper">
           <button class="header-buttons" v-b-modal.impressum-modal>
-            <BIconInfoCircle/>
+            <BIconGearFill/>
           </button>
         </b-col>
       </b-row>
@@ -44,7 +44,7 @@
 import Decider from '@/components/Decider.vue'
 import Task from '@/components/Task.vue'
 import ModalContent from '@/components/ModalContent'
-import { BIconInfoCircle } from 'bootstrap-vue'
+import { BIconGearFill } from 'bootstrap-vue'
 
 export default {
   name: 'App',
@@ -52,7 +52,7 @@ export default {
     Decider,
     Task,
     ModalContent,
-    BIconInfoCircle
+    BIconGearFill
   },
   data () {
     return {
