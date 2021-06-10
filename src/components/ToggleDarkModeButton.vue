@@ -5,8 +5,6 @@
   <input type="checkbox" v-model="isDarkMode" @change="toggleDarkMode" checked>
   <span class="slider round"></span>
 </label>
-    <!-- <b-form-checkbox v-model="isDarkMode" @change="toggleDarkMode" id="DarkmodeSwitch" name="DarkmodeSwitch" switch size="lg" class="ml-auto toggle">
-    </b-form-checkbox> -->
   </div>
 </template>
 <script>
@@ -20,7 +18,6 @@ export default {
   mounted () {
     if(localStorage.getItem('SaufiDarkMode') === 'true'){
       this.isDarkMode = true
-      this.toggleDarkMode()
     }
   },
   methods: {
