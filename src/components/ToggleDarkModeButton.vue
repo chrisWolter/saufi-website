@@ -1,12 +1,9 @@
 <template>
-  <button @click="toggleDarkMode" class="header-buttons">
-    <template v-if="isDarkMode">
-      <BIconMoon/>
-    </template>
-    <template v-else>
-      <BIconSun/>
-    </template>
-  </button>
+  <div class="d-flex toggle-wrapper">
+    <label for="DarkmodeSwitch" class="mb-0">Darkmode</label>
+    <b-form-checkbox v-model="isDarkMode" @change="toggleDarkMode" id="DarkmodeSwitch" name="DarkmodeSwitch" switch size="lg" class="ml-auto toggle">
+    </b-form-checkbox>
+  </div>
 </template>
 <script>
 export default {
@@ -18,14 +15,16 @@ export default {
   },
   mounted () {
     if(localStorage.getItem('SaufiDarkMode') === 'true'){
+      this.isDarkMode = true
       this.toggleDarkMode()
     }
   },
   methods: {
     toggleDarkMode () {
-      this.isDarkMode = !this.isDarkMode
       this.localStoreDarkMode(this.isDarkMode)
+      if(!document.querySelector('html').classList.contains('dark-mode') && this.isDarkMode === true || document.querySelector('html').classList.contains('dark-mode') && this.isDarkMode === false){
       document.querySelector('html').classList.toggle('dark-mode')
+      }
     },
     localStoreDarkMode (isDarkMode) {
       localStorage.setItem('SaufiDarkMode', isDarkMode)
@@ -33,3 +32,20 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+  .toggle-wrapper {
+    position: relative;
+    width: 80%;
+    left: 10%;
+    margin-top: 20px;
+  }
+
+  .toggle-wrapper label{
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .toggle{
+    align-self: center;
+  }
+</style>

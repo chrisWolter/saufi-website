@@ -3,7 +3,7 @@
     <b-container fluid>
       <b-row class="justify-content-md-center header">
         <b-col cols="2" md="1" class="header-wrapper dark-mode-button-wrapper">
-          <ToggleDarkModeButton/>
+          <!-- Placeholder for button -->
         </b-col>
         <b-col cols="8" md="4" class="header-wrapper">
           <h2 class="logo mx-0">Saufi?</h2>
@@ -45,12 +45,10 @@ import Decider from '@/components/Decider.vue'
 import Task from '@/components/Task.vue'
 import ModalContent from '@/components/ModalContent'
 import { BIconInfoCircle } from 'bootstrap-vue'
-import ToggleDarkModeButton from '@/components/ToggleDarkModeButton'
 
 export default {
   name: 'App',
   components: {
-    ToggleDarkModeButton,
     Decider,
     Task,
     ModalContent,
@@ -79,6 +77,9 @@ export default {
     }
   },
   async mounted () {
+    if(localStorage.getItem('SaufiDarkMode') === 'true'){
+      document.querySelector('html').classList.toggle('dark-mode')
+    }
     await this.fetchTasks()
     this.reload()
     this.stopAnimations()
