@@ -3,7 +3,11 @@
         <div class="d-flex justify-content-center">
       <button class="close-modal" @click="$bvModal.hide('impressum-modal')"><BIconX class="h2" /></button>
       </div>
+      <div class="settings-wrapper">
+        <b-row class="justify-content-center">
 <ToggleDarkModeButton/>
+</b-row>
+</div>
     </div>
 </template>
 <script>
@@ -34,4 +38,7 @@ import ToggleDarkModeButton from '@/components/ToggleDarkModeButton'
     background: none;
   }
 
+  .settings-wrapper{
+    margin-top: 30px;
+  }
 </style>

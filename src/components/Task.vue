@@ -1,5 +1,5 @@
 <template>
-    <b-col col md="6">
+    <b-col col lg="6" sm="8">
         <div v-show="show">
             <div v-if="task" class="task">
                 <h5 class="subheading">{{task.category}}</h5>

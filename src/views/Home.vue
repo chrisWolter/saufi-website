@@ -259,6 +259,7 @@ export default {
 ::v-deep .modal-dialog{
   margin: 0;
   min-height: 100%;
+  max-width: 100%;
 }
 
 ::v-deep .modal-content{
@@ -269,5 +270,11 @@ export default {
   border-radius: 0;
   border: none;
   }
+
+@media screen and (min-width: 576px) {
+  ::v-deep .modal-dialog{
+    
+  }
+}
 
 </style>

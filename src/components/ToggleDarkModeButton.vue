@@ -1,4 +1,5 @@
 <template>
+<b-col cols="11" md="8" lg="6">
   <div class="d-flex toggle-wrapper">
     <label for="DarkmodeSwitch" class="mb-0">Darkmode</label>
 <label class="switch ml-auto toggle">
@@ -6,6 +7,7 @@
   <span class="slider round"></span>
 </label>
   </div>
+  </b-col>
 </template>
 <script>
 export default {
@@ -35,12 +37,6 @@ export default {
 </script>
 
 <style scoped>
-  .toggle-wrapper {
-    position: relative;
-    width: 80%;
-    left: 10%;
-    margin-top: 20px;
-  }
 
   .toggle-wrapper label{
     font-size: 24px;
