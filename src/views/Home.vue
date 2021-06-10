@@ -57,8 +57,8 @@ export default {
   data () {
     return {
       gradients: {
-        red: 'linear-gradient(to right, #dce35b, #45b649)',
-        green: 'linear-gradient(to right, #f7b733, #fc4a1a)'
+        green: 'linear-gradient(to right, #dce35b, #45b649)',
+        red: 'linear-gradient(to right, #f7b733, #fc4a1a)'
       },
       didIHearSaufi: null,
       didIHearTask: null,
@@ -138,7 +138,7 @@ export default {
   },
   computed: {
     themeColor() {
-      return this.didIHearSaufi ? this.gradients.red : this.gradients.green
+      return this.didIHearSaufi ? this.gradients.green : this.gradients.red
     }
   }
 
@@ -281,11 +281,5 @@ export default {
   border-radius: 0;
   border: none;
   }
-
-@media screen and (min-width: 576px) {
-  ::v-deep .modal-dialog{
-    
-  }
-}
 
 </style>

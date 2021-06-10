@@ -24,17 +24,23 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
-  background-color: white
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
 .dark-mode, .dark-mode body {
   background: #000814;
   color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
 .dark-mode .modal-content{
   background: rgba(0, 8, 20, 0.6);
   color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
 .dark-mode #reload-button::after, .dark-mode .header::before {

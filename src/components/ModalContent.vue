@@ -7,12 +7,16 @@
         <b-row class="justify-content-center">
 <ToggleDarkModeButton/>
 </b-row>
+<b-row class="justify-content-center">
+  <ToggleDifficulty/>
+</b-row>
 </div>
     </div>
 </template>
 <script>
 import { BIconX } from 'bootstrap-vue'
 import ToggleDarkModeButton from '@/components/ToggleDarkModeButton'
+import ToggleDifficulty from '@/components/ToggleDifficulty'
 
 
   export default {
@@ -20,6 +24,7 @@ import ToggleDarkModeButton from '@/components/ToggleDarkModeButton'
     components: {
       BIconX,
       ToggleDarkModeButton,
+      ToggleDifficulty
     }
   }
 </script>
@@ -38,7 +43,7 @@ import ToggleDarkModeButton from '@/components/ToggleDarkModeButton'
     background: none;
   }
 
-  .settings-wrapper{
-    margin-top: 30px;
+  .settings-wrapper * {
+    margin-top: 20px;
   }
 </style>

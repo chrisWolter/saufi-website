@@ -50,7 +50,7 @@ export default {
   .switch {
   position: relative;
   display: inline-block;
-  width: 40px;
+  width: 46px;
   height: 24px;
 }
 
@@ -67,7 +67,7 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background: rgb(51, 51, 51);
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -85,13 +85,13 @@ export default {
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background: #45b649;
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(16px);
-  -ms-transform: translateX(16px);
-  transform: translateX(16px);
+  -webkit-transform: translateX(23px);
+  -ms-transform: translateX(23px);
+  transform: translateX(23px);
 }
 
 /* Rounded sliders */
