@@ -110,7 +110,7 @@ export default {
       this.didIHearSaufi = Math.random() > 0.4
     },
     rollDidIHearTaskDice () {
-      this.didIHearTask = Math.random() < 0.45
+      this.didIHearTask = this.didIHearSaufi
       this.triggerButton = !this.triggerButton
     },
     animateDecider () {
