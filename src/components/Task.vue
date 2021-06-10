@@ -5,16 +5,13 @@
                 <h5 class="subheading">{{task.category}}</h5>
                 <h1 class="heading">{{task.name}}</h1>
                 <p>{{taskDesciption}}</p>
+                <a class="roll-again" @click="rollNewSubTask()" v-if="task.description instanceof Array"> <BIconArrowClockwise></BIconArrowClockwise> Das hatt ich schon</a>
             </div>
         </div>
         <div v-show="!show">
-            <div v-if="didIHearSaufi" class="no-task">
+            <div v-if="!didIHearSaufi" class="no-task">
                 <h3>Keine Zusatzaufgabe :(</h3>
                 <h4 class="mt-4">Aber du darfst trotzdem einen Sipp nehmen.</h4>
-            </div>
-            <div v-else class="no-task">
-                <h3>Keine Zusatzaufgabe :(</h3>
-                <h4 class="mt-4">Leider darfst du auch nichts trinken.</h4>
             </div>
         </div>
     </b-col>
@@ -22,9 +19,13 @@
 
 <script>
 const weightedRandom = require('weighted-random')
+import { BIconArrowClockwise } from 'bootstrap-vue'
 
 export default {
     name: "Task",
+    components: {
+        BIconArrowClockwise
+    },
     props: {
       tasksJson: {
           type: Array
@@ -41,7 +42,8 @@ export default {
     },
     data() {
       return {
-          task: null
+          task: null,
+          taskDescriptionToShow: null
       }
     },
     methods: {
@@ -56,6 +58,10 @@ export default {
         const tasks = taskList[selection].data
         const randomTaskIndex = Math.floor(Math.random() * tasks.length)
         return tasks[randomTaskIndex]
+      },
+
+      rollNewSubTask() {
+          console.log(this.taskDesciption);
       }
     },
     computed: {
@@ -91,5 +97,11 @@ export default {
     .no-task {
         text-align: center;
         color: rgb(160, 160, 160);
+    }
+
+    .roll-again {
+        text-decoration: none;
+        color: rgba(255,255,255,0.6);
+        border-bottom: 1px solid rgba(255,255,255,0.6);
     }
 </style>
