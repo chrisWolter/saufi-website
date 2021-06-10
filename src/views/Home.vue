@@ -3,14 +3,14 @@
     <b-container fluid>
       <b-row class="justify-content-md-center header">
         <b-col cols="2" md="1" class="header-wrapper dark-mode-button-wrapper">
-          <ToggleDarkModeButton/>
+          <!-- Placeholder for button -->
         </b-col>
         <b-col cols="8" md="4" class="header-wrapper">
           <h2 class="logo mx-0">Saufi?</h2>
         </b-col>
         <b-col cols="2" md="1" class="header-wrapper info-button-wrapper">
           <button class="header-buttons" v-b-modal.impressum-modal>
-            <BIconInfoCircle/>
+            <BIconGearFill/>
           </button>
         </b-col>
       </b-row>
@@ -34,7 +34,7 @@
         </b-row>
       </div>
     </b-container>
-    <b-modal id="impressum-modal" title="Information" hide-footer>
+    <b-modal id="impressum-modal" hide-header hide-footer>
       <modal-content/>
     </b-modal>
   </div>
@@ -44,17 +44,15 @@
 import Decider from '@/components/Decider.vue'
 import Task from '@/components/Task.vue'
 import ModalContent from '@/components/ModalContent'
-import { BIconInfoCircle } from 'bootstrap-vue'
-import ToggleDarkModeButton from '@/components/ToggleDarkModeButton'
+import { BIconGearFill } from 'bootstrap-vue'
 
 export default {
   name: 'App',
   components: {
-    ToggleDarkModeButton,
     Decider,
     Task,
     ModalContent,
-    BIconInfoCircle
+    BIconGearFill
   },
   data () {
     return {
@@ -79,6 +77,9 @@ export default {
     }
   },
   async mounted () {
+    if(localStorage.getItem('SaufiDarkMode') === 'true'){
+      document.querySelector('html').classList.toggle('dark-mode')
+    }
     await this.fetchTasks()
     this.reload()
     this.stopAnimations()
@@ -122,7 +123,7 @@ export default {
     },
     animateTask () {
       this.activeAnimations.task.slideInBottom = true
-    }
+    },
   },
   computed: {
     themeColor() {
@@ -254,5 +255,19 @@ export default {
 .content-container {
   margin-top: 60px;
 }
+
+::v-deep .modal-dialog{
+  margin: 0;
+  min-height: 100%;
+}
+
+::v-deep .modal-content{
+  backdrop-filter: blur(20px);
+  position: absolute;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 0;
+  border: none;
+  }
 
 </style>

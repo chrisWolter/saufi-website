@@ -27,8 +27,13 @@ html, body {
   background-color: white
 }
 
-.dark-mode, .dark-mode body, .dark-mode .modal-content {
+.dark-mode, .dark-mode body {
   background: #000814;
+  color: white;
+}
+
+.dark-mode .modal-content{
+  background: rgba(0, 8, 20, 0.6);
   color: white;
 }
 
