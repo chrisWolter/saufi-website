@@ -107,7 +107,18 @@ export default {
       })
     },
     rollDidIHearSaufiDice () {
-      this.didIHearSaufi = Math.random() > 0.4
+      const saufiModus = localStorage.getItem('SaufiModus')
+      if(saufiModus === '1') {
+        this.didIHearSaufi = Math.random() > 0.7
+        console.log("easy mode");
+      } else if(saufiModus === '2') {
+        this.didIHearSaufi = Math.random() > 0.4
+        console.log("medium mode");
+      } else {
+        this.didIHearSaufi = Math.random() > 0.2
+        console.log("hard mode");
+      }
+
     },
     rollDidIHearTaskDice () {
       this.didIHearTask = this.didIHearSaufi
