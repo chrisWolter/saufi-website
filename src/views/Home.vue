@@ -116,7 +116,7 @@ export default {
         this.didIHearSaufi = Math.random() > 0.4
         console.log("medium mode");
       } else {
-        this.didIHearSaufi = true
+        this.didIHearSaufi = Math.random() > 0.2
         console.log("hard mode");
       }
 
