@@ -1,17 +1,14 @@
 <template>
   <div id="app">
-    <Home/>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import Home from '@/views/Home'
 
 export default {
   name: 'App',
-  components: {
-    Home
-  }
+
 }
 </script>
 
@@ -37,16 +34,16 @@ html, body {
 }
 
 .dark-mode .modal-content{
-  background: rgba(0, 8, 20, 0.6);
+  background: rgba(0, 8, 20, 0.6) !important;
   color: white;
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 .dark-mode #reload-button::after, .dark-mode .header::before {
-  background: -moz-linear-gradient(top, rgba(0, 8, 20, 1) 0%, rgba(0, 8, 20, 1) 65%, rgba(0, 8, 20, 0) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgba(0, 8, 20, 1) 0%, rgba(0, 8, 20, 1) 65%, rgba(0, 8, 20, 0) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to top, rgba(0, 8, 20, 1) 0%, rgba(0, 8, 20, 1) 65%, rgba(0, 8, 20, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: -moz-linear-gradient(top, rgba(0, 8, 20, 1) 0%, rgba(0, 8, 20, 1) 65%, rgba(0, 8, 20, 0) 100%) !important; /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0, 8, 20, 1) 0%, rgba(0, 8, 20, 1) 65%, rgba(0, 8, 20, 0) 100%) !important; /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to top, rgba(0, 8, 20, 1) 0%, rgba(0, 8, 20, 1) 65%, rgba(0, 8, 20, 0) 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 #app {
