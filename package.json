@@ -11,10 +11,11 @@
     "axios": "^0.21.1",
     "bootstrap-vue": "^2.21.1",
     "core-js": "^3.6.5",
-    "gsap": "^3.5.1",
+    "gsap": "^3.6.1",
     "vue": "^2.6.11",
     "vue-async-computed": "^3.9.0",
     "vue-axios": "^3.2.0",
+    "vue-router": "^3.5.1",
     "weighted-random": "^0.1.0"
   },
   "devDependencies": {
