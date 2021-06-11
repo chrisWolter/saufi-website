@@ -53,16 +53,16 @@ export default {
 
 .difficulty-button{
     background-color: transparent;
-    color: white;
+    color: #212529;
     outline: none;
     border-radius: 10px;
     padding: 10px;
-    border: 2px solid white;
+    border: 2px solid #212529;
 }
 
 .fill-bg {
-    background: white;
-    color: black;
+    background: #212529;
+    color: white;
 }
 
 </style>
