@@ -1,6 +1,6 @@
 <template>
     <b-col cols="11" md="8" lg="6">
-        <h4 class="mb-4">Saufi-Modus</h4>
+        <h4 class="mb-4 saufi-heading">Saufi-Modus</h4>
         <b-row class="mt-3 difficulty-wrapper">
             <b-col cols="4">
                 <button
@@ -49,7 +49,6 @@ export default {
 <style scoped>
 .difficulty-wrapper{
     font-size: 12px;
-    font-weight: bold;
 }
 
 .difficulty-button{
@@ -64,6 +63,10 @@ export default {
 .fill-bg {
     background: #212529;
     color: white;
+}
+
+.saufi-heading {
+    font-weight: bold;
 }
 
 </style>
