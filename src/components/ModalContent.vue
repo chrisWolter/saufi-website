@@ -10,8 +10,10 @@
 <b-row class="justify-content-center">
   <ToggleDifficulty/>
 </b-row>
-<b-row>
+<b-row class="justify-content-center">
+  <b-col cols="11" md="8" lg="6">
   <router-link :to="{name:'Explanation'}">TheGame</router-link>
+  </b-col>
 </b-row>
 </div>
     </div>
