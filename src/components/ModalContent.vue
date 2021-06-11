@@ -10,6 +10,9 @@
 <b-row class="justify-content-center">
   <ToggleDifficulty/>
 </b-row>
+<b-row>
+  <router-link :to="{name:'Explanation'}">TheGame</router-link>
+</b-row>
 </div>
     </div>
 </template>
