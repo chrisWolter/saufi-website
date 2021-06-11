@@ -5,6 +5,7 @@
                 <h5 class="subheading">{{task.category}}</h5>
                 <h1 class="heading">{{task.name}}</h1>
                 <p>{{taskDesciption}}</p>
+                <span class="schlucks">Schlucks: {{schlucks}}</span>
             </div>
         </div>
         <div v-show="!show">
@@ -33,6 +34,9 @@ export default {
       },
       didIHearSaufi: {
           type: Boolean
+      },
+      schlucks: {
+          type: Number
       }
     },
     data() {
@@ -63,7 +67,7 @@ export default {
                 return this.task.description[random]
             }
             return this.task.description
-        }
+        },
     },
     created() {
         this.task = this.getTask()
@@ -89,5 +93,10 @@ export default {
     .no-task {
         text-align: center;
         color: rgb(160, 160, 160);
+    }
+
+    .schlucks {
+        font-style: italic;
+        font-weight: bold;
     }
 </style>
