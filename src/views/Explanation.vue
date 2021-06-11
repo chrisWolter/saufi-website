@@ -1,7 +1,7 @@
 <template>
-<b-container>
-    <b-row class="header">
-        <b-col>
+<b-container style="margin-bottom:100px">
+    <b-row class="header justify-content-md-center">
+        <b-col class="header-wrapper">
             <router-link :to="{name:'Home'}">zurück</router-link>
         </b-col>
     </b-row>
@@ -98,5 +98,11 @@
     width: 100px;
     height: 100px;
     background-size: cover;
+    margin-bottom: -30px
   }
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+}
 </style>
