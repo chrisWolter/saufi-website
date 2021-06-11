@@ -27,7 +27,7 @@
         </b-row>
         <b-row id="reload-button" class="justify-content-md-center pos-bottom">
           <b-col col md="6" class="mx-0 px-sm-0">
-            <button @click="reload()" block class="reload-button w-100" :style="{'background': themeColor}"> <span class="mr-3"> <BIconArrowRepeat /> </span>Hab ich Saufi
+            <button @click="reload()" class="reload-button w-100" :style="{'background': themeColor}"> <span class="mr-3"> <BIconArrowRepeat /> </span>Hab ich Saufi
               gehört?
             </button>
           </b-col>
@@ -116,7 +116,7 @@ export default {
         this.didIHearSaufi = Math.random() > 0.4
         console.log("medium mode");
       } else {
-        this.didIHearSaufi = Math.random() > 0.2
+        this.didIHearSaufi = true
         console.log("hard mode");
       }
 
