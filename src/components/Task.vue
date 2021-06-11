@@ -5,7 +5,6 @@
                 <h5 class="subheading">{{task.category}}</h5>
                 <h1 class="heading">{{task.name}}</h1>
                 <p>{{taskDesciption}}</p>
-                <a class="roll-again" @click="rollNewSubTask()" v-if="task.description instanceof Array"> <BIconArrowClockwise></BIconArrowClockwise> Das hatt ich schon</a>
             </div>
         </div>
         <div v-show="!show">
@@ -19,13 +18,9 @@
 
 <script>
 const weightedRandom = require('weighted-random')
-import { BIconArrowClockwise } from 'bootstrap-vue'
 
 export default {
     name: "Task",
-    components: {
-        BIconArrowClockwise
-    },
     props: {
       tasksJson: {
           type: Array
@@ -57,12 +52,9 @@ export default {
         const selection = weightedRandom(weights)
         const tasks = taskList[selection].data
         const randomTaskIndex = Math.floor(Math.random() * tasks.length)
+
         return tasks[randomTaskIndex]
       },
-
-      rollNewSubTask() {
-          console.log(this.taskDesciption);
-      }
     },
     computed: {
         taskDesciption() {
@@ -97,11 +89,5 @@ export default {
     .no-task {
         text-align: center;
         color: rgb(160, 160, 160);
-    }
-
-    .roll-again {
-        text-decoration: none;
-        color: rgba(255,255,255,0.6);
-        border-bottom: 1px solid rgba(255,255,255,0.6);
     }
 </style>
