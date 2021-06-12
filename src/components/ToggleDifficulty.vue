@@ -86,7 +86,7 @@ export default {
 }
 
 .tooltip-trigger {
-    color: white;
+    color: #212529;
     height: fit-content;
     padding: 2px 5px;
     margin-left: 10px;
@@ -95,7 +95,7 @@ export default {
     box-shadow: none;
 }
 .tooltip-trigger:hover {
-   color: rgba(255,255,255,.6)
+   color: #677a7d;
 }
 
 .heading-container {

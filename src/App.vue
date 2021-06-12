@@ -53,6 +53,10 @@ html, body {
   color: black;
 }
 
+.dark-mode .modal-content .tooltip-trigger {
+  color: white;
+}
+
 .dark-mode #reload-button::after, .dark-mode .header::before {
   background: -moz-linear-gradient(top, rgba(0, 8, 20, 1) 0%, rgba(0, 8, 20, 1) 65%, rgba(0, 8, 20, 0) 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(top, rgba(0, 8, 20, 1) 0%, rgba(0, 8, 20, 1) 65%, rgba(0, 8, 20, 0) 100%); /* Chrome10-25,Safari5.1-6 */
