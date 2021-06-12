@@ -1,6 +1,16 @@
 <template>
     <b-col cols="11" md="8" lg="6">
-        <h4 class="mb-4 saufi-heading">Saufi-Modus</h4>
+        <div class="heading-container">
+            <h4 class="mb-4 saufi-heading">Saufi-Modus</h4>
+            <b-button id="tooltip-target-1" class="tooltip-trigger"  variant="link">
+                <BIconQuestionCircle></BIconQuestionCircle>
+            </b-button>
+            <b-tooltip target="tooltip-target-1" triggers="hover">
+                Radlertrinker: 1-3 Schlucks
+                Alkoholiker: 2-4 Schlucks
+                Raketendicht: 3-5 Schlucks
+            </b-tooltip>
+        </div>
         <b-row class="mt-3 difficulty-wrapper">
             <b-col cols="4">
                 <button
@@ -31,7 +41,12 @@
 </template>
 
 <script>
+
+import { BIconQuestionCircle } from 'bootstrap-vue'
 export default {
+    components: {
+        BIconQuestionCircle
+    },
     name: 'ToggleDifficulty',
     data() {
         return {
@@ -58,6 +73,7 @@ export default {
     border-radius: 10px;
     padding: 10px;
     border: 2px solid #212529;
+    width: 100%;
 }
 
 .fill-bg {
@@ -69,4 +85,20 @@ export default {
     font-weight: bold;
 }
 
+.tooltip-trigger {
+    color: white;
+    height: fit-content;
+    padding: 2px 5px;
+    margin-left: 10px;
+}
+.tooltip-trigger:focus {
+    box-shadow: none;
+}
+.tooltip-trigger:hover {
+   color: rgba(255,255,255,.6)
+}
+
+.heading-container {
+    display: flex;
+}
 </style>
