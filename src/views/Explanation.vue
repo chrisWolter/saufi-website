@@ -23,40 +23,10 @@
         eine Aufgabe erledigen müsst. Was Ihr bei der Aufgabe machen müsst, wird auf der
         Aufgabenkarte erklärt.
         <br />
+        <br />
         #drinkresponsibly #dontdrinkanddrive
       </p>
-      <h4>Allgemeine Infos</h4>
-      <p>Diese Website wurde mit viel Herz und Alkohol von Alexander Herrmann
-        und Christian Wolter entwickelt. Bei Fragen, Anregungen oder Ideen für
-        Spiele könnt Ihr uns einfach eine Email schreiben.</p>
-        <a href="mailto:alex@hab-ich-saufi-gehoert.de">Mail an Alex</a>
-        <br />
-        <a href="mailto:chris@hab-ich-saufi-gehoert.de" class="mt-4">Mail an Chris</a>
-      <h4 class="mt-4">Roadmap</h4>
-      <p>Wir werden dieses Trinkspiel weiterentwickeln und neue Ideen einfließen
-        lassen. Allerdings kommen Major Updates unregelmäßig.
-        Bugfixes und kleinere Anpassungen werden aber recht schnell erledigt und
-        bereitgestellt.
-      </p>
-      <h4 class="mt-4">Rechtliches</h4>
-      <div>Infoicon made by
-        <a href="https://www.flaticon.com/authors/freepik"
-          title="Freepik">Freepik
-        </a> from
-        <a href="https://www.flaticon.com/"
-          title="Flaticon">www.flaticon.com
-        </a>
-      </div>
-      <div>Favicon made by
-        <a href="https://www.iconarchive.com/artist/paomedia.html"
-          title="Iconarchive">paomedia
-        </a>
-          from
-        <a href="https://www.paomedia.com/"
-          title="paomedia">www.paomedia.com
-        </a>
-      </div>
-      <p class="mt-4">Aktuelle Version: 1.1.1</p>
+            <p class="mt-4">Aktuelle Version: 1.1.1</p>
       <div class="clippy"></div>
     </b-col>
     </b-container>
