@@ -21,13 +21,26 @@
                    :class="{'wobble': activeAnimations.decider.wobble, 'scale-in-center': activeAnimations.decider.scaleInCenter}"/>
         </b-row>
         <b-row id="task-decider" class="justify-content-md-center task">
-          <Task :tasks-json="tasksJson" :task-trigger="triggerButton" :show="didIHearTask"
-                :didIHearSaufi="didIHearSaufi" ref="task" id="task" class="task-elem"
+          <Task :tasks-json="tasksJson"
+                :task-trigger="triggerButton"
+                :show="didIHearTask"
+                :didIHearSaufi="didIHearSaufi"
+                :schlucks="schlucks"
+                ref="task"
+                id="task"
+                class="task-elem"
                 :class="{'slide-in-bottom': activeAnimations.task.slideInBottom}"/>
         </b-row>
         <b-row id="reload-button" class="justify-content-md-center pos-bottom">
           <b-col col md="6" class="mx-0 px-sm-0">
-            <button @click="reload()" block class="reload-button w-100" :style="{'background': themeColor}"> <span class="mr-3"> <BIconArrowRepeat /> </span>Hab ich Saufi
+            <button
+                    @click="reload()"
+                    class="reload-button w-100"
+                    :style="{'background': themeColor}">
+              <span class="mr-3">
+                <BIconArrowRepeat />
+              </span>
+              Hab ich Saufi
               gehört?
             </button>
           </b-col>
@@ -65,6 +78,7 @@ export default {
       taskHeight: String,
       tasksJson: null,
       triggerButton: false,
+      schlucks: 0,
       activeAnimations: {
         decider: {
           wobble: false,
@@ -112,12 +126,15 @@ export default {
       const saufiModus = localStorage.getItem('SaufiModus')
       if(saufiModus === '1') {
         this.didIHearSaufi = Math.random() > 0.7
+        this.schlucks = Math.floor((Math.random()) * 3) + 1
         console.log("easy mode");
       } else if(saufiModus === '2') {
         this.didIHearSaufi = Math.random() > 0.4
+        this.schlucks = Math.floor((Math.random()) * 3) + 2
         console.log("medium mode");
       } else {
         this.didIHearSaufi = Math.random() > 0.2
+        this.schlucks = Math.floor((Math.random()) * 3) + 3
         console.log("hard mode");
       }
 

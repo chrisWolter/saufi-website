@@ -33,11 +33,25 @@ html, body {
   transition: .4s;
 }
 
-.dark-mode .modal-content{
-  background: rgba(0, 8, 20, 0.6) !important;
+.dark-mode .modal-content {
+  background: rgba(0, 8, 20, 0.6);
   color: white;
   -webkit-transition: .4s;
   transition: .4s;
+}
+
+.dark-mode .modal-content .difficulty-button {
+  border: 2px solid white;
+  color: white;
+}
+
+.dark-mode .modal-content .fill-bg {
+  background: white;
+  color: black;
+}
+
+.dark-mode .modal-content .tooltip-trigger {
+  color: white;
 }
 
 .dark-mode #reload-button::after, .dark-mode .header::before {

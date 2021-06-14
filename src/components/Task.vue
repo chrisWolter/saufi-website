@@ -5,16 +5,13 @@
                 <h5 class="subheading">{{task.category}}</h5>
                 <h1 class="heading">{{task.name}}</h1>
                 <p>{{taskDesciption}}</p>
+                <span class="schlucks">Schlucks: {{schlucks}}</span>
             </div>
         </div>
         <div v-show="!show">
-            <div v-if="didIHearSaufi" class="no-task">
+            <div v-if="!didIHearSaufi" class="no-task">
                 <h3>Keine Zusatzaufgabe :(</h3>
                 <h4 class="mt-4">Aber du darfst trotzdem einen Sipp nehmen.</h4>
-            </div>
-            <div v-else class="no-task">
-                <h3>Keine Zusatzaufgabe :(</h3>
-                <h4 class="mt-4">Leider darfst du auch nichts trinken.</h4>
             </div>
         </div>
     </b-col>
@@ -37,11 +34,15 @@ export default {
       },
       didIHearSaufi: {
           type: Boolean
+      },
+      schlucks: {
+          type: Number
       }
     },
     data() {
       return {
-          task: null
+          task: null,
+          taskDescriptionToShow: null
       }
     },
     methods: {
@@ -55,8 +56,9 @@ export default {
         const selection = weightedRandom(weights)
         const tasks = taskList[selection].data
         const randomTaskIndex = Math.floor(Math.random() * tasks.length)
+
         return tasks[randomTaskIndex]
-      }
+      },
     },
     computed: {
         taskDesciption() {
@@ -65,7 +67,7 @@ export default {
                 return this.task.description[random]
             }
             return this.task.description
-        }
+        },
     },
     created() {
         this.task = this.getTask()
@@ -91,5 +93,10 @@ export default {
     .no-task {
         text-align: center;
         color: rgb(160, 160, 160);
+    }
+
+    .schlucks {
+        font-style: italic;
+        font-weight: bold;
     }
 </style>
