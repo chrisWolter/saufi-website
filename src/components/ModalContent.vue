@@ -3,15 +3,28 @@
         <div class="d-flex justify-content-center">
       <button class="close-modal" @click="$bvModal.hide('impressum-modal')"><BIconX class="h2" /></button>
       </div>
-      <div class="settings-wrapper">
-        <b-row class="justify-content-center">
+        <b-row class="justify-content-center mt-3">
 <ToggleDarkModeButton/>
 </b-row>
-<b-row class="justify-content-center">
+<b-row class="justify-content-center mt-4">
   <ToggleDifficulty/>
 </b-row>
+<b-row class="justify-content-center text-center mt-4">
+  <b-col cols="11" md="8" lg="6">
+  <router-link class="menu-link" :to="{name:'Explanation'}">TheGame</router-link>
+  </b-col>
+</b-row>
+<b-row class="justify-content-center text-center mt-4">
+  <b-col cols="11" md="8" lg="6">
+  <router-link class="menu-link" :to="{name:'AboutUs'}">About Us</router-link>
+  </b-col>
+</b-row>
+<b-row class="justify-content-center text-center mt-4">
+  <b-col cols="11" md="8" lg="6">
+  <router-link class="menu-link" :to="{name:'Changelog'}">Changelog</router-link>
+  </b-col>
+</b-row>
 </div>
-    </div>
 </template>
 <script>
 import { BIconX } from 'bootstrap-vue'
@@ -33,7 +46,7 @@ import ToggleDifficulty from '@/components/ToggleDifficulty'
     min-height: 100%;
     padding-top: 50px;
   }
-  .dark-mode .close-modal{
+  .dark-mode .close-modal, .dark-mode .menu-link{
     color:white;
   }
 
@@ -43,7 +56,7 @@ import ToggleDifficulty from '@/components/ToggleDifficulty'
     background: none;
   }
 
-  .settings-wrapper * {
-    margin-top: 20px;
+  .menu-link{
+    color: darkblue;
   }
 </style>

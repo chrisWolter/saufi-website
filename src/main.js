@@ -6,6 +6,7 @@ import "bootstrap-vue/dist/bootstrap-vue.css"
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import {BIconInfoCircle, BIconSun, BIconMoon, BIconArrowRepeat} from 'bootstrap-vue'
+import router from './router'
 
 Vue.config.productionTip = false
 
@@ -17,5 +18,6 @@ Vue.component('BIconMoon', BIconMoon)
 Vue.component('BIconArrowRepeat', BIconArrowRepeat)
 
 new Vue({
+  router,
   render: h => h(App),
 }).$mount('#app')
