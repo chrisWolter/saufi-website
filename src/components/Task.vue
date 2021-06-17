@@ -42,7 +42,8 @@ export default {
     data() {
       return {
           task: null,
-          taskDescriptionToShow: null
+          taskDescriptionToShow: null,
+          selection: Number,
       }
     },
     methods: {
@@ -50,32 +51,32 @@ export default {
         if (!this.tasksJson) {
             return
         }
-
         const taskList = JSON.parse(JSON.stringify(this.tasksJson))
         const weights = taskList.map(task => task.weight)
-        const selection = weightedRandom(weights)
-        const tasks = taskList[selection].data
+        this.selection = weightedRandom(weights)
+        const tasks = taskList[this.selection].data
         const randomTaskIndex = Math.floor(Math.random() * tasks.length)
-
         return tasks[randomTaskIndex]
       },
     },
     computed: {
         taskDesciption() {
+            if(this.show){
             if(this.task.description instanceof Array) {
                 const random = Math.floor(Math.random() * this.task.description.length)
-                return this.task.description[random]
+                let task = this.task.description[random]
+                this.$emit("deleteDescription", this.selection, this.task.name, random)
+                return task
+            }
+            this.$emit("deleteDescription", this.selection, this.task.name)
             }
             return this.task.description
         },
     },
-    created() {
-        this.task = this.getTask()
-    },
     watch: {
         taskTrigger() {
             this.task = this.getTask()
-        }
+        },
     }
 }
 </script>

@@ -26,6 +26,7 @@
                 :show="didIHearTask"
                 :didIHearSaufi="didIHearSaufi"
                 :schlucks="schlucks"
+                @deleteDescription="deleteDescription"
                 ref="task"
                 id="task"
                 class="task-elem"
@@ -87,7 +88,8 @@ export default {
         task: {
           slideInBottom: false
         }
-      }
+      },
+      reRenderCount: 0,
     }
   },
   async mounted () {
@@ -110,7 +112,7 @@ export default {
       const response = await this.axios
           .get('https://alexherrmi.github.io/json/tasks.json')
       this.tasksJson = response.data
-    },
+    }, 
     stopAnimations() {
       const decider = this.$refs.decider.$el
       decider.addEventListener('animationend', () => {
@@ -127,17 +129,13 @@ export default {
       if(saufiModus === '1') {
         this.didIHearSaufi = Math.random() > 0.7
         this.schlucks = Math.floor((Math.random()) * 3) + 1
-        console.log("easy mode");
       } else if(saufiModus === '2') {
         this.didIHearSaufi = Math.random() > 0.4
         this.schlucks = Math.floor((Math.random()) * 3) + 2
-        console.log("medium mode");
       } else {
         this.didIHearSaufi = Math.random() > 0.2
         this.schlucks = Math.floor((Math.random()) * 3) + 3
-        console.log("hard mode");
       }
-
     },
     rollDidIHearTaskDice () {
       this.didIHearTask = this.didIHearSaufi
@@ -153,13 +151,34 @@ export default {
     animateTask () {
       this.activeAnimations.task.slideInBottom = true
     },
+    async deleteDescription(selection, name, number){
+      const task = this.tasksJson[selection].data
+      const taskNumber = task.findIndex(x => x.name === name)
+
+      if(number != null){
+        task[taskNumber].description.splice(number, 1)
+        if(task[taskNumber].description.length === 0){
+          task.splice(taskNumber, 1)
+        }
+      } else {
+        task.splice(taskNumber, 1)
+      }
+
+      if(this.tasksJson[selection].data.length === 0){
+        this.tasksJson.splice([selection], 1)
+      }
+
+      if(this.tasksJson.length === 1){
+        console.log("Out of Tasks --> Reload JSON")
+        await this.fetchTasks()
+      }
+    }
   },
   computed: {
     themeColor() {
       return this.didIHearSaufi ? this.gradients.green : this.gradients.red
     }
   }
-
 }
 </script>
 
