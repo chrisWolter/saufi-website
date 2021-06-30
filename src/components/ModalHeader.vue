@@ -53,5 +53,7 @@ export default {
 .header-wrapper {
   display: flex;
   align-items: center;
+  padding-left: 0;
+  padding-right: 0;
 }
 </style>
