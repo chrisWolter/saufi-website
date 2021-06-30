@@ -9,7 +9,7 @@
 <b-row class="justify-content-center mt-4">
   <ToggleDifficulty/>
 </b-row>
-<b-row class="justify-content-center text-center mt-4">
+<b-row class="justify-content-center text-center mt-5">
   <b-col cols="11" md="8" lg="6">
   <router-link class="menu-link" :to="{name:'Explanation'}">TheGame</router-link>
   </b-col>
@@ -58,5 +58,7 @@ import ToggleDifficulty from '@/components/ToggleDifficulty'
 
   .menu-link{
     color: darkblue;
+    text-decoration: none;
+    font-weight: bold;
   }
 </style>
