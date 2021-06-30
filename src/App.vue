@@ -34,7 +34,7 @@ html, body {
 }
 
 .dark-mode .modal-content {
-  background: rgba(0, 8, 20, 0.6);
+  background: rgba(0, 8, 20, 0.6) !important;
   color: white;
   -webkit-transition: .4s;
   transition: .4s;
