@@ -5,16 +5,27 @@
     <b-col class="d-block content" cols="11" md="8" lg="6">
       <h4 class="mb-3">Changelog</h4>
       <div>
-        <p class="mb-0">Version: 2.0.0</p>
-        <p>Anpassen der Animationen</p>
+        <p class="mb-0"><b>Version 2.0.0</b></p>
+        <ul>
+          <li>Neues Menü</li>
+          <li>Hinzufügen von neuen Aufgaben</li>
+          <li>Einstellung der "Schwierigkeitsstufe"</li>
+          <li>Entfernen von sich wiederholenden Aufgaben</li>
+          <li>Beheben von Designfehlern</li>
+        </ul>
       </div>
       <div>
-        <p class="mb-0">Version: 1.1.1</p>
-        <p>Anpassen der Animationen</p>
+        <p class="mb-0"><b>Version 1.1.1</b></p>
+        <ul>
+          <li>Style Updates</li>
+          <li>Implementierung Darkmode</li>
+        </ul>
       </div>
             <div>
-        <p class="mb-0">Version: 1.0.0</p>
-        <p>Anpassen der Animationen</p>
+        <p class="mb-0"><b>Version 1.0.0</b></p>
+        <ul>
+          <li>Erstveröffentlichung</li>
+        </ul>
       </div>
       <h4 class="mt-4">Roadmap</h4>
       <p>Wir werden dieses Trinkspiel weiterentwickeln und neue Ideen einfließen
@@ -22,7 +33,7 @@
         Bugfixes und kleinere Anpassungen werden aber recht schnell erledigt und
         bereitgestellt.
       </p>
-      <p class="mt-5">Aktuelle Version: 1.1.1</p>
+      <p class="mt-5">Aktuelle Version: 2</p>
       <div class="clippy"></div>
     </b-col>
     </b-row>
@@ -40,7 +51,7 @@ import ModalHeader from '@/components/ModalHeader'
 <style scoped>
 .content{
     position: relative;
-    top: 3rem;
+    top: 2rem;
 }
   .clippy {
     background-image: url("../assets/clippy.png");
