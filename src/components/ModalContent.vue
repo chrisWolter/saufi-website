@@ -11,23 +11,23 @@
 </b-row>
 <b-row class="justify-content-center text-center mt-5">
   <b-col cols="11" md="8" lg="6">
-  <router-link class="menu-link" :to="{name:'Explanation'}">Das Spiel</router-link>
+  <router-link class="menu-link" :to="{name:'Explanation'}">Das Spiel <BIconChevronRight /></router-link>
   </b-col>
 </b-row>
 <b-row class="justify-content-center text-center mt-4">
   <b-col cols="11" md="8" lg="6">
-  <router-link class="menu-link" :to="{name:'AboutUs'}">Über Uns</router-link>
+  <router-link class="menu-link" :to="{name:'AboutUs'}">Über Uns <BIconChevronRight /></router-link>
   </b-col>
 </b-row>
 <b-row class="justify-content-center text-center mt-4">
   <b-col cols="11" md="8" lg="6">
-  <router-link class="menu-link" :to="{name:'Changelog'}">Changelog</router-link>
+  <router-link class="menu-link" :to="{name:'Changelog'}">Changelog <BIconChevronRight /></router-link>
   </b-col>
 </b-row>
 </div>
 </template>
 <script>
-import { BIconX } from 'bootstrap-vue'
+import { BIconX, BIconChevronRight } from 'bootstrap-vue'
 import ToggleDarkModeButton from '@/components/ToggleDarkModeButton'
 import ToggleDifficulty from '@/components/ToggleDifficulty'
 
@@ -37,7 +37,8 @@ import ToggleDifficulty from '@/components/ToggleDifficulty'
     components: {
       BIconX,
       ToggleDarkModeButton,
-      ToggleDifficulty
+      ToggleDifficulty,
+      BIconChevronRight
     }
   }
 </script>
@@ -58,7 +59,7 @@ import ToggleDifficulty from '@/components/ToggleDifficulty'
 
   .menu-link{
     color: black;
-    text-decoration: underline;
+    text-decoration: none;
     font-weight: bold;
   }
 </style>
