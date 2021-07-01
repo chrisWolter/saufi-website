@@ -127,13 +127,13 @@ export default {
     rollDidIHearSaufiDice () {
       const saufiModus = localStorage.getItem('SaufiModus')
       if(saufiModus === '1') {
-        this.didIHearSaufi = Math.random() > 0.7
+        this.didIHearSaufi = Math.random() > 0.4
         this.schlucks = Math.floor((Math.random()) * 3) + 1
       } else if(saufiModus === '2') {
         this.didIHearSaufi = Math.random() > 0.4
         this.schlucks = Math.floor((Math.random()) * 3) + 2
       } else {
-        this.didIHearSaufi = Math.random() > 0.2
+        this.didIHearSaufi = Math.random() > 0.4
         this.schlucks = Math.floor((Math.random()) * 3) + 3
       }
     },
