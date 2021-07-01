@@ -23,6 +23,11 @@
   <b-col cols="11" md="8" lg="6">
   <router-link class="menu-link" :to="{name:'Changelog'}">Changelog <BIconChevronRight /></router-link>
   </b-col>
+  </b-row>
+  <b-row class="justify-content-center text-center mt-4">
+    <b-col cols="11" md="8" lg="6">
+  <a href="https://makemeacocktail.com/mybar/" class="menu-link" >Make Me A Cocktail <BIconChevronRight /></a>
+  </b-col>
 </b-row>
 </div>
 </template>
