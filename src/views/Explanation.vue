@@ -1,11 +1,8 @@
 <template>
 <b-container style="margin-bottom:100px">
-    <b-row class="header justify-content-md-center">
-        <b-col class="header-wrapper">
-            <router-link :to="{name:'Home'}">zurück</router-link>
-        </b-col>
-    </b-row>
-    <b-col class="d-block content">
+    <ModalHeader />
+    <b-row class="justify-content-center">
+    <b-col class="d-block content" cols="11" md="8" lg="6">
       <h4 class="mb-3">Das Spiel</h4>
       <p>Ihr wollt wissen, ob Ihr Saufi gehört habt? Say no more.
         <br />
@@ -26,53 +23,34 @@
         <br />
         #drinkresponsibly #dontdrinkanddrive
       </p>
-            <p class="mt-4">Aktuelle Version: 1.1.1</p>
+      <p class="mt-4">Aktuelle Version: 2</p>
       <div class="clippy"></div>
     </b-col>
+    </b-row>
     </b-container>
 </template>
 <script>
+import ModalHeader from '@/components/ModalHeader'
   export default {
-    name: 'Explanation'
+    name: 'Explanation',
+    components: {
+      ModalHeader
+    }
   }
 </script>
 <style scoped>
-.header{
-    position: fixed;
-    z-index: 10;
-    width: 100%;
-    top: 0px;
-    padding: 0 15px;
-}
-.header::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 60px;
-  margin-left: -15px;
-  background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 65%, rgba(255, 255, 255, 0) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 65%, rgba(255, 255, 255, 0) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 65%, rgba(255, 255, 255, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  transform: rotate(180deg);
-}
-
 .content{
     position: relative;
-    top: 3rem;
+    top: 2em;
 }
-  .clippy {
-    background-image: url("../assets/clippy.png");
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 100px;
-    height: 100px;
-    background-size: cover;
-    margin-bottom: -30px
-  }
-
-.header-wrapper {
-  display: flex;
-  align-items: center;
+.clippy {
+  background-image: url("../assets/clippy.png");
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  margin-bottom: -30px
 }
 </style>

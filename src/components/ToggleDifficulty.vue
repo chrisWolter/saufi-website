@@ -11,8 +11,8 @@
                 Raketendicht: 3-5 Schlucks
             </b-tooltip>
         </div>
-        <b-row class="mt-3 difficulty-wrapper">
-            <b-col cols="4">
+        <b-row class="mt-1 difficulty-wrapper">
+            <b-col cols="4" class="difficulty-col-wrapper">
                 <button
                         class="difficulty-button radler"
                         :class="{ 'fill-bg': difficulty === 1 }"
@@ -20,7 +20,7 @@
                     Radlertrinker
                 </button>
             </b-col>
-            <b-col cols="4">
+            <b-col cols="4" class="difficulty-col-wrapper">
                 <button
                         class="difficulty-button alki"
                         :class="{ 'fill-bg': difficulty === 2 }"
@@ -28,7 +28,7 @@
                     Alkoholiker
                 </button>
             </b-col>
-            <b-col cols="4">
+            <b-col cols="4" class="difficulty-col-wrapper">
                 <button
                         class="difficulty-button raketen"
                         :class="{ 'fill-bg': difficulty === 3 }"
@@ -71,7 +71,7 @@ export default {
     color: #212529;
     outline: none;
     border-radius: 10px;
-    padding: 10px;
+    padding: 5px 0;
     border: 2px solid #212529;
     width: 100%;
 }
@@ -100,5 +100,9 @@ export default {
 
 .heading-container {
     display: flex;
+}
+
+.difficulty-col-wrapper {
+    padding: 0 5px;
 }
 </style>
