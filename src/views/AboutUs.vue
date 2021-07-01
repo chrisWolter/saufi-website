@@ -46,6 +46,6 @@ import ModalHeader from '@/components/ModalHeader'
 <style scoped>
 .content{
     position: relative;
-    top: 3rem;
+    top: 2rem;
 }
 </style>

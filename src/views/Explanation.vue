@@ -23,7 +23,7 @@
         <br />
         #drinkresponsibly #dontdrinkanddrive
       </p>
-      <p class="mt-4">Aktuelle Version: 1.1.1</p>
+      <p class="mt-4">Aktuelle Version: 2</p>
       <div class="clippy"></div>
     </b-col>
     </b-row>
@@ -41,7 +41,7 @@ import ModalHeader from '@/components/ModalHeader'
 <style scoped>
 .content{
     position: relative;
-    top: 3rem;
+    top: 2em;
 }
 .clippy {
   background-image: url("../assets/clippy.png");
