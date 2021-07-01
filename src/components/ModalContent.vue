@@ -11,12 +11,12 @@
 </b-row>
 <b-row class="justify-content-center text-center mt-5">
   <b-col cols="11" md="8" lg="6">
-  <router-link class="menu-link" :to="{name:'Explanation'}">TheGame</router-link>
+  <router-link class="menu-link" :to="{name:'Explanation'}">Das Spiel</router-link>
   </b-col>
 </b-row>
 <b-row class="justify-content-center text-center mt-4">
   <b-col cols="11" md="8" lg="6">
-  <router-link class="menu-link" :to="{name:'AboutUs'}">About Us</router-link>
+  <router-link class="menu-link" :to="{name:'AboutUs'}">Über Uns</router-link>
   </b-col>
 </b-row>
 <b-row class="justify-content-center text-center mt-4">
@@ -57,8 +57,8 @@ import ToggleDifficulty from '@/components/ToggleDifficulty'
   }
 
   .menu-link{
-    color: darkblue;
-    text-decoration: none;
+    color: black;
+    text-decoration: underline;
     font-weight: bold;
   }
 </style>
