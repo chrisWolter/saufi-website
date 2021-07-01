@@ -96,7 +96,6 @@ export default {
     if(localStorage.getItem('SaufiDarkMode') === 'true' && !document.querySelector('html').classList.contains('dark-mode')){
       document.querySelector('html').classList.toggle('dark-mode')
     }
-    console.log("DarkMode")
     await this.fetchTasks()
     this.reload()
     this.stopAnimations()
