@@ -1,0 +1,197 @@
+[
+  {
+    "name": "Spiele",
+    "weight": 5,
+    "data": [
+      {
+        "category": "Spiel",
+        "name": "Wahrheit oder Pflicht",
+        "description": "Der/Die Spieler*in, der/die die Karte gezogen hat, darf mit einer Person seiner Wahl eine Runde Wahrheit oder Pflicht spielen."
+      },
+      {
+        "category": "Spiel",
+        "name": "Ich hab noch nie",
+        "description": "Die Person, die die Karte gezogen hat darf ein Thema für eine Runde Ich hab noch nie aussuchen. (z.B. Ich hab noch nie Alkohol getrunken) Jeder der das schon einmal getan hat, muss einem Schluck trinken."
+      },
+      {
+        "category": "Spiel",
+        "name": "Ich würde am ehesten",
+        "description": ["Ich würde am ehesten von Robby Bubble kotzen", "Ich würde am ehesten auf einem Festival blank ziehen", "Ich würde am ehesten sterben keine Ahnung"]
+      },
+      {
+        "category": "Spiel",
+        "name": "Ich gehe in eine Bar und trinke einen...",
+        "description": "Das Spiel ist gleich wie \"Ich packe meinen Koffer und nehme mit\", nur packen wir keinen Koffer, sondern gehen in eine Bar und trinken. Der Verlierer muss saufen (Kein Wasser! (Außer er ist Fahrer!!))"
+      },
+      {
+        "category": "Spiel",
+        "name": "Themenrunde",
+        "description": ["Biermarken", "Automarken", "Tiere", "Sexspielzeuge"]
+      },
+      {
+        "category": "Spiel",
+        "name": "Flachwitzchallenge",
+        "description": "Jede/r Spieler*in sagt einen Flachwitz auf. Der/Die Spieler*in der die Karte gezogen hat darf entscheiden welcher der beste oder schlechteste war. Trinken müssen alle außer die Person, die vom Kartenzieher*in genannt wurde."
+      },
+      {
+        "category": "Spiel",
+        "name": "Ja, Nein, Vielleicht",
+        "description": "Jeder Spieler darf dem Lelek, der diese Karte gezogen hat eine Frage stellen. Der Lelek MUSS diese beantworten, darf aber nicht die Wörter \"Ja\", \"Nein\" und \"Vielleicht\" benutzen. Benutzt er eins dieser Wörter, muss er trinken."
+      },
+      {
+        "category": "Spiel",
+        "name": "Assoziation",
+        "description": "Bei dem Spiel Assoziation denkt sich der Keck, der die Karte gezogen ein Wort aus, welches sich aus zwei Wörtern zusammensetzt (z.B. Alkoholvergiftung). Der/Die Spieler*in rechts neben dem Keck, der die Karte gezogen hat nimmt nun das zweite Wort (Vergiftung) und fügt ein neues Wort hintendran (Vergiftungssymptome). Und so geht es im Kreis weiter, bis einer Person nichts mehr einfällt oder einer einen Fehler macht. Der Person muss dann trinken."
+      },
+      {
+        "category": "Spiel",
+        "name": "Bodenseetrinken",
+        "description": "Bei diesem Spiel geht es darum, eure Flaschen / Gläser leer zu bekommen. Der Bimbo der das Spiel gezogen hat fängt mit 1 Schlucks an und gibt sein Getränk dem Uhrzeigersinn weiter. Der/Die nächste Spieler*in trink dann 2 Schlucks und so weiter. Das Spiel endet, wenn das Behältnis leer ist oder das Frühstück eines Mitspielers den Magen verlassen hat."
+      },
+      {
+        "category": "Spiel",
+        "name": "Imitation",
+        "description": "Der Dödel, der die Karte gezogen hat, versucht nun für 1 Minute eine Person zu imitieren, die möglichst alle kennen. Hierbei ist darauf zu achten, dass diese Person auch sehr klischeehaft dargestellt wird. (z.B. \"Ähhhh aber geht dein Licht unter deinem Bett automatisch an wenn du nachts mal wieder einen Abseilen musst?! Hä ?!\") Alle die, die diese Person nicht erkannt haben trinken. Je nachdem wie viele es nicht erkannt haben so viele Schlucks trinkt der Dödel."
+      },
+      {
+        "category": "Spiel",
+        "name": "Kurz-Pantomime",
+        "description": "Der/Die Spieler*in, der/die diese Karte gezogen hat denkt sich einen Begriff aus, schreibt den Begriff auf und muss nur mit Gestik und Mimik (OHNE GERÄUSCHE IHR KEKS) zeigen, um was für einen Begriff es sich handelt. Der Spieler hat 1 Minute Zeit (variierbar). Alle die es nicht erkannt haben: trinkt. Wenn es z.B. 5 nicht erkannt haben, so muss der ziehende Spieler 5 Schlucks runterschlabbern."
+      },
+      {
+        "category": "Spiel",
+        "name": "Entweder, oder",
+        "description": "Der Frosch, der diese Karte gezogen hat stellt eine \"Entweder oder\" Frage (z.B Entweder 1 Jahr kein Sex oder 1 Jahr keine Party mehr). Nun gibt jeder eine Antwort ab, was man lieber nehmen würde. Die Minderheit trinkt. Bei Gleichstand entscheidet die Person, mit der größten Nase, wer trinken muss."
+      }
+    ]
+  },
+  {
+    "name": "Trinken",
+    "weight": 6,
+    "data": [
+      {
+        "category": "Trink",
+        "name": "Der/Die möchtegern Influencer*in trinkt",
+        "description": "Zur Not auch die Person, die da am ehesten reinpassen würde."
+      },
+      {
+        "category": "Trink",
+        "name": "Der/Die klügste Spieler*in trinkt",
+        "description": "Kommt eine schwangere Frau zum Bäcker. Sagt sie zum Bäcker: \"Ich bekomme 3 Brezeln\". Sagt der Bäcker: \"Sachen gibts..\""
+      },
+      {
+        "category": "Trink",
+        "name": "Die dümmste Flasche trinkt",
+        "description": "Im Zweifel auch der, mit den dümmsten Aussagen (oder der Lars in der Gruppe :*)"
+      },
+      {
+        "category": "Trink",
+        "name": "Der Klappstuhl, mit der größten Nase trinkt.",
+        "description": "Sollte selbstverständlich sein."
+      },
+      {
+        "category": "Trink",
+        "name": "An die bärtigen unter euch: trinkt!",
+        "description": "Auch Backenbart zählt dazu"
+      },
+      {
+        "category": "Trink",
+        "name": "Der Älteste Lurch trinkt",
+        "description": "Was ist das Gegenteil von Netflix and Chill? - Tagesschau und Samenstau"
+      },
+      {
+        "category": "Trink",
+        "name": "Alle männlichen Dullies trinken",
+        "description": "Und diese, die sich als solche identifizieren"
+      },
+      {
+        "category": "Trink",
+        "name": "Alle weiblichen Geschöpfe trinken",
+        "description": "Und diese, die sich als solche identifizieren"
+      },
+      {
+        "category": "Trink",
+        "name": "Alle die sich als Apache Kampfhubschrauber oder \"son Scheiß\" identifizieren nehmen einen Sipp",
+        "description": "Mach den Hub Hub Hub mach den Schrauber Schrauber Schrauber"
+      },
+      {
+        "category": "Trink",
+        "name": "Die am wenigsten betrunkene Person trinkt",
+        "description": "UHHHHHHHHHHHHHHHHHHHHHHHH I'm blinded by the lights"
+      },
+      {
+        "category": "Trink",
+        "name": "Der Keko, welcher am höchsten gewachsen ist darf erstmal trinken",
+        "description": "Upsi Dupsi. Gibt das Leben dir 'ne Zitrone, dann mach Limousine"
+      },
+      {
+        "category": "Trink",
+        "name": "Alle Spieler*innen, die heute noch nicht geduscht haben, trinken! Aber sofort.",
+        "description": "Deutsch ist halt so eine Alman Sprache"
+      },
+      {
+        "category": "Trink",
+        "name": "Alle Brillenträger trinken",
+        "description": "Wie nennt man eine japanische Unterhosenfabrik? Sacki verpacki."
+      },
+      {
+        "category": "Trink",
+        "name": "Das kleinste Gebläse trinkt",
+        "description": "Ich spüle Teller, Schalen, Pfannen aber abwaschen bleibt gleich - Mozart"
+      },
+      {
+        "category": "Trink",
+        "name": "Der jünste trinkt",
+        "description": "Das passt ja vorn und hinten nicht. Lisa, 23 schickt ihre Eis.de Bestellung zurück."
+      },
+      {
+        "category": "Trink",
+        "name": "Der Lelek mit den kürzesten Haaren trinkt",
+        "description": "Da kannst du schütteln, da kannst du klopfen, in die Hose geht der letzte Tropfen."
+      }
+    ]
+  },
+  {
+    "name": "Regel",
+    "weight": 1,
+    "data": [
+      {
+        "category": "Regel (nicht Tage)",
+        "name": "Diese Regel gilt für die nächste Runde",
+        "description": "Der Dumbo, der diese Karte gezogen hat, darf sich eine Regel ausdenken, die für die nächste Runde gilt. (z.B. Nur noch mit der schwachen Hand trinken)"
+      },
+      {
+        "category": "Regel",
+        "name": "Diese Regel gilt für die nächsten zwei Runde",
+        "description": "Der Dullie, der diese Karte gezogen hat, darf sich eine Regel ausdenken, die für die nächsten zwei Runde gilt. (z.B. Man darf nur noch in der dritten Person reden)"
+      },
+      {
+        "category": "Regel",
+        "name": "Diese Regel gilt für die nächsten drei Runde",
+        "description": "Der Hans, der diese Karte gezogen hat, darf sich eine Regel ausdenken, die für die nächsten drei Runde gilt. (z.B. Keine Personalpronomen mehr benutzen)"
+      }
+    ]
+  },
+  {
+    "name": "Aufgabe",
+    "weight": 1,
+    "data": [
+      {
+        "category": "Aufgabe",
+        "name": "Ein/e Spieler*in deiner Wahl muss...",
+        "description": "Der Johannes, der diese Karte gezogen hat darf einem Spieler*in seiner/ihrer Wahl eine Aufgabe stellen, der/die diese erledigen muss. Will er/sie das nicht machen, kann er/sie sich mit 5 guten Schlucks freikaufen. (Wird aber nicht empfohlen)"
+      }
+    ]
+  },
+  {
+    "name": "Frage",
+    "weight": 1,
+    "data": [
+      {
+        "category": "Frage",
+        "name": "Sag doch mal...",
+        "description": "Die Bumbsbiene, die diese Karte gezogen hat darf einem Mitspieler*in seiner/ihrer Wahl eine Frage stellen. Du hast jetzt die Möglichkeit alles herauszufinden, was du schon immer wissen wolltest. Nutze diese Chance weise! Die Person, die die Frage beantworten muss, muss diese aber nicht beantworten. Alternativ kann sie sich für 5 Schlucks freikaufen."
+      }
+    ]
+  }
+]
