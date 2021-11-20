@@ -6,7 +6,10 @@
                 <h1 class="heading">{{task.name}}</h1>
                 <p>{{taskDesciption}}</p>
                 <span class="schlucks">Schlucks: {{schlucks}}</span>
-                <p class="pt-3 hint mt-5">{{task.hint}}</p>
+                <div v-if="task.hint">
+                  <p class="pt-3 hint mt-5">{{task.hint}}</p>
+                </div>
+
             </div>
         </div>
         <div v-show="!show">
@@ -56,15 +59,8 @@ export default {
         const weights = taskList.map(task => task.weight)
         this.selection = weightedRandom(weights)
         const tasks = taskList[this.selection].data
-        // eslint-disable-next-line no-unused-vars
         const randomTaskIndex = Math.floor(Math.random() * tasks.length)
-        // return tasks[randomTaskIndex]
-        return {
-          category: "Spiel",
-          name: "Kurz-Pantomime",
-          description: 'Motorsäge',
-          hint: "Beschreibe das obere Wort / die Phrase ausschließlich mit Gestik und Mimik (OHNE GERÄUSCHE IHR KEKS). Nach 1 Minute (kann variieren) sagt dan jeden Spieler reihum, was er denkt, was hier beschrieben wurde. Wenn einer den Begriff nicht richtig erkannt hat, so trinkst du."
-        }
+        return tasks[randomTaskIndex]
       },
     },
     computed: {
