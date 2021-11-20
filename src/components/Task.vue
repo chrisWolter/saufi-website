@@ -6,6 +6,7 @@
                 <h1 class="heading">{{task.name}}</h1>
                 <p>{{taskDesciption}}</p>
                 <span class="schlucks">Schlucks: {{schlucks}}</span>
+                <p class="pt-3 hint mt-5">{{task.hint}}</p>
             </div>
         </div>
         <div v-show="!show">
@@ -55,8 +56,15 @@ export default {
         const weights = taskList.map(task => task.weight)
         this.selection = weightedRandom(weights)
         const tasks = taskList[this.selection].data
+        // eslint-disable-next-line no-unused-vars
         const randomTaskIndex = Math.floor(Math.random() * tasks.length)
-        return tasks[randomTaskIndex]
+        // return tasks[randomTaskIndex]
+        return {
+          category: "Spiel",
+          name: "Kurz-Pantomime",
+          description: 'Motorsäge',
+          hint: "Beschreibe das obere Wort / die Phrase ausschließlich mit Gestik und Mimik (OHNE GERÄUSCHE IHR KEKS). Nach 1 Minute (kann variieren) sagt dan jeden Spieler reihum, was er denkt, was hier beschrieben wurde. Wenn einer den Begriff nicht richtig erkannt hat, so trinkst du."
+        }
       },
     },
     computed: {
@@ -99,5 +107,20 @@ export default {
     .schlucks {
         font-style: italic;
         font-weight: bold;
+    }
+
+    .hint {
+      position: relative;
+      color: #898989;
+    }
+
+    .hint::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100px;
+      background: #424242;
+      height: 4px;
     }
 </style>
