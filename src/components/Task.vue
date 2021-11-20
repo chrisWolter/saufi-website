@@ -7,9 +7,8 @@
                 <p>{{taskDesciption}}</p>
                 <span class="schlucks">Schlucks: {{schlucks}}</span>
                 <div v-if="task.hint">
-                  <p class="pt-3 hint mt-5">{{task.hint}}</p>
+                  <p class="hint pt-3 mt-5">{{task.hint}}</p>
                 </div>
-
             </div>
         </div>
         <div v-show="!show">
