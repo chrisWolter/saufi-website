@@ -96,9 +96,14 @@ export default {
     if(localStorage.getItem('SaufiDarkMode') === 'true' && !document.querySelector('html').classList.contains('dark-mode')){
       document.querySelector('html').classList.toggle('dark-mode')
     }
-    await this.fetchTasks()
-    this.reload()
-    this.stopAnimations()
+
+    if(this.$route.params.referer) {
+      this.$bvModal.show('impressum-modal')
+    } else {
+      await this.fetchTasks()
+      this.reload()
+      this.stopAnimations()
+    }
   },
   methods: {
     reload () {
