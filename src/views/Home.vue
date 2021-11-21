@@ -99,11 +99,11 @@ export default {
 
     if(this.$route.params.referer) {
       this.$bvModal.show('impressum-modal')
-    } else {
-      await this.fetchTasks()
-      this.reload()
-      this.stopAnimations()
     }
+    
+    await this.fetchTasks()
+    this.reload()
+    this.stopAnimations()
   },
   methods: {
     reload () {
