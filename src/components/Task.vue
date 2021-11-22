@@ -6,6 +6,9 @@
                 <h1 class="heading">{{task.name}}</h1>
                 <p>{{taskDesciption}}</p>
                 <span class="schlucks">Schlucks: {{schlucks}}</span>
+                <div v-if="task.hint">
+                  <p class="hint pt-3 mt-5">{{task.hint}}</p>
+                </div>
             </div>
         </div>
         <div v-show="!show">
@@ -99,5 +102,20 @@ export default {
     .schlucks {
         font-style: italic;
         font-weight: bold;
+    }
+
+    .hint {
+      position: relative;
+      color: #898989;
+    }
+
+    .hint::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100px;
+      background: #424242;
+      height: 4px;
     }
 </style>
