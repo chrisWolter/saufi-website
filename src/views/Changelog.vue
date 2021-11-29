@@ -7,8 +7,8 @@
             <div>
         <p class="mb-0"><b>Version 2.1.0</b></p>
         <ul>
-          <li>Ein Hinweistext für unklare Spiele / Aufgaben</li>
-          <li>HNeue überarbeitete Aufgaben</li>
+          <li>Hinweistext für unklare Spiele / Aufgaben wurde hinzugefügt</li>
+          <li>Neue überarbeitete Aufgaben eingebunden</li>
           <li>Du kannst die Website nun als App installieren</li>
         </ul>
       </div>
