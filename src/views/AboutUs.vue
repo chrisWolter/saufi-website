@@ -28,7 +28,7 @@
           title="paomedia">www.paomedia.com
         </a>
       </div>
-      <p class="mt-4">Aktuelle Version: 1.1.1</p>
+      <p class="mt-4">Aktuelle Version: 2.1.0</p>
       <div class="clippy"></div>
     </b-col>
     </b-row>
