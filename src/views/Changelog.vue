@@ -4,6 +4,14 @@
     <b-row class="justify-content-center">
     <b-col class="d-block content" cols="11" md="8" lg="6">
       <h4 class="mb-3">Changelog</h4>
+            <div>
+        <p class="mb-0"><b>Version 2.1.0</b></p>
+        <ul>
+          <li>Ein Hinweistext für unklare Spiele / Aufgaben</li>
+          <li>HNeue überarbeitete Aufgaben</li>
+          <li>Du kannst die Website nun als App installieren</li>
+        </ul>
+      </div>
       <div>
         <p class="mb-0"><b>Version 2.0.0</b></p>
         <ul>
@@ -33,7 +41,7 @@
         Bugfixes und kleinere Anpassungen werden aber recht schnell erledigt und
         bereitgestellt.
       </p>
-      <p class="mt-5">Aktuelle Version: 2</p>
+      <p class="mt-5">Aktuelle Version: 2.1.0</p>
       <div class="clippy"></div>
     </b-col>
     </b-row>
