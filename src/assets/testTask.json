@@ -1,0 +1,74 @@
+[
+    {
+        "name": "Spiele",
+        "weight": 5,
+        "data": [
+            {
+                "category": "Wer würde am ehesten",
+                "name": [
+                    "... von Robby Bubble kotzen?",
+                    "... auf einem Festival blank ziehen?",
+                    "... in der Wildnis überleben?"
+                ],
+                "description": "Such dir eine Person aus, die am ehesten die genannte Sache machen würde. Stoßt an und trinkt."
+            },
+            {
+                "category": "Ich hab noch nie",
+                "name": [
+                    "... Analsex gehabt",
+                    "... mehr als 2x am Tag masturbiert",
+                    "... Fahrerflucht begangen"
+                ],
+                "description": "Diejenigen, die der oben genannten Aussgage so zustimmen können müssen nicht trinken. Alle anderen: Prost"
+            },
+            {
+                "category": "Spiel 2",
+                "name": "Ich gehe in eine Bar und trinke einen...",
+                "description": "Das Spiel ist gleich wie \"Ich packe meinen Koffer und nehme mit\", nur packen wir keinen Koffer, sondern gehen in eine Bar und trinken. Der Verlierer muss saufen (Kein Wasser! (Außer er ist Fahrer!!))"
+            },
+            {
+                "category": "Spiel 3",
+                "name": "Assoziation",
+                "description": "Bei dem Spiel Assoziation denkt sich der Keck, der die Karte gezogen ein Wort aus, welches sich aus zwei Wörtern zusammensetzt (z.B. Alkoholvergiftung). Der/Die Spieler*in rechts neben dem Keck, der die Karte gezogen hat nimmt nun das zweite Wort (Vergiftung) und fügt ein neues Wort hintendran (Vergiftungssymptome). Und so geht es im Kreis weiter, bis einer Person nichts mehr einfällt oder einer einen Fehler macht. Der Person muss dann trinken."
+            }
+        ]
+    },
+    {
+        "name": "Trinken",
+        "weight": 6,
+        "data": [
+            {
+                "category": "Trink",
+                "name": "Der/Die möchtegern Influencer*in trinkt",
+                "description": "Zur Not auch die Person, die da am ehesten reinpassen würde."
+            },
+            {
+                "category": "Trink",
+                "name": "Der/Die klügste Spieler*in trinkt",
+                "description": "Kommt eine schwangere Frau zum Bäcker. Sagt sie zum Bäcker: \"Ich bekomme 3 Brezeln\". Sagt der Bäcker: \"Sachen gibts..\""
+            }
+        ]
+    },
+    {
+        "name": "Regel",
+        "weight": 2,
+        "data": [
+            {
+                "category": "Regel (nicht Tage)",
+                "name": [
+                    "Joker - Du darfst dir eine eigene Regel ausdenken.",
+                    "Joker - Du darfst dir eine eigene Regel ausdenken."
+                ],
+                "description": "Der Dumbo, der diese Karte gezogen hat, darf sich eine Regel ausdenken, die für die nächste Runde gilt. (z.B. Nur noch mit der schwachen Hand trinken)"
+            },
+            {
+                "category": "Regel - 3 Runden",
+                "name": [
+                    "Redet euch nurnoch mit \"Sie\" an",
+                    "Wie Yoda Ihr reden müsst"
+                ],
+                "description": "Der Dullie, der diese Karte gezogen hat, darf sich eine Regel ausdenken, die für die nächsten drei Runde gilt. (z.B. Man darf nur noch in der dritten Person reden)"
+            }
+        ]
+    }
+]
