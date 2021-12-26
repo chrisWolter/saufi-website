@@ -4,6 +4,15 @@
     <b-row class="justify-content-center">
     <b-col class="d-block content" cols="11" md="8" lg="6">
       <h4 class="mb-3">Changelog</h4>
+                  <div>
+        <p class="mb-0"><b>Version 2.1.1</b></p>
+        <ul>
+          <li>Kategorie fällt bei Spielen weg und dadurch wird die Aufgabe größer angezeigt</li>
+          <li>Update der Spiele</li>
+          <li>Typo Korrektur</li>
+          <li>Saufi wahrscheinlichkeit bleibt gleich. Nur die Schlucks ändern sich</li>
+        </ul>
+      </div>
             <div>
         <p class="mb-0"><b>Version 2.1.0</b></p>
         <ul>
