@@ -3,8 +3,8 @@
         <div v-show="show">
             <div v-if="task" class="task">
                 <h5 class="subheading">{{task.category}}</h5>
-                <h1 class="heading">{{task.name}}</h1>
-                <p>{{taskDesciption}}</p>
+                <h1 class="heading">{{taskName}}</h1>
+                <p>{{task.description}}</p>
                 <span class="schlucks">Schlucks: {{schlucks}}</span>
                 <div v-if="task.hint">
                   <p class="hint pt-3 mt-5">{{task.hint}}</p>
@@ -45,7 +45,7 @@ export default {
     data() {
       return {
           task: null,
-          taskDescriptionToShow: null,
+          taskNameToShow: null,
           selection: Number,
       }
     },
@@ -63,17 +63,17 @@ export default {
       },
     },
     computed: {
-        taskDesciption() {
+        taskName() {
             if(this.show){
-            if(this.task.description instanceof Array) {
-                const random = Math.floor(Math.random() * this.task.description.length)
-                let task = this.task.description[random]
-                this.$emit("deleteDescription", this.selection, this.task.name, random)
+            if(this.task.name instanceof Array) {
+                const random = Math.floor(Math.random() * this.task.name.length)
+                let task = this.task.name[random]
+                this.$emit("deleteTask", this.selection, this.task.category, random)
                 return task
             }
-            this.$emit("deleteDescription", this.selection, this.task.name)
+            this.$emit("deleteTask", this.selection, this.task.name)
             }
-            return this.task.description
+            return this.task.name
         },
     },
     watch: {
