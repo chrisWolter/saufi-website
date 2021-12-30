@@ -1,0 +1,556 @@
+[
+    {
+        "name": "Spiele",
+        "weight": 5,
+        "data": [
+            {
+                "category": "Wer würde am ehesten",
+                "name": [
+                    "... von Robby Bubble kotzen?",
+                    "... auf einem Festival blank ziehen?",
+                    "... in der Wildnis überleben?",
+                    "... nackt durch die Innenstadt laufen?",
+                    "... in den Knast kommen?",
+                    "... die schärfste Chili der Welt essen?",
+                    "... ein Jahr ohne Sex auskommen?",
+                    "... in einen Swingerclub gehen?",
+                    "... eine Woche schweigen können?",
+                    "... bei Kik klauen?",
+                    "... sich die Haare bunt färben",
+                    "... Wasser anbrennen lassen",
+                    "... auf Malle eine Gesangskarriere starten",
+                    "... Vater/Mutter werden",
+                    "... einen Monat mit den selben Klamotten umherlaufen",
+                    "... nackt in eine Polizeikontroller kommen",
+                    "... vom Zoll hopps genommen werden",
+                    "... für Geld Sex haben",
+                    "... Nudes versenden",
+                    "... mit dem Vorgesetzten schlafen",
+                    "... einen Porno drehen",
+                    "... einen Partymarathon von sieben Tagen überstehen?",
+                    "... das Wasser im Gurkenglas exen?",
+                    "... 100 km am Stück mit dem Fahrrad fahren?",
+                    "... einen Dreier ausprobieren?",
+                    "... Leberwust vom Körper eines anderen lecken?",
+                    "... bei einer Sexhotline arbeiten?",
+                    "... sich eine Liebesschaukel in die Wohnung hängen?",
+                    "... Gemüse als Sextoy benutzen?",
+                    "... Sex in der Öffentlichkeit haben?",
+                    "... sich einen Sexsklaven halten?",
+                    "... in einen Swingerclub gehen?",
+                    "... im Bett der Eltern Sex haben?",
+                    "... sich beim Sex anpinkeln lassen?",
+                    "... drei Tage ohne Essen aushalten?",
+                    "... drei Tage ohne Essen aushalten?",
+                    "... seinen Instagram-Account löschen?",
+                    "... im Winter Sandalen anziehen?",
+                    "... ein Nutellabrot mit Käse überbacken?"
+                ],
+                "description": "Such dir eine Person aus, die am ehesten die genannte Sache machen würde. Stoßt an und trinkt."
+            },
+            {
+                "category": "Themenrunde",
+                "name": [
+                    "Biermarken",
+                    "Automarken",
+                    "Tiere",
+                    "Sexspielzeuge",
+                    "Städte mit A",
+                    "Dinge, die man beim Fußball und beim Sex sagen kann",
+                    "Musiker",
+                    "Ballermann Künstler",
+                    "Pornoseiten",
+                    "Pornostars",
+                    "Dinge die man beim Familienessen und beim Sex sagen kann",
+                    "Tiere mit langen Schwänzen",
+                    "Alkoholische Getränke",
+                    "Länder",
+                    "Städte in Europa",
+                    "Scheidungsgründe",
+                    "Dinge die stinken",
+                    "Musikrichtungen",
+                    "Alkoholische Getränke",
+                    "Sexstellungen",
+                    "Traurige Momente",
+                    "Dinge die kalt sind",
+                    "TV Sender",
+                    "Obstsorten",
+                    "Unglückliche Momente",
+                    "Trinkspiele",
+                    "Scharfe Sachen",
+                    "Heiße Sachen",
+                    "Orte an denen man besser keinen Sex hat",
+                    "Orte an denen man ungern eine Nacht verbringen will",
+                    "Komische Schlafplätze",
+                    "Sachen die man besser nicht klauen sollte",
+                    "Dämliche Friseursaloon Namen",
+                    "Lustige Namen für eure Bar",
+                    "Dinge die man sich am besten nicht in Körperöffnungen steckt",
+                    "Dinge in die man am besten keine Gliedmaßen reinsteckt",
+                    "Sachen die Weiß sind",
+                    "Dinge, die du beim Arzt nicht hören willst, wenn du Nackt bist.",
+                    "Schlechte Momente um Nackt zu sein."
+                ],
+                "description": "Der Spacko, der diese Karte gezogen hat nennt einen Begriff zum oben genannten Thema. Dann wird reihum ein weiterer Begriff gennant. Wem nichts mehr einfällt: Kopf in Nacken"
+            },
+            {
+                "category": "Ich hab noch nie",
+                "name": [
+                    "... Analsex gehabt",
+                    "... mehr als 2x am Tag masturbiert",
+                    "... Fahrerflucht begangen",
+                    "... auf der Toilette telefoniert",
+                    "... gekifft",
+                    "... mehr als 200€ an einem Tag beim Feiern ausgegeben",
+                    "... mit meinen Eltern über Sex geredet",
+                    "... einen Porno geschaut",
+                    "... draußen Sex gehabt",
+                    "... eine Prüfung nicht bestanden",
+                    "... eine Homosexuelle Erfarhung gehabt",
+                    "... Nacktbilder versendet",
+                    "... auf einer Party geschlafen",
+                    "... eine Party verschlafen",
+                    "... jemanden beim Sex erwischt",
+                    "Ich wurde noch nie beim Sex erwischt",
+                    "... von zu viel Essen gekotzt",
+                    "... einen Autounfall gebaut",
+                    "Ich wurde noch nie von der Polizei angehalten",
+                    "... einen Strafzettel fürs zu schnell fahren bekommen",
+                    "... einen Strafzettel bekommen",
+                    "... einen Blowjob gegeben",
+                    "... einen Blowjob bekommen",
+                    "... einen Dreier gehabt",
+                    "... zu einen unpassenden Zeitpunkt einne Lachanfall bekommen",
+                    "... Süßigkeiten in die Nase gesteckt",
+                    "... einen TZK heimlich gemacht",
+                    "... in einem Aufzug gefurzt",
+                    "... in einem unpassenden Moment laut gefurzt",
+                    "... gelacht wenn ein Kind hingefallen ist",
+                    "... in die Dusche gepinkelt",
+                    "... bei \"Ich hab noch nie\" gelogen",
+                    "... sexy Selfies geschossen",
+                    "... in ein Taxi gekotzt",
+                    "... auf der Autobahn mich übergeben",
+                    "... einen Stripclub aufgesucht",
+                    "... in einem Stripclub Geld liegen gelassen",
+                    "... einen Nacht im Gefängnis verbracht",
+                    "... etwas geklaut was teurer als 100€ war",
+                    "... ein Straßenschild mitgenommen",
+                    "... Drogen gekauft",
+                    "... Drogen genommen",
+                    "... einen Anwalt benötigt",
+                    "... betrunken/angetrunken ein Auto geführt",
+                    "... auf einem Date keine Unterwäsche getragen",
+                    "... mich vor einer Party vorsichtshalber rasiert",
+                    "... einen Anruf meiner Eltern weggedrückt"
+                ],
+                "description": "Diejenigen, die der oben genannten Aussgage so zustimmen können müssen nicht trinken. Alle anderen: Prost"
+            },
+            {
+                "category": "Spiel 1",
+                "name": "Warheit oder Pflicht",
+                "description": "Such dir eine Person aus, die entweder eine Wahrheit erzählen oder eine Pflichtaufgabe erledigen muss. "
+            },
+            {
+                "category": "Spiel 2",
+                "name": "Ich gehe in eine Bar und trinke einen...",
+                "description": "Das Spiel ist gleich wie \"Ich packe meinen Koffer und nehme mit\", nur packen wir keinen Koffer, sondern gehen in eine Bar und trinken. Der Verlierer muss saufen (Kein Wasser! (Außer er ist Fahrer!!))"
+            },
+            {
+                "category": "Spiel 3",
+                "name": "Assoziation",
+                "description": "Bei dem Spiel Assoziation denkt sich der Keck, der die Karte gezogen ein Wort aus, welches sich aus zwei Wörtern zusammensetzt (z.B. Alkoholvergiftung). Der/Die Spieler*in rechts neben dem Keck, der die Karte gezogen hat nimmt nun das zweite Wort (Vergiftung) und fügt ein neues Wort hintendran (Vergiftungssymptome). Und so geht es im Kreis weiter, bis einer Person nichts mehr einfällt oder einer einen Fehler macht. Der Person muss dann trinken."
+            },
+            {
+                "category": "Entweder/Oder",
+                "name": [
+                    "Kaffe oder Schoki",
+                    "Raclette oder Fondue",
+                    "Ein Jahr obdachlos oder ein Jahr kein Sex",
+                    "Bier oder Wein",
+                    "Riesige Hände oder riesige Füße",
+                    "Teleportation oder Gedanken lesen",
+                    "Kino oder Netflix",
+                    "Blind oder Taub",
+                    "Beim Partner: Unterleib eines Fisches oder Kopf eines Fisches",
+                    "Youporn oder Pornhub",
+                    "Beziehung oder One Night Stand",
+                    "Zitrone- oder Pfirsicheistee",
+                    "Hamburger oder Cheeseburger",
+                    "Schokolade oder Chips",
+                    "Roter oder Weißer Wein",
+                    "Mittagessen oder Frühstück",
+                    "Pommes oder Chicken Nuggets",
+                    "Sprudel oder normales Wasser",
+                    "Anal oder Vaginal",
+                    "Feiern oder chillen",
+                    "Festival oder Freizeitpark",
+                    "Geld zum shoppen oder Geld für Freizeitaktivitäten",
+                    "Einen Monat in einem U-Boot oder in einer Raumstation verbringen",
+                    "Zwei Wochen aufs Handy oder auf den Computer verzichten",
+                    "Kostümparty oder Poolparty",
+                    "Reisen oder Zuhause",
+                    "Sport schauen oder Sport machen",
+                    "Instagram oder TikTok",
+                    "Youporn oder Youtube",
+                    "Bösewicht oder Superheld",
+                    "Klassik oder EDM",
+                    "Aliens existieren: ja oder nein",
+                    "Hose oder Rock",
+                    "Rücken- oder Seitenschläfer",
+                    "Tag oder Nacht",
+                    "Früh- oder Spätaufsteher",
+                    "Kinder haben: ja oder nein",
+                    "Abenteuerlich oder vorsichtig",
+                    "Intelligenz oder Schönheit",
+                    "Arsch oder Titten",
+                    "iOS oder Android",
+                    "Charakter oder Aussehen",
+                    "Intelligenz oder Humor",
+                    "Chillen oder Sport",
+                    "Jünger oder älter",
+                    "Mit oder ohne Kondom",
+                    "Gegensätze oder Gemeinsamkeiten",
+                    "Ehrlichkeit oder Notlügen",
+                    "Romantik oder Abenteuer",
+                    "Kuscheln oder Küssen",
+                    "Beziehung oder Freundschaft-Plus",
+                    "Sex mit der/dem Ex: Ja oder Nein",
+                    "Oben oder unten",
+                    "Mit oder ohne Vorspiel",
+                    "Oral oder Anal",
+                    "Missionarstellung oder Reiterstellung",
+                    "Sex-Toys oder Dirty Talk",
+                    "Sanft oder leidenschaftlich",
+                    "Fesseln oder Augenbinde"
+                ],
+                "description": "Jeder Spieler hat kurz Zeit um zu überlegen. Anschließend wird gezeigt für was sich jeder Spieler entscheidet. Die Minderheit darf den Inhalt seines Getränks verringern."
+            },
+            {
+                "category": "Imitation",
+                "name": [
+                    "Dieter Bohlen",
+                    "Angela Merkel",
+                    "Markus Söder",
+                    "Adlersson",
+                    "Putin",
+                    "Beliebige Person",
+                    "Sascha Huber",
+                    "Mickie Krause",
+                    "Pamela Reif",
+                    "Jeder x belibiege Rentner",
+                    "Montanablack",
+                    "Prinz Markus",
+                    "Carmen Geiß",
+                    "Adolf Hitler",
+                    "Beliebige Person deines Freundeskreises",
+                    "Beliebige Person deines Freundeskreises",
+                    "Beliebige Person deines Freundeskreises",
+                    "Beliebige Person deines Freundeskreises",
+                    "Beliebige Person deines Freundeskreises",
+                    "Spongebob",
+                    "Mr. Krabs",
+                    "Die Möwen aus \"Findet Nemo\"",
+                    "Attila Hildmann",
+                    "Lisa aus Australien"
+                ],
+                "description": "Der Dödel, der die Karte gezogen hat, versucht nun für 1 Minute die genannte Person zu imitieren. Falls diese unbekannt ist, kann gerne jede anderen Person imitiert werden. Hierbei ist darauf zu achten, dass diese Person auch sehr klischeehaft dargestellt wird. (z.B. \"Ähhhh aber geht dein Licht unter deinem Bett automatisch an wenn du nachts mal wieder einen Abseilen musst?! Hä ?!\") Alle die, die diese Person nicht erkannt haben trinken."
+            },
+            {
+                "category": "Pantomime",
+                "name": [
+                    "Motorsäge",
+                    "Gitarrist",
+                    "Bierbauch",
+                    "Du musst mal aufs Klo",
+                    "Hubschrauber",
+                    "Lars auf einer Party",
+                    "Deine Mische ist leer",
+                    "Das Kondom ist geplatzt",
+                    "Zahnarzt",
+                    "Poledance",
+                    "Glatteis",
+                    "sich Ausziehen",
+                    "Orgie",
+                    "Blowjopb",
+                    "Intimpiercing"
+                ],
+                "description": "Beschreibe das obere Wort / die Phrase ausschließlich mit Gestik und Mimik (OHNE GERÄUSCHE IHR KEKS). Nach 1 Minute (kann variieren) sagt dan jeden Spieler reihum, was er denkt, was hier beschrieben wurde. Wenn einer den Begriff nicht richtig erkannt hat, so trinkst du."
+            }
+        ]
+    },
+    {
+        "name": "Trinken",
+        "weight": 6,
+        "data": [
+            {
+                "category": "Trink",
+                "name": "Der/Die möchtegern Influencer*in trinkt",
+                "description": "Zur Not auch die Person, die da am ehesten reinpassen würde."
+            },
+            {
+                "category": "Trink",
+                "name": "Der/Die klügste Spieler*in trinkt",
+                "description": "Kommt eine schwangere Frau zum Bäcker. Sagt sie zum Bäcker: \"Ich bekomme 3 Brezeln\". Sagt der Bäcker: \"Sachen gibts..\""
+            },
+            {
+                "category": "Trink",
+                "name": "Die dümmste Flasche trinkt",
+                "description": "Im Zweifel auch der, mit den dümmsten Aussagen (oder der Lars in der Gruppe :*)"
+            },
+            {
+                "category": "Trink",
+                "name": "Der Klappstuhl, mit der größten Nase trinkt.",
+                "description": "Sollte selbstverständlich sein."
+            },
+            {
+                "category": "Trink",
+                "name": "An die bärtigen unter euch: trinkt!",
+                "description": "Auch Backenbart zählt dazu"
+            },
+            {
+                "category": "Trink",
+                "name": "Der Älteste Lurch trinkt",
+                "description": "Was ist das Gegenteil von Netflix and Chill? - Tagesschau und Samenstau"
+            },
+            {
+                "category": "Trink",
+                "name": "Alle männlichen Dullies trinken",
+                "description": "Und diese, die sich als solche identifizieren"
+            },
+            {
+                "category": "Trink",
+                "name": "Alle weiblichen Geschöpfe trinken",
+                "description": "Und diese, die sich als solche identifizieren"
+            },
+            {
+                "category": "Trink",
+                "name": "Alle die sich als Apache Kampfhubschrauber oder \"son Scheiß\" identifizieren nehmen einen Sipp",
+                "description": "Mach den Hub Hub Hub mach den Schrauber Schrauber Schrauber"
+            },
+            {
+                "category": "Trink",
+                "name": "Die am wenigsten betrunkene Person trinkt",
+                "description": "UHHHHHHHHHHHHHHHHHHHHHHHH I'm blinded by the lights"
+            },
+            {
+                "category": "Trink",
+                "name": "Der Keko, welcher am höchsten gewachsen ist darf erstmal trinken",
+                "description": "Upsi Dupsi. Gibt das Leben dir 'ne Zitrone, dann mach Limousine"
+            },
+            {
+                "category": "Trink",
+                "name": "Alle Spieler*innen, die heute noch nicht geduscht haben, trinken! Aber sofort.",
+                "description": "Deutsch ist halt so eine Alman Sprache"
+            },
+            {
+                "category": "Trink",
+                "name": "Alle Brillenträger trinken",
+                "description": "Wie nennt man eine japanische Unterhosenfabrik? Sacki verpacki."
+            },
+            {
+                "category": "Trink",
+                "name": "Das kleinste Gebläse trinkt",
+                "description": "Ich spüle Teller, Schalen, Pfannen aber abwaschen bleibt gleich - Mozart"
+            },
+            {
+                "category": "Trink",
+                "name": "Der jünste trinkt",
+                "description": "Das passt ja vorn und hinten nicht. Lisa, 23 schickt ihre Eis.de Bestellung zurück."
+            },
+            {
+                "category": "Trink",
+                "name": "Der Lelek mit den kürzesten Haaren trinkt",
+                "description": "Da kannst du schütteln, da kannst du klopfen, in die Hose geht der letzte Tropfen."
+            },
+            {
+                "category": "Trink",
+                "name": "Jeder der keine Jeans trägt darf sich ein Getränk einverleiben",
+                "description": ""
+            },
+            {
+                "category": "Trink",
+                "name": "Wer im Monat April oder November Geburtstag hat, darf einen Shot trinken. (Eigentlich musst du ja)",
+                "description": ""
+            },
+            {
+                "category": "Trink",
+                "name": "Du darst trinken, wenn dein Name mit A anfängt oder endet",
+                "description": ""
+            },
+            {
+                "category": "Trink",
+                "name": "Wenn dein Name ein N beinhaltet siehst du durstig aus und darfst trinken.",
+                "description": ""
+            },
+            {
+                "category": "Trink",
+                "name": "Du kennst Spongebob? Dann trink auf Ihn!",
+                "description": ""
+            },
+            {
+                "category": "Trink",
+                "name": "Alle Lockenköpfe trinken",
+                "description": ""
+            },
+            {
+                "category": "Trink",
+                "name": "Alle Blondhaarigen trinken",
+                "description": ""
+            },
+            {
+                "category": "Trink",
+                "name": "Jeder der ein Haustier hat darf sein ein Getränk reinschnabulieren",
+                "description": ""
+            },
+            {
+                "category": "Aufgabe",
+                "name": "Alle in der Runde, die schon einmal etwas miteinander hatten, müssen das Getränk desjenigen auf ex austrinken.",
+                "description": "Kommen da jetzt etwas Geheimnisse hoch?"
+            },
+            {
+                "category": "Trink",
+                "name": "Jeder der schonmal Angst hatte schwanger zu sein oder jemanden geschwängert zu haben darf trinken",
+                "description": ""
+            },
+            {
+                "category": "Trink",
+                "name": "Alle die ein Kondom dabei haben dürfen trinken",
+                "description": "Es ist egal ob am Mann/Frau, im Rucksack oder Handtasche oder wo auch immer. Hauptsache Griffbereit"
+            },
+            {
+                "category": "Trink",
+                "name": "Jeder, der eine Lisa persönlich kennt, muss trinken.",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "name": "Regel",
+        "weight": 2,
+        "data": [
+            {
+                "category": "Regel (nicht Tage)",
+                "name": [
+                    "Joker - Du darfst dir eine eigene Regel ausdenken.",
+                    "Joker - Du darfst dir eine eigene Regel ausdenken.",
+                    "Diese Runde ist Ruhe. Ihr dürft nurnoch flüstern!"
+                ],
+                "description": "Der Dumbo, der diese Karte gezogen hat, darf sich eine Regel ausdenken, die für die nächste Runde gilt. (z.B. Nur noch mit der schwachen Hand trinken)"
+            },
+            {
+                "category": "Regel - 3 Runden",
+                "name": [
+                    "Joker - Du darfst dir eine eigene Regel ausdenken.",
+                    "Joker - Du darfst dir eine eigene Regel ausdenken.",
+                    "Joker - Du darfst dir eine eigene Regel ausdenken.",
+                    "Redet euch nurnoch mit \"Sie\" an",
+                    "Wie Yoda Ihr reden müsst"
+                ],
+                "description": "Der Dullie, der diese Karte gezogen hat, darf sich eine Regel ausdenken, die für die nächsten drei Runde gilt. (z.B. Man darf nur noch in der dritten Person reden)"
+            },
+            {
+                "category": "Regel - 5 Runden",
+                "name": [
+                    "Joker - Du darfst dir eine eigene Regel ausdenken.",
+                    "Joker - Du darfst dir eine eigene Regel ausdenken.",
+                    "Es dürfen keine Fragen gestellt werden. Wer eine Frage stellt muss trinken.",
+                    "Um euer Gehirn zu trainieren trinkt Ihr mit der schwachen Hand.",
+                    "Die Person rechts von dir darf ab jetzt mit dir mittrinken und anders herum",
+                    "Namen sind nicht mehr erlaubt"
+                ],
+                "description": "Der Dullie, der diese Karte gezogen hat, darf sich eine Regel ausdenken, die für die nächsten fünf Runde gilt. (z.B. Man darf nur noch in der dritten Person reden)"
+            },
+            {
+                "category": "Regel für den Rest des Abends",
+                "name": [
+                    "Wer aufs Klo gehen will muss davor einen Shot trinken",
+                    "Die Person links von dir trinkt ab jetzt immer mit dir mit und anders herum",
+                    "Dein neuer Name ist ab jetzt Horst, wer dich nicht mit Horst anspricht, muss trinken",
+                    "Bis zum Ende des Spiels sind die Wörter „Fuck“ und „Scheiße“ verboten.",
+                    "\"Ja\", \"Nein\", \"Vielleicht\" dürfen ab jetzt nich mehr gesagt werden",
+                    "Joker - Du darfst dir eine eigene Regel ausdenken.",
+                    "Joker - Du darfst dir eine eigene Regel ausdenken."
+                ],
+                "description": "Diese Regeln gelten den Rest des Abends. Ja, auch wenn das Spiel schon lange vorbei ist."
+            }
+        ]
+    },
+    {
+        "name": "Frage",
+        "weight": 1,
+        "data": [
+            {
+                "category": "Frage",
+                "name": "Sag doch mal...",
+                "description": "Die Bumbsbiene, die diese Karte gezogen hat darf einem Mitspieler*in seiner/ihrer Wahl eine Frage stellen. Du hast jetzt die Möglichkeit alles herauszufinden, was du schon immer wissen wolltest. Nutze diese Chance weise! Die Person, die die Frage beantworten muss, muss diese aber nicht beantworten. Alternativ kann sie sich für 5 Schlucks freikaufen."
+            }
+        ]
+    },
+    {
+        "name": "Aufgabe",
+        "weight": 1,
+        "data": [
+            {
+                "category": "Aufgabe",
+                "name": "Mache alles, was die Person Links von dir verlangt",
+                "description": "Wenn du nicht kannst oder willst, dann trinke."
+            },
+            {
+                "category": "Aufgabe",
+                "name": "Mach 10 Liegestütze",
+                "description": "Wenn du nicht kannst oder willst, dann trinke."
+            },
+            {
+                "category": "Aufgabe",
+                "name": "Twerke für 10 sekunden",
+                "description": "Wenn du nicht kannst oder willst, dann trinke."
+            },
+            {
+                "category": "Aufgabe",
+                "name": "Versucht mit geschlossenen Augen einen aus eurer Runde im Gesicht zu ertasten und seinen richtigen Namen zu sagen. Wer es nicht schafft, muss etwas trinken.",
+                "description": "Wenn du nicht kannst oder willst, dann trinke."
+            },
+            {
+                "category": "Aufgabe",
+                "name": "Haltet für 30 Sekunden alle die Luft an und steht dabei auf einem Bein. Wer vorher ausatmet oder umfällt, muss sein Glas austrinken.",
+                "description": "Wenn du nicht kannst oder willst, dann trinke."
+            },
+            {
+                "category": "Aufgabe",
+                "name": "",
+                "description": "Wenn du nicht kannst oder willst, dann trinke."
+            },
+            {
+                "category": "Aufgabe",
+                "name": "Trink dein Glas aus.",
+                "description": "Wenn du es eben erst aufgefüllt hast, hast du einfach Pech gehabt."
+            },
+            {
+                "category": "Aufgabe",
+                "name": "Macht ein Gruppenselfie, auf dem alle zu sehen sind.",
+                "description": "Wer nur halb drauf ist, muss einen Shot trinken."
+            },
+            {
+                "category": "Aufgabe",
+                "name": "Du hilfst deinem rechten Nachbarn beim trinken.",
+                "description": "Flöße Ihm ein Getränk ein, ohne das etwas daneben geht. Wenn etwas daneben geht musst du trinken, wenn dein Nachbar das Glas anfässt muss er das Getränk auf Ex trinken"
+            },
+            {
+                "category": "Aufgabe",
+                "name": "Erratet welches Lied als nächstes kommt.",
+                "description": "Wer falsch liet muss trinken"
+            },
+            {
+                "category": "Aufgabe",
+                "name": "Jeder legt seine Hand für die nächsten 5 minuten auf den Oberschenkel seines rechten Nachbars.",
+                "description": "Wem das zu unangenehm darf sich auch durch die angegeben Anzahl an Schlucks freitrinken"
+            },
+            {
+                "category": "Aufgabe",
+                "name": "Tauscht einmal im Uhrzeigersinn die Getränke",
+                "description": "Gibt euer Getränk einfach an euren linken Sitznachbar weiter. Ihr bekommt ja gleich auch ein neues"
+            }
+        ]
+    }
+]
