@@ -109,6 +109,9 @@ export default {
     ) {
       document.querySelector("html").classList.toggle("dark-mode");
     }
+    if(this.$route.params.referer) {
+      this.$bvModal.show('impressum-modal')
+    }
     await this.fetchTasks();
     this.reload();
     this.stopAnimations();

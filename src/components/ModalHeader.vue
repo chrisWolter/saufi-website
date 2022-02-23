@@ -1,7 +1,7 @@
 <template>
     <b-row class="justify-content-center header">
         <b-col class="header-wrapper" cols="11" md="8" lg="6">
-            <router-link class="header-link" :to="{name:'Home'}"> 
+            <router-link class="header-link" :to="{ name:'Home', params: { referer: true }}">
                 <BIconChevronLeft font-scale="1.2"/> zurück</router-link>
         </b-col>
     </b-row>
@@ -13,7 +13,7 @@ export default {
     name: 'ModalHeader',
     components: {
         BIconChevronLeft
-    }
+    },
 }
 </script>
 
