@@ -10,69 +10,79 @@
         </b-col>
         <b-col cols="2" md="1" class="header-wrapper info-button-wrapper">
           <button class="header-buttons" v-b-modal.impressum-modal>
-            <BIconGearFill/>
+            <BIconGearFill />
           </button>
         </b-col>
       </b-row>
       <div class="content-container">
         <b-row id="saufi-decider" class="justify-content-md-center decider">
-          <Decider :didIHearSaufi="didIHearSaufi" ref="decider" id="decider" class="decider-elem"
-                   :style="{'background': themeColor}"
-                   :class="{'wobble': activeAnimations.decider.wobble, 'scale-in-center': activeAnimations.decider.scaleInCenter}"/>
+          <Decider
+            :didIHearSaufi="didIHearSaufi"
+            ref="decider"
+            id="decider"
+            class="decider-elem"
+            :style="{ background: themeColor }"
+            :class="{
+              wobble: activeAnimations.decider.wobble,
+              'scale-in-center': activeAnimations.decider.scaleInCenter,
+            }"
+          />
         </b-row>
         <b-row id="task-decider" class="justify-content-md-center task">
-          <Task :tasks-json="tasksJson"
-                :task-trigger="triggerButton"
-                :show="didIHearTask"
-                :didIHearSaufi="didIHearSaufi"
-                :schlucks="schlucks"
-                @deleteDescription="deleteDescription"
-                ref="task"
-                id="task"
-                class="task-elem"
-                :class="{'slide-in-bottom': activeAnimations.task.slideInBottom}"/>
+          <Task
+            :tasks-json="tasksJson"
+            :task-trigger="triggerButton"
+            :show="didIHearTask"
+            :didIHearSaufi="didIHearSaufi"
+            :schlucks="schlucks"
+            @deleteTask="deleteTask"
+            ref="task"
+            id="task"
+            class="task-elem"
+            :class="{ 'slide-in-bottom': activeAnimations.task.slideInBottom }"
+          />
         </b-row>
         <b-row id="reload-button" class="justify-content-md-center pos-bottom">
           <b-col col md="6" class="mx-0 px-sm-0">
             <button
-                    @click="reload()"
-                    class="reload-button w-100"
-                    :style="{'background': themeColor}">
+              @click="reload()"
+              class="reload-button w-100"
+              :style="{ background: themeColor }"
+            >
               <span class="mr-3">
                 <BIconArrowRepeat />
               </span>
-              Hab ich Saufi
-              gehört?
+              Hab ich Saufi gehört?
             </button>
           </b-col>
         </b-row>
       </div>
     </b-container>
     <b-modal id="impressum-modal" hide-header hide-footer>
-      <modal-content/>
+      <modal-content />
     </b-modal>
   </div>
 </template>
 
 <script>
-import Decider from '@/components/Decider.vue'
-import Task from '@/components/Task.vue'
-import ModalContent from '@/components/ModalContent'
-import { BIconGearFill } from 'bootstrap-vue'
+import Decider from "@/components/Decider.vue";
+import Task from "@/components/Task.vue";
+import ModalContent from "@/components/ModalContent";
+import { BIconGearFill } from "bootstrap-vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     Decider,
     Task,
     ModalContent,
-    BIconGearFill
+    BIconGearFill,
   },
-  data () {
+  data() {
     return {
       gradients: {
-        green: 'linear-gradient(to right, #dce35b, #45b649)',
-        red: 'linear-gradient(to right, #f7b733, #fc4a1a)'
+        green: "linear-gradient(to right, #dce35b, #45b649)",
+        red: "linear-gradient(to right, #f7b733, #fc4a1a)",
       },
       didIHearSaufi: null,
       didIHearTask: null,
@@ -83,115 +93,116 @@ export default {
       activeAnimations: {
         decider: {
           wobble: false,
-          scaleInCenter: false
+          scaleInCenter: false,
         },
         task: {
-          slideInBottom: false
-        }
+          slideInBottom: false,
+        },
       },
       reRenderCount: 0,
-    }
+    };
   },
-  async mounted () {
-    if(localStorage.getItem('SaufiDarkMode') === 'true' && !document.querySelector('html').classList.contains('dark-mode')){
-      document.querySelector('html').classList.toggle('dark-mode')
+  async mounted() {
+    if (
+      localStorage.getItem("SaufiDarkMode") === "true" &&
+      !document.querySelector("html").classList.contains("dark-mode")
+    ) {
+      document.querySelector("html").classList.toggle("dark-mode");
     }
-
-    if(this.$route.params.referer) {
-      this.$bvModal.show('impressum-modal')
-    }
-    
-    await this.fetchTasks()
-    this.reload()
-    this.stopAnimations()
+    await this.fetchTasks();
+    this.reload();
+    this.stopAnimations();
   },
   methods: {
-    reload () {
-      this.rollDidIHearSaufiDice()
-      this.rollDidIHearTaskDice()
-      this.animateDecider()
-      this.animateTask()
+    reload() {
+      this.rollDidIHearSaufiDice();
+      this.rollDidIHearTaskDice();
+      this.animateDecider();
+      this.animateTask();
     },
     async fetchTasks() {
-      const response = await this.axios
-          .get('https://alexherrmi.github.io/json/tasks.json')
-      this.tasksJson = response.data
-    }, 
+      const response = await this.axios.get(
+        "https://alexherrmi.github.io/json/tasks.json"
+      );
+      this.tasksJson = response.data;
+    },
     stopAnimations() {
-      const decider = this.$refs.decider.$el
-      decider.addEventListener('animationend', () => {
-        this.activeAnimations.decider.wobble = false
-        this.activeAnimations.decider.scaleInCenter = false
-      })
-      const task = this.$refs.task.$el
-      task.addEventListener('animationend', () => {
-        this.activeAnimations.task.slideInBottom = false
-      })
+      const decider = this.$refs.decider.$el;
+      decider.addEventListener("animationend", () => {
+        this.activeAnimations.decider.wobble = false;
+        this.activeAnimations.decider.scaleInCenter = false;
+      });
+      const task = this.$refs.task.$el;
+      task.addEventListener("animationend", () => {
+        this.activeAnimations.task.slideInBottom = false;
+      });
     },
-    rollDidIHearSaufiDice () {
-      const saufiModus = localStorage.getItem('SaufiModus')
-      this.didIHearSaufi = Math.random() > 0.3
-      if(saufiModus === '1') {
-        this.schlucks = Math.floor((Math.random()) * 3) + 1
-      } else if(saufiModus === '2') {
-        this.schlucks = Math.floor((Math.random()) * 3) + 2
+    rollDidIHearSaufiDice() {
+      const saufiModus = localStorage.getItem("SaufiModus");
+      this.didIHearSaufi = Math.random() > 0.3;
+      if (saufiModus === "1") {
+        this.schlucks = Math.floor(Math.random() * 3) + 1;
+      } else if (saufiModus === "2") {
+        this.schlucks = Math.floor(Math.random() * 3) + 2;
       } else {
-        this.schlucks = Math.floor((Math.random()) * 3) + 3
+        this.schlucks = Math.floor(Math.random() * 3) + 3;
       }
     },
-    rollDidIHearTaskDice () {
-      this.didIHearTask = this.didIHearSaufi
-      this.triggerButton = !this.triggerButton
+    rollDidIHearTaskDice() {
+      this.didIHearTask = this.didIHearSaufi;
+      this.triggerButton = !this.triggerButton;
     },
-    animateDecider () {
+    animateDecider() {
       if (this.didIHearSaufi) {
-        this.activeAnimations.decider.scaleInCenter = true
+        this.activeAnimations.decider.scaleInCenter = true;
       } else {
-        this.activeAnimations.decider.wobble = true
+        this.activeAnimations.decider.wobble = true;
       }
     },
-    animateTask () {
-      this.activeAnimations.task.slideInBottom = true
+    animateTask() {
+      this.activeAnimations.task.slideInBottom = true;
     },
-    async deleteDescription(selection, name, number){
-      const task = this.tasksJson[selection].data
-      const taskNumber = task.findIndex(x => x.name === name)
+    deleteTask(selection, nameOrCategory, number) {
+      const task = this.tasksJson[selection].data;
 
-      if(number != null){
-        task[taskNumber].description.splice(number, 1)
-        if(task[taskNumber].description.length === 0){
-          task.splice(taskNumber, 1)
+      if (number != null) {
+        const taskNumber = task.findIndex((x) => x.category === nameOrCategory);
+        task[taskNumber].name.splice(number, 1);
+        if (task[taskNumber].name.length === 0) {
+          task.splice(taskNumber, 1);
         }
       } else {
-        task.splice(taskNumber, 1)
+        const taskNumber = task.findIndex((x) => x.name === nameOrCategory);
+        task.splice(taskNumber, 1);
       }
 
-      if(this.tasksJson[selection].data.length === 0){
-        this.tasksJson.splice([selection], 1)
+      if (task.length === 0) {
+        this.tasksJson.splice([selection], 1);
       }
 
-      if(this.tasksJson.length === 1){
-        console.log("Out of Tasks --> Reload JSON")
-        await this.fetchTasks()
+      if (this.tasksJson.length === 1) {
+        this.fetchTasks();
+        console.log("Out of Tasks --> Reload JSON");
+        return;
       }
-    }
+    },
   },
   computed: {
     themeColor() {
-      return this.didIHearSaufi ? this.gradients.green : this.gradients.red
-    }
-  }
-}
+      return this.didIHearSaufi ? this.gradients.green : this.gradients.red;
+    },
+  },
+};
 </script>
 
 <style scoped>
-@import '../assets/animation.css';
+@import "../assets/animation.css";
 
 .logo {
   text-align: center;
   padding: 20px 0;
   margin: 0 25px;
-  font-family: 'Kalam', cursive;
+  font-family: "Kalam", cursive;
   font-weight: 700;
 }
 
@@ -216,11 +227,26 @@ export default {
 }
 
 .pos-bottom::after {
-  content: '';
+  content: "";
   position: absolute;
-  background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 65%, rgba(255, 255, 255, 0) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 65%, rgba(255, 255, 255, 0) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 65%, rgba(255, 255, 255, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: -moz-linear-gradient(
+    top,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 65%,
+    rgba(255, 255, 255, 0) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 65%,
+    rgba(255, 255, 255, 0) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 65%,
+    rgba(255, 255, 255, 0) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   width: 100%;
   left: 0;
   top: -60px;
@@ -238,7 +264,7 @@ export default {
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
 }
 
-.reload-button:focus{
+.reload-button:focus {
   outline: none;
 }
 
@@ -291,14 +317,29 @@ export default {
 }
 
 .header::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 80px;
   margin-left: -15px;
-  background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 65%, rgba(255, 255, 255, 0) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 65%, rgba(255, 255, 255, 0) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 65%, rgba(255, 255, 255, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: -moz-linear-gradient(
+    top,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 65%,
+    rgba(255, 255, 255, 0) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 65%,
+    rgba(255, 255, 255, 0) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 65%,
+    rgba(255, 255, 255, 0) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   transform: rotate(180deg);
 }
 
@@ -306,19 +347,18 @@ export default {
   margin-top: 60px;
 }
 
-::v-deep .modal-dialog{
+::v-deep .modal-dialog {
   margin: 0;
   min-height: 100%;
   max-width: 100%;
 }
 
-::v-deep .modal-content{
+::v-deep .modal-content {
   backdrop-filter: blur(20px);
   position: absolute;
   height: 100%;
   background: rgba(255, 255, 255, 0.6);
   border-radius: 0;
   border: none;
-  }
-
+}
 </style>

@@ -28,8 +28,6 @@
           title="paomedia">www.paomedia.com
         </a>
       </div>
-      <p class="mt-4">Aktuelle Version: 1.1.1</p>
-      <div class="clippy"></div>
     </b-col>
     </b-row>
     </b-container>
