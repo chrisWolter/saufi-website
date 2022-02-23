@@ -3,7 +3,7 @@
     <ModalHeader />
     <b-row class="justify-content-center">
     <b-col class="d-block content" cols="11" md="8" lg="6">
-      <h4>About Us</h4>
+      <h4>Über uns</h4>
       <p>Diese Website wurde mit viel Herz und Alkohol von Alexander Herrmann
         und Christian Wolter entwickelt. Bei Fragen, Anregungen oder Ideen für
         Spiele könnt Ihr uns einfach eine Email schreiben.</p>
